@@ -2,10 +2,6 @@ require_relative "../strategies/ds_base_strategy"
 
 class DSLastNonDrawInARowStrategy < DSBaseStrategy
 
-  def initialize(all_team_games, team)
-    super(all_team_games, team)
-  end
-
   def getGrade
     non_draw_index = 0
 

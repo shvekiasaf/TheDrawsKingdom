@@ -1,14 +1,15 @@
-
 require_relative "../components/ds_file_reader"
 
 class DSBaseStrategy
 
-  # Readers
-  attr_reader :file_reader
+  def loadGamesAndTeam(file_reader, team, due_to_date)
 
-  # Initialize
-  def initialize(all_team_games, team)
-    @all_team_games = all_team_games
+    @due_to_date = due_to_date
+
+    @file_reader = file_reader
+
+    @all_team_games  = @file_reader.getAllGamesFor(team, Date.parse('01-01-1804'), Date.parse(due_to_date))
+
     @team = team
   end
 

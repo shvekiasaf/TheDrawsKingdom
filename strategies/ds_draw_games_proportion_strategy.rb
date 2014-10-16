@@ -2,8 +2,7 @@ require_relative "../strategies/ds_base_strategy"
 
 class DSDrawGamesProportionStrategy < DSBaseStrategy
 
-  def initialize(all_team_games, team, since)
-    super(all_team_games, team)
+  def initialize(since)
 
     if (since.nil?)
       @since = 999999999

@@ -10,3 +10,4 @@ class DSStrategyValue
     @value = value
   end
 end
+
