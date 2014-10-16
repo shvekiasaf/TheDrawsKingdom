@@ -43,6 +43,8 @@ class DSFileReader
             currentGamesArray.push(current_game)
           end
         end
+
+        @teams_games_hash[team] = currentGamesArray
       else
 
         currentGamesArray = @teams_games_hash[team]
@@ -107,7 +109,7 @@ class DSFileReader
           @teams_names_dictionary[splitter[1]] = splitter[2]
 
         else
-          print "Reading file: " + current_file + "\n"
+          print "Reading file: " + current_file
 
           # Read from scores API
           if (current_file.include? "365scores.com")

@@ -3,34 +3,39 @@ require_relative "components/ds_simulations"
 require 'date'
 
 # Read all games from file
-# @file_readers = [DSFileReader.new("german_urls"),
-#                  DSFileReader.new("spanish_urls"),
-#                  DSFileReader.new("italian_urls"),
-#                  DSFileReader.new("greece_urls"),
-#                  DSFileReader.new("belgium_urls"),
-#                  DSFileReader.new("frances_urls"),
-#                  DSFileReader.new("italian_urls"),
-#                  DSFileReader.new("nethderland_urls"),
-#                  DSFileReader.new("portugali_urls"),
-#                  DSFileReader.new("turkey_urls"),
-#                  DSFileReader.new("english_urls")]
-
-# @file_readers = [DSFileReader.new("spanish_urls"),
-#                  DSFileReader.new("german_urls")]
-
-@file_readers = [DSFileReader.new("english_urls")]
+@file_readers = [DSFileReader.new("german_urls"),
+                 DSFileReader.new("spanish_urls"),
+                 DSFileReader.new("italian_urls"),
+                 DSFileReader.new("greece_urls"),
+                 DSFileReader.new("belgium_urls"),
+                 DSFileReader.new("frances_urls"),
+                 DSFileReader.new("nethderland_urls"),
+                 DSFileReader.new("portugali_urls"),
+                 DSFileReader.new("turkey_urls"),
+                 DSFileReader.new("english_urls")]
 
 @file_readers.each do |current_file_reader|
 
-  print "\n================\nCalculating odds for " + current_file_reader.url_file_name + "\n"
+  print "\nCalculating odds for " + current_file_reader.url_file_name + "\n"
+  print "====================================\n"
 
-  number_of_games_i_can_bet_in_a_row = 5
+  number_of_games_i_can_bet_in_a_row = 6
   number_of_teams_i_will_bet_on = 1
-  today_date = "16-10-2014"
+  today_date = Date.parse("16-10-2014")
 
   @simulation_manager = DSSimulations.new(current_file_reader)
 
-  dates_array = ['15-09-2014','15-05-2014','15-04-2014','15-03-2014','15-02-2014','15-01-2014','15-12-2013','15-11-2013']
+  dates_array = Array.new
+  current_date = today_date
+  for i in 0..(100)
+
+    if (current_date.strftime("%m").eql? "08")
+      current_date -= 100
+    end
+
+    current_date = current_date - 7
+    dates_array.push(current_date)
+  end
 
   simulations1 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                   DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
@@ -89,7 +94,7 @@ require 'date'
   end
 
   # print the chosen teams
-  print "\nThese are the chosen teams for the chosen simulation: \n===============================================\n"
+  print "===============> You better choose: "
   @simulation_manager.runSimulationWithStrategies(selected_simulation, today_date, number_of_games_i_can_bet_in_a_row, number_of_teams_i_will_bet_on, true)
 
 end

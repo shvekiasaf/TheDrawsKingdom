@@ -11,9 +11,9 @@ class DSFutureFixturesEffectStrategy < DSBaseStrategy
   def getGrade
 
     # retrieve future game for the current team
-    future_date = Date.parse(@due_to_date) + 365
+    future_date = @due_to_date + 365
     future_games_for_team = @file_reader.getAllGamesFor(@team,
-                                                     Date.parse(@due_to_date),
+                                                     @due_to_date,
                                                      future_date).sort {|x,y| x.game_date <=> y.game_date}
 
     # Get current team league points for this season
@@ -32,7 +32,7 @@ class DSFutureFixturesEffectStrategy < DSBaseStrategy
         current_comp_team = (@team.team_name.eql? home_team.team_name) ? away_team : home_team
 
         # get the arrival team league points according to relevant date
-        all_games_for_comp_team = @file_reader.getAllGamesFor(current_comp_team, Date.parse('01-01-1804'), Date.parse(@due_to_date))
+        all_games_for_comp_team = @file_reader.getAllGamesFor(current_comp_team, Date.parse('01-01-1804'), @due_to_date)
         current_comp_team_points = @file_reader.getTeamPoints(all_games_for_comp_team, current_season, current_comp_team)
 
         # calculate the difference between the arrival league points to the current team points
@@ -46,7 +46,7 @@ class DSFutureFixturesEffectStrategy < DSBaseStrategy
       return normalizeGrade(grade, 7.0)
     else
 
-      # print @team.team_name + "\n"
+       # print "#" + @team.team_name + "#temp#\n"
 
       return 0
     end

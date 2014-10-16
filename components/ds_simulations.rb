@@ -30,7 +30,7 @@ class DSSimulations
     @file_reader.teamsHash.each do |team_name, team_object|
 
       # get all games per team between dates
-      all_games_for_team = @file_reader.getAllGamesFor(team_object, Date.parse('01-01-1804'), Date.parse(due_to_date))
+      all_games_for_team = @file_reader.getAllGamesFor(team_object, Date.parse('01-01-1804'), due_to_date)
 
       if (not all_games_for_team.nil?)
 
@@ -39,7 +39,7 @@ class DSSimulations
 
           # For simulation purposes -
           # Check whether team has a draw or not in X number of games after custom date
-          some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, Date.parse(due_to_date), success_indicator)
+          some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, due_to_date, success_indicator)
           did_draw_since = false
           # count the number of draws since date
           some_games_for_team.each do |current_game|

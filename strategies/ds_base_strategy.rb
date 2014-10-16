@@ -8,7 +8,7 @@ class DSBaseStrategy
 
     @file_reader = file_reader
 
-    @all_team_games  = @file_reader.getAllGamesFor(team, Date.parse('01-01-1804'), Date.parse(due_to_date))
+    @all_team_games  = @file_reader.getAllGamesFor(team, Date.parse('01-01-1804'), due_to_date)
 
     @team = team
   end
