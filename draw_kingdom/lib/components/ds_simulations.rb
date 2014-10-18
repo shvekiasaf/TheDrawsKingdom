@@ -20,7 +20,7 @@ class DSSimulations
     @file_reader = file_reader
   end
 
-  def runSimulationWithStrategies(strategies, due_to_date, success_indicator, bet_ammount_limit, should_print_log)
+  def runSimulationWithStrategies(strategies, due_to_date, success_indicator)
 
     @records_array = Array.new()
 
@@ -41,11 +41,17 @@ class DSSimulations
           # Check whether team has a draw or not in X number of games after custom date
           some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, due_to_date, success_indicator)
           did_draw_since = false
+          draw_after_attempt = 0
           # count the number of draws since date
           some_games_for_team.each do |current_game|
+            draw_after_attempt += 1
             if (current_game.isDraw)
               did_draw_since = true
+              break
             end
+          end
+          if (did_draw_since != true)
+            draw_after_attempt = -1
           end
 
           # print team_name + "," + (did_draw_since ? "1" : "0")
@@ -65,7 +71,7 @@ class DSSimulations
             # print "," + ('%.2f' % tempgrade)
           end
 
-          currentRecord = DSRecord.new(team_object, @totalGrade, did_draw_since)
+          currentRecord = DSRecord.new(team_object, @totalGrade, did_draw_since, draw_after_attempt)
           @records_array.push(currentRecord)
 
           # debug
@@ -81,23 +87,12 @@ class DSSimulations
     #  print "====================================" + "\n"
     @records_array = @records_array.sort {|x,y| y.general_score <=> x.general_score}
 
-    did_draw_since_index = 0.0
-    for i in 0..(bet_ammount_limit - 1)
+    if (@records_array.length > 0)
+      current_record = @records_array[0]
 
-      x = @records_array[i]
-
-      if (x.did_draw_since)
-        did_draw_since_index += 1
-      end
-      if (should_print_log)
-        print  x.team_object.team_name.to_s + " (" + ('%.2f' % x.general_score) + ")\n"
-      end
+      return current_record
+    else
+      return nil
     end
-
-    finalgrade = did_draw_since_index / bet_ammount_limit
-    return finalgrade
-
   end
-
-
 end

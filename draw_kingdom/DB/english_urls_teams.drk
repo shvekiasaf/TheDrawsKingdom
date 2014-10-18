@@ -1,0 +1,283 @@
+---
+Sunderland: !ruby/object:DSTeam
+  team_name: Sunderland
+Manchester United: !ruby/object:DSTeam
+  team_name: Manchester United
+Aston Villa: !ruby/object:DSTeam
+  team_name: Aston Villa
+Manchester City: !ruby/object:DSTeam
+  team_name: Manchester City
+Tottenham: !ruby/object:DSTeam
+  team_name: Tottenham
+Newcastle: !ruby/object:DSTeam
+  team_name: Newcastle
+Leicester: !ruby/object:DSTeam
+  team_name: Leicester
+Southampton: !ruby/object:DSTeam
+  team_name: Southampton
+Burnley: !ruby/object:DSTeam
+  team_name: Burnley
+West Ham: !ruby/object:DSTeam
+  team_name: West Ham
+Crystal Palace: !ruby/object:DSTeam
+  team_name: Crystal Palace
+Chelsea: !ruby/object:DSTeam
+  team_name: Chelsea
+Arsenal: !ruby/object:DSTeam
+  team_name: Arsenal
+Hull: !ruby/object:DSTeam
+  team_name: Hull
+Everton: !ruby/object:DSTeam
+  team_name: Everton
+Queens P.R.: !ruby/object:DSTeam
+  team_name: Queens P.R.
+Liverpool: !ruby/object:DSTeam
+  team_name: Liverpool
+Stoke: !ruby/object:DSTeam
+  team_name: Stoke
+Swansea: !ruby/object:DSTeam
+  team_name: Swansea
+West Bromwich: !ruby/object:DSTeam
+  team_name: West Bromwich
+Wigan: !ruby/object:DSTeam
+  team_name: Wigan
+Ipswich: !ruby/object:DSTeam
+  team_name: Ipswich
+Rotherham: !ruby/object:DSTeam
+  team_name: Rotherham
+Leeds: !ruby/object:DSTeam
+  team_name: Leeds
+Cardiff: !ruby/object:DSTeam
+  team_name: Cardiff
+Nottingham F.: !ruby/object:DSTeam
+  team_name: Nottingham F.
+Fulham: !ruby/object:DSTeam
+  team_name: Fulham
+Norwich: !ruby/object:DSTeam
+  team_name: Norwich
+Huddersfield: !ruby/object:DSTeam
+  team_name: Huddersfield
+Blackpool: !ruby/object:DSTeam
+  team_name: Blackpool
+Blackburn: !ruby/object:DSTeam
+  team_name: Blackburn
+Millwall: !ruby/object:DSTeam
+  team_name: Millwall
+Wolves: !ruby/object:DSTeam
+  team_name: Wolves
+Reading: !ruby/object:DSTeam
+  team_name: Reading
+Derby: !ruby/object:DSTeam
+  team_name: Derby
+Sheffield Wed: !ruby/object:DSTeam
+  team_name: Sheffield Wed
+Watford: !ruby/object:DSTeam
+  team_name: Watford
+Birmingham: !ruby/object:DSTeam
+  team_name: Birmingham
+Bolton: !ruby/object:DSTeam
+  team_name: Bolton
+Bournemouth: !ruby/object:DSTeam
+  team_name: Bournemouth
+Charlton: !ruby/object:DSTeam
+  team_name: Charlton
+Brighton: !ruby/object:DSTeam
+  team_name: Brighton
+Middlesbrough: !ruby/object:DSTeam
+  team_name: Middlesbrough
+Brentford: !ruby/object:DSTeam
+  team_name: Brentford
+Coventry: !ruby/object:DSTeam
+  team_name: Coventry
+Gillingham: !ruby/object:DSTeam
+  team_name: Gillingham
+Crewe: !ruby/object:DSTeam
+  team_name: Crewe
+Notts County: !ruby/object:DSTeam
+  team_name: Notts County
+Leyton Orient: !ruby/object:DSTeam
+  team_name: Leyton Orient
+Preston: !ruby/object:DSTeam
+  team_name: Preston
+Sheffield Utd: !ruby/object:DSTeam
+  team_name: Sheffield Utd
+MK Dons: !ruby/object:DSTeam
+  team_name: MK Dons
+Barnsley: !ruby/object:DSTeam
+  team_name: Barnsley
+Doncaster: !ruby/object:DSTeam
+  team_name: Doncaster
+Chesterfield: !ruby/object:DSTeam
+  team_name: Chesterfield
+Swindon: !ruby/object:DSTeam
+  team_name: Swindon
+Rochdale: !ruby/object:DSTeam
+  team_name: Rochdale
+Oldham: !ruby/object:DSTeam
+  team_name: Oldham
+Bristol City: !ruby/object:DSTeam
+  team_name: Bristol City
+Fleetwood Town: !ruby/object:DSTeam
+  team_name: Fleetwood Town
+Crawley Town: !ruby/object:DSTeam
+  team_name: Crawley Town
+Peterborough: !ruby/object:DSTeam
+  team_name: Peterborough
+Port Vale: !ruby/object:DSTeam
+  team_name: Port Vale
+Scunthorpe: !ruby/object:DSTeam
+  team_name: Scunthorpe
+Colchester: !ruby/object:DSTeam
+  team_name: Colchester
+Walsall: !ruby/object:DSTeam
+  team_name: Walsall
+Yeovil: !ruby/object:DSTeam
+  team_name: Yeovil
+Bradford: !ruby/object:DSTeam
+  team_name: Bradford
+Burton Albion: !ruby/object:DSTeam
+  team_name: Burton Albion
+Morecambe: !ruby/object:DSTeam
+  team_name: Morecambe
+Bury: !ruby/object:DSTeam
+  team_name: Bury
+Portsmouth: !ruby/object:DSTeam
+  team_name: Portsmouth
+Cheltenham: !ruby/object:DSTeam
+  team_name: Cheltenham
+Northampton: !ruby/object:DSTeam
+  team_name: Northampton
+Dagenham and Redbridge: !ruby/object:DSTeam
+  team_name: Dagenham and Redbridge
+Newport County: !ruby/object:DSTeam
+  team_name: Newport County
+Hartlepool: !ruby/object:DSTeam
+  team_name: Hartlepool
+Luton: !ruby/object:DSTeam
+  team_name: Luton
+Mansfield: !ruby/object:DSTeam
+  team_name: Mansfield
+Cambridge United: !ruby/object:DSTeam
+  team_name: Cambridge United
+Plymouth: !ruby/object:DSTeam
+  team_name: Plymouth
+Carlisle Utd: !ruby/object:DSTeam
+  team_name: Carlisle Utd
+Oxford United: !ruby/object:DSTeam
+  team_name: Oxford United
+Tranmere: !ruby/object:DSTeam
+  team_name: Tranmere
+Stevenage: !ruby/object:DSTeam
+  team_name: Stevenage
+Accrington: !ruby/object:DSTeam
+  team_name: Accrington
+Southend: !ruby/object:DSTeam
+  team_name: Southend
+Exeter: !ruby/object:DSTeam
+  team_name: Exeter
+Wycombe: !ruby/object:DSTeam
+  team_name: Wycombe
+AFC Wimbledon: !ruby/object:DSTeam
+  team_name: AFC Wimbledon
+York: !ruby/object:DSTeam
+  team_name: York
+Shrewsbury: !ruby/object:DSTeam
+  team_name: Shrewsbury
+Woking: !ruby/object:DSTeam
+  team_name: Woking
+AFC Telford: !ruby/object:DSTeam
+  team_name: AFC Telford
+Aldershot Town: !ruby/object:DSTeam
+  team_name: Aldershot Town
+Eastleigh: !ruby/object:DSTeam
+  team_name: Eastleigh
+Dover Athletic: !ruby/object:DSTeam
+  team_name: Dover Athletic
+Barnet: !ruby/object:DSTeam
+  team_name: Barnet
+Chester: !ruby/object:DSTeam
+  team_name: Chester
+Wrexham: !ruby/object:DSTeam
+  team_name: Wrexham
+Altrincham: !ruby/object:DSTeam
+  team_name: Altrincham
+Braintree Town: !ruby/object:DSTeam
+  team_name: Braintree Town
+Alfreton: !ruby/object:DSTeam
+  team_name: Alfreton
+Dartford: !ruby/object:DSTeam
+  team_name: Dartford
+Halifax: !ruby/object:DSTeam
+  team_name: Halifax
+Kidderminster: !ruby/object:DSTeam
+  team_name: Kidderminster
+Gateshead: !ruby/object:DSTeam
+  team_name: Gateshead
+Lincoln: !ruby/object:DSTeam
+  team_name: Lincoln
+Southport: !ruby/object:DSTeam
+  team_name: Southport
+Welling Utd: !ruby/object:DSTeam
+  team_name: Welling Utd
+Torquay: !ruby/object:DSTeam
+  team_name: Torquay
+Grimsby: !ruby/object:DSTeam
+  team_name: Grimsby
+Bristol Rovers: !ruby/object:DSTeam
+  team_name: Bristol Rovers
+Forest Green: !ruby/object:DSTeam
+  team_name: Forest Green
+Nuneaton: !ruby/object:DSTeam
+  team_name: Nuneaton
+Macclesfield: !ruby/object:DSTeam
+  team_name: Macclesfield
+Bristol Rvs: !ruby/object:DSTeam
+  team_name: Bristol Rvs
+Stockport: !ruby/object:DSTeam
+  team_name: Stockport
+Hereford: !ruby/object:DSTeam
+  team_name: Hereford
+Aldershot: !ruby/object:DSTeam
+  team_name: Aldershot
+Darlington: !ruby/object:DSTeam
+  team_name: Darlington
+Alfreton Town: !ruby/object:DSTeam
+  team_name: Alfreton Town
+Nuneaton Town: !ruby/object:DSTeam
+  team_name: Nuneaton Town
+Telford United: !ruby/object:DSTeam
+  team_name: Telford United
+Welling United: !ruby/object:DSTeam
+  team_name: Welling United
+Hyde United: !ruby/object:DSTeam
+  team_name: Hyde United
+Tamworth: !ruby/object:DSTeam
+  team_name: Tamworth
+Salisbury City: !ruby/object:DSTeam
+  team_name: Salisbury City
+AFC Telford United: !ruby/object:DSTeam
+  team_name: AFC Telford United
+Barrow: !ruby/object:DSTeam
+  team_name: Barrow
+Ebbsfleet: !ruby/object:DSTeam
+  team_name: Ebbsfleet
+Hayes & Yeading: !ruby/object:DSTeam
+  team_name: Hayes & Yeading
+Kettering Town: !ruby/object:DSTeam
+  team_name: Kettering Town
+Bath City: !ruby/object:DSTeam
+  team_name: Bath City
+Histon: !ruby/object:DSTeam
+  team_name: Histon
+Rushden & D: !ruby/object:DSTeam
+  team_name: Rushden & D
+Eastbourne Borough: !ruby/object:DSTeam
+  team_name: Eastbourne Borough
+Grays: !ruby/object:DSTeam
+  team_name: Grays
+Lewes: !ruby/object:DSTeam
+  team_name: Lewes
+Northwich: !ruby/object:DSTeam
+  team_name: Northwich
+Weymouth: !ruby/object:DSTeam
+  team_name: Weymouth

@@ -1,0 +1,59 @@
+---
+Charleroi: !ruby/object:DSTeam
+  team_name: Charleroi
+KV Kortrijk: !ruby/object:DSTeam
+  team_name: KV Kortrijk
+KAA Gent: !ruby/object:DSTeam
+  team_name: KAA Gent
+SV Zulte Waregem: !ruby/object:DSTeam
+  team_name: SV Zulte Waregem
+KV Mechelen: !ruby/object:DSTeam
+  team_name: KV Mechelen
+Club Brugge: !ruby/object:DSTeam
+  team_name: Club Brugge
+Cercle Brugge: !ruby/object:DSTeam
+  team_name: Cercle Brugge
+Sporting Lokeren: !ruby/object:DSTeam
+  team_name: Sporting Lokeren
+KVC Westerlo: !ruby/object:DSTeam
+  team_name: KVC Westerlo
+RSC Anderlecht: !ruby/object:DSTeam
+  team_name: RSC Anderlecht
+K. Lierse S.K.: !ruby/object:DSTeam
+  team_name: K. Lierse S.K.
+Waasland: !ruby/object:DSTeam
+  team_name: Waasland
+Moeskroen-Peruwelz: !ruby/object:DSTeam
+  team_name: Moeskroen-Peruwelz
+KV Oostende: !ruby/object:DSTeam
+  team_name: KV Oostende
+Royal Standard de Liège: !ruby/object:DSTeam
+  team_name: Royal Standard de Liège
+KRC Genk: !ruby/object:DSTeam
+  team_name: KRC Genk
+Standard: !ruby/object:DSTeam
+  team_name: Standard
+Oostende: !ruby/object:DSTeam
+  team_name: Oostende
+Waasland-Beveren: !ruby/object:DSTeam
+  team_name: Waasland-Beveren
+Mouscron-Peruwelz: !ruby/object:DSTeam
+  team_name: Mouscron-Peruwelz
+Bergen: !ruby/object:DSTeam
+  team_name: Bergen
+Oud-Heverlee Leuven: !ruby/object:DSTeam
+  team_name: Oud-Heverlee Leuven
+Germinal: !ruby/object:DSTeam
+  team_name: Germinal
+St Truiden: !ruby/object:DSTeam
+  team_name: St Truiden
+Eupen: !ruby/object:DSTeam
+  team_name: Eupen
+Roeselare: !ruby/object:DSTeam
+  team_name: Roeselare
+Dender: !ruby/object:DSTeam
+  team_name: Dender
+Mouscron: !ruby/object:DSTeam
+  team_name: Mouscron
+Tubize: !ruby/object:DSTeam
+  team_name: Tubize

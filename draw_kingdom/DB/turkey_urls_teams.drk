@@ -1,0 +1,65 @@
+---
+Erciyesspor: !ruby/object:DSTeam
+  team_name: Erciyesspor
+Galatasaray: !ruby/object:DSTeam
+  team_name: Galatasaray
+Istanbul Buyuksehir: !ruby/object:DSTeam
+  team_name: Istanbul Buyuksehir
+Trabzonspor: !ruby/object:DSTeam
+  team_name: Trabzonspor
+Fenerbahce: !ruby/object:DSTeam
+  team_name: Fenerbahce
+Konyaspor: !ruby/object:DSTeam
+  team_name: Konyaspor
+Bursaspor: !ruby/object:DSTeam
+  team_name: Bursaspor
+Besiktas: !ruby/object:DSTeam
+  team_name: Besiktas
+Gaziantepspor: !ruby/object:DSTeam
+  team_name: Gaziantepspor
+Karabukspor: !ruby/object:DSTeam
+  team_name: Karabukspor
+Eskisehirspor: !ruby/object:DSTeam
+  team_name: Eskisehirspor
+Mersin Idman Yurdu: !ruby/object:DSTeam
+  team_name: Mersin Idman Yurdu
+Akhisar Belediye: !ruby/object:DSTeam
+  team_name: Akhisar Belediye
+Kasimpasa: !ruby/object:DSTeam
+  team_name: Kasimpasa
+Sivasspor: !ruby/object:DSTeam
+  team_name: Sivasspor
+Genclerbirligi: !ruby/object:DSTeam
+  team_name: Genclerbirligi
+Rizespor: !ruby/object:DSTeam
+  team_name: Rizespor
+Balikesirspor: !ruby/object:DSTeam
+  team_name: Balikesirspor
+Akhisar Belediyespor: !ruby/object:DSTeam
+  team_name: Akhisar Belediyespor
+Antalyaspor: !ruby/object:DSTeam
+  team_name: Antalyaspor
+Elazigspor: !ruby/object:DSTeam
+  team_name: Elazigspor
+Kayserispor: !ruby/object:DSTeam
+  team_name: Kayserispor
+Orduspor: !ruby/object:DSTeam
+  team_name: Orduspor
+Ankaragucu: !ruby/object:DSTeam
+  team_name: Ankaragucu
+Manisaspor: !ruby/object:DSTeam
+  team_name: Manisaspor
+Samsunspor: !ruby/object:DSTeam
+  team_name: Samsunspor
+Bucaspor: !ruby/object:DSTeam
+  team_name: Bucaspor
+Diyarbakirspor: !ruby/object:DSTeam
+  team_name: Diyarbakirspor
+Denizlispor: !ruby/object:DSTeam
+  team_name: Denizlispor
+Hacettepespor: !ruby/object:DSTeam
+  team_name: Hacettepespor
+Kocaelispor: !ruby/object:DSTeam
+  team_name: Kocaelispor
+Ankaraspor: !ruby/object:DSTeam
+  team_name: Ankaraspor

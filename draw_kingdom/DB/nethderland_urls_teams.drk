@@ -1,0 +1,93 @@
+---
+Jong Ajax: !ruby/object:DSTeam
+  team_name: Jong Ajax
+Telstar: !ruby/object:DSTeam
+  team_name: Telstar
+FC Oss: !ruby/object:DSTeam
+  team_name: FC Oss
+FC Eindhoven: !ruby/object:DSTeam
+  team_name: FC Eindhoven
+Helmond: !ruby/object:DSTeam
+  team_name: Helmond
+Volendam: !ruby/object:DSTeam
+  team_name: Volendam
+Almere City: !ruby/object:DSTeam
+  team_name: Almere City
+RKC Waalwijk: !ruby/object:DSTeam
+  team_name: RKC Waalwijk
+Emmen: !ruby/object:DSTeam
+  team_name: Emmen
+MVV Maastricht: !ruby/object:DSTeam
+  team_name: MVV Maastricht
+De Graafschap: !ruby/object:DSTeam
+  team_name: De Graafschap
+Achilles'29: !ruby/object:DSTeam
+  team_name: Achilles'29
+Sparta Rotterdam: !ruby/object:DSTeam
+  team_name: Sparta Rotterdam
+VVV-Venlo: !ruby/object:DSTeam
+  team_name: VVV-Venlo
+N.E.C. Nijmegen: !ruby/object:DSTeam
+  team_name: N.E.C. Nijmegen
+Den Bosch: !ruby/object:DSTeam
+  team_name: Den Bosch
+Jong PSV Eindhoven: !ruby/object:DSTeam
+  team_name: Jong PSV Eindhoven
+Fortuna Sittard: !ruby/object:DSTeam
+  team_name: Fortuna Sittard
+Jong FC Twente: !ruby/object:DSTeam
+  team_name: Jong FC Twente
+Roda JC Kerkrade: !ruby/object:DSTeam
+  team_name: Roda JC Kerkrade
+Utrecht: !ruby/object:DSTeam
+  team_name: Utrecht
+Zwolle: !ruby/object:DSTeam
+  team_name: Zwolle
+Cambuur: !ruby/object:DSTeam
+  team_name: Cambuur
+Dordrecht: !ruby/object:DSTeam
+  team_name: Dordrecht
+Heerenveen: !ruby/object:DSTeam
+  team_name: Heerenveen
+AZ Alkmaar: !ruby/object:DSTeam
+  team_name: AZ Alkmaar
+Heracles: !ruby/object:DSTeam
+  team_name: Heracles
+Excelsior: !ruby/object:DSTeam
+  team_name: Excelsior
+NAC Breda: !ruby/object:DSTeam
+  team_name: NAC Breda
+Vitesse: !ruby/object:DSTeam
+  team_name: Vitesse
+Feyenoord: !ruby/object:DSTeam
+  team_name: Feyenoord
+Den Haag: !ruby/object:DSTeam
+  team_name: Den Haag
+Groningen: !ruby/object:DSTeam
+  team_name: Groningen
+Go Ahead Eagles: !ruby/object:DSTeam
+  team_name: Go Ahead Eagles
+Willem II: !ruby/object:DSTeam
+  team_name: Willem II
+'Heracles ': !ruby/object:DSTeam
+  team_name: 'Heracles '
+'Roda ': !ruby/object:DSTeam
+  team_name: 'Roda '
+'Ajax ': !ruby/object:DSTeam
+  team_name: 'Ajax '
+'Feyenoord ': !ruby/object:DSTeam
+  team_name: 'Feyenoord '
+'Graafschap ': !ruby/object:DSTeam
+  team_name: 'Graafschap '
+'Groningen ': !ruby/object:DSTeam
+  team_name: 'Groningen '
+'Utrecht ': !ruby/object:DSTeam
+  team_name: 'Utrecht '
+'Vitesse ': !ruby/object:DSTeam
+  team_name: 'Vitesse '
+'Willem II ': !ruby/object:DSTeam
+  team_name: 'Willem II '
+Roda JC: !ruby/object:DSTeam
+  team_name: Roda JC
+Sparta: !ruby/object:DSTeam
+  team_name: Sparta

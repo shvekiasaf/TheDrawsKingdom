@@ -1,0 +1,137 @@
+---
+Verona: !ruby/object:DSTeam
+  team_name: Verona
+Cagliari: !ruby/object:DSTeam
+  team_name: Cagliari
+AS Roma: !ruby/object:DSTeam
+  team_name: AS Roma
+Chievo: !ruby/object:DSTeam
+  team_name: Chievo
+Sassuolo: !ruby/object:DSTeam
+  team_name: Sassuolo
+Juventus: !ruby/object:DSTeam
+  team_name: Juventus
+Fiorentina: !ruby/object:DSTeam
+  team_name: Fiorentina
+Lazio: !ruby/object:DSTeam
+  team_name: Lazio
+Atalanta: !ruby/object:DSTeam
+  team_name: Atalanta
+Parma: !ruby/object:DSTeam
+  team_name: Parma
+Sampdoria: !ruby/object:DSTeam
+  team_name: Sampdoria
+Torino: !ruby/object:DSTeam
+  team_name: Torino
+Udinese: !ruby/object:DSTeam
+  team_name: Udinese
+AC Milan: !ruby/object:DSTeam
+  team_name: AC Milan
+Palermo: !ruby/object:DSTeam
+  team_name: Palermo
+Cesena: !ruby/object:DSTeam
+  team_name: Cesena
+Inter Milan: !ruby/object:DSTeam
+  team_name: Inter Milan
+Napoli: !ruby/object:DSTeam
+  team_name: Napoli
+Genoa: !ruby/object:DSTeam
+  team_name: Genoa
+Empoli: !ruby/object:DSTeam
+  team_name: Empoli
+Entella: !ruby/object:DSTeam
+  team_name: Entella
+Ternana: !ruby/object:DSTeam
+  team_name: Ternana
+Spezia: !ruby/object:DSTeam
+  team_name: Spezia
+Carpi: !ruby/object:DSTeam
+  team_name: Carpi
+Perugia: !ruby/object:DSTeam
+  team_name: Perugia
+Frosinone: !ruby/object:DSTeam
+  team_name: Frosinone
+Vicenza: !ruby/object:DSTeam
+  team_name: Vicenza
+Pescara: !ruby/object:DSTeam
+  team_name: Pescara
+Bologna: !ruby/object:DSTeam
+  team_name: Bologna
+Varese: !ruby/object:DSTeam
+  team_name: Varese
+Brescia: !ruby/object:DSTeam
+  team_name: Brescia
+Pro Vercelli: !ruby/object:DSTeam
+  team_name: Pro Vercelli
+Latina Calcio: !ruby/object:DSTeam
+  team_name: Latina Calcio
+Modena: !ruby/object:DSTeam
+  team_name: Modena
+Catania: !ruby/object:DSTeam
+  team_name: Catania
+Livorno: !ruby/object:DSTeam
+  team_name: Livorno
+Trapani Calcio: !ruby/object:DSTeam
+  team_name: Trapani Calcio
+Crotone: !ruby/object:DSTeam
+  team_name: Crotone
+Lanciano: !ruby/object:DSTeam
+  team_name: Lanciano
+Bari: !ruby/object:DSTeam
+  team_name: Bari
+Avellino: !ruby/object:DSTeam
+  team_name: Avellino
+Cittadella: !ruby/object:DSTeam
+  team_name: Cittadella
+Siena: !ruby/object:DSTeam
+  team_name: Siena
+Novara: !ruby/object:DSTeam
+  team_name: Novara
+Lecce: !ruby/object:DSTeam
+  team_name: Lecce
+Reggina: !ruby/object:DSTeam
+  team_name: Reggina
+Virtus Lanciano: !ruby/object:DSTeam
+  team_name: Virtus Lanciano
+Trapani: !ruby/object:DSTeam
+  team_name: Trapani
+Virtus Entella: !ruby/object:DSTeam
+  team_name: Virtus Entella
+Latina: !ruby/object:DSTeam
+  team_name: Latina
+Padova: !ruby/object:DSTeam
+  team_name: Padova
+Juve Stabia: !ruby/object:DSTeam
+  team_name: Juve Stabia
+Grosseto: !ruby/object:DSTeam
+  team_name: Grosseto
+Ascoli: !ruby/object:DSTeam
+  team_name: Ascoli
+Albinoleffe: !ruby/object:DSTeam
+  team_name: Albinoleffe
+Gubbio: !ruby/object:DSTeam
+  team_name: Gubbio
+Nocerina: !ruby/object:DSTeam
+  team_name: Nocerina
+Piacenza: !ruby/object:DSTeam
+  team_name: Piacenza
+Portogruaro: !ruby/object:DSTeam
+  team_name: Portogruaro
+Triestina: !ruby/object:DSTeam
+  team_name: Triestina
+Gallipoli: !ruby/object:DSTeam
+  team_name: Gallipoli
+Ancona: !ruby/object:DSTeam
+  team_name: Ancona
+Mantova: !ruby/object:DSTeam
+  team_name: Mantova
+Salernitana: !ruby/object:DSTeam
+  team_name: Salernitana
+'Piacenza ': !ruby/object:DSTeam
+  team_name: 'Piacenza '
+Rimini: !ruby/object:DSTeam
+  team_name: Rimini
+Pisa: !ruby/object:DSTeam
+  team_name: Pisa
+Treviso: !ruby/object:DSTeam
+  team_name: Treviso
