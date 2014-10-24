@@ -1,18 +1,12 @@
 ---
-Eintracht Frankfurt: !ruby/object:DSTeam
-  team_name: Eintracht Frankfurt
 FC Koln: !ruby/object:DSTeam
   team_name: FC Koln
+Bor. Dortmund: !ruby/object:DSTeam
+  team_name: Bor. Dortmund
 Bayern Munich: !ruby/object:DSTeam
   team_name: Bayern Munich
 Werder Bremen: !ruby/object:DSTeam
   team_name: Werder Bremen
-Bor. Dortmund: !ruby/object:DSTeam
-  team_name: Bor. Dortmund
-Mainz 05: !ruby/object:DSTeam
-  team_name: Mainz 05
-Augsburg: !ruby/object:DSTeam
-  team_name: Augsburg
 Hannover: !ruby/object:DSTeam
   team_name: Hannover
 Bor. Monchengladbach: !ruby/object:DSTeam
@@ -25,52 +19,58 @@ Stuttgart: !ruby/object:DSTeam
   team_name: Stuttgart
 Bayer Leverkusen: !ruby/object:DSTeam
   team_name: Bayer Leverkusen
-Schalke 04: !ruby/object:DSTeam
-  team_name: Schalke 04
-Hertha Berlin: !ruby/object:DSTeam
-  team_name: Hertha Berlin
 Hamburger SV: !ruby/object:DSTeam
   team_name: Hamburger SV
 Hoffenheim: !ruby/object:DSTeam
   team_name: Hoffenheim
 Paderborn: !ruby/object:DSTeam
   team_name: Paderborn
-Gr.Furth: !ruby/object:DSTeam
-  team_name: Gr.Furth
-Nurnberg: !ruby/object:DSTeam
-  team_name: Nurnberg
-FC Heidenheim: !ruby/object:DSTeam
-  team_name: FC Heidenheim
-Kaiserslautern: !ruby/object:DSTeam
-  team_name: Kaiserslautern
-Bochum: !ruby/object:DSTeam
-  team_name: Bochum
-SV Darmstadt 98: !ruby/object:DSTeam
-  team_name: SV Darmstadt 98
-RB Leipzig: !ruby/object:DSTeam
-  team_name: RB Leipzig
-Union Berlin: !ruby/object:DSTeam
-  team_name: Union Berlin
-SV Sandhausen: !ruby/object:DSTeam
-  team_name: SV Sandhausen
-Eintracht Braunschweig: !ruby/object:DSTeam
-  team_name: Eintracht Braunschweig
-FC Erzgebirge Aue: !ruby/object:DSTeam
-  team_name: FC Erzgebirge Aue
-1860 Munchen: !ruby/object:DSTeam
-  team_name: 1860 Munchen
+Eintracht Frankfurt: !ruby/object:DSTeam
+  team_name: Eintracht Frankfurt
+Schalke 04: !ruby/object:DSTeam
+  team_name: Schalke 04
+Hertha Berlin: !ruby/object:DSTeam
+  team_name: Hertha Berlin
+Augsburg: !ruby/object:DSTeam
+  team_name: Augsburg
+Mainz 05: !ruby/object:DSTeam
+  team_name: Mainz 05
 FSV Frankfurt: !ruby/object:DSTeam
   team_name: FSV Frankfurt
 FC Ingolstadt 04: !ruby/object:DSTeam
   team_name: FC Ingolstadt 04
+FC Erzgebirge Aue: !ruby/object:DSTeam
+  team_name: FC Erzgebirge Aue
+1860 Munchen: !ruby/object:DSTeam
+  team_name: 1860 Munchen
 Karlsruhe: !ruby/object:DSTeam
   team_name: Karlsruhe
 VFR Aalen: !ruby/object:DSTeam
   team_name: VFR Aalen
+Gr.Furth: !ruby/object:DSTeam
+  team_name: Gr.Furth
+Nurnberg: !ruby/object:DSTeam
+  team_name: Nurnberg
+RB Leipzig: !ruby/object:DSTeam
+  team_name: RB Leipzig
+Bochum: !ruby/object:DSTeam
+  team_name: Bochum
+Union Berlin: !ruby/object:DSTeam
+  team_name: Union Berlin
+Kaiserslautern: !ruby/object:DSTeam
+  team_name: Kaiserslautern
 Fortuna Dusseldorf: !ruby/object:DSTeam
   team_name: Fortuna Dusseldorf
 St. Pauli: !ruby/object:DSTeam
   team_name: St. Pauli
+FC Heidenheim: !ruby/object:DSTeam
+  team_name: FC Heidenheim
+SV Sandhausen: !ruby/object:DSTeam
+  team_name: SV Sandhausen
+Eintracht Braunschweig: !ruby/object:DSTeam
+  team_name: Eintracht Braunschweig
+SV Darmstadt 98: !ruby/object:DSTeam
+  team_name: SV Darmstadt 98
 Bielefeld: !ruby/object:DSTeam
   team_name: Bielefeld
 Cottbus: !ruby/object:DSTeam

@@ -2,7 +2,7 @@ require_relative "../components/ds_file_reader"
 
 class DSBaseStrategy
 
-  def loadGamesAndTeam(file_reader, team, due_to_date)
+  def loadGamesAndTeam(file_reader, team, due_to_date, strategies, stay_power)
 
     @due_to_date = due_to_date
 
@@ -11,6 +11,10 @@ class DSBaseStrategy
     @all_team_games  = @file_reader.getAllGamesFor(team, Date.parse('01-01-1804'), due_to_date)
 
     @team = team
+
+    @strategies = strategies
+
+    @stay_power = stay_power
   end
 
   # Grade will be a number between 0 to 100
@@ -20,6 +24,10 @@ class DSBaseStrategy
   def normalizeGrade(grade, range)
 
     return  ((grade >= range ? range : grade) / range) * 100.0
+  end
+
+  def shouldRunWhenTreatingArrivals
+    return true
   end
 
 end

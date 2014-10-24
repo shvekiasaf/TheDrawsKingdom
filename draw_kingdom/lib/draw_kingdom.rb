@@ -1,4 +1,3 @@
-require "draw_kingdom/version"
 require_relative "components/ds_file_reader"
 require_relative "components/ds_simulations"
 require 'date'
@@ -6,16 +5,19 @@ require 'date'
 module DrawKingdom
 
 # Read all games from file
-  @file_readers = [DSFileReader.new("german_urls"),
-      DSFileReader.new("spanish_urls"),
-      DSFileReader.new("italian_urls"),
-      # DSFileReader.new("greece_urls"),
-      DSFileReader.new("belgium_urls"),
-      DSFileReader.new("frances_urls"),
-DSFileReader.new("nethderland_urls"),
-DSFileReader.new("portugali_urls"),
-DSFileReader.new("turkey_urls"),
-DSFileReader.new("english_urls")]
+#   @file_readers = [DSFileReader.new("german_urls"),
+#       DSFileReader.new("spanish_urls"),
+#       DSFileReader.new("italian_urls"),
+#       DSFileReader.new("greece_urls"),
+#       DSFileReader.new("belgium_urls"),
+#       DSFileReader.new("frances_urls"),
+#       DSFileReader.new("nethderland_urls"),
+#       DSFileReader.new("portugali_urls"),
+#       DSFileReader.new("turkey_urls"),
+#       DSFileReader.new("english_urls")]
+
+  @file_readers = [DSFileReader.new("italian_urls")]
+
 
   @file_readers.each do |current_file_reader|
 
@@ -24,14 +26,14 @@ DSFileReader.new("english_urls")]
 
     stay_power = 5
     initial_bet_money = 10
-    today_date = Date.parse("16-10-2014")
+    today_date = Date.parse("23-10-2014")
 
     @simulation_manager = DSSimulations.new(current_file_reader)
 
     # create array with dates for simluations
     dates_array = Array.new
     current_date = today_date - 60
-    for i in 0..(70)
+    for i in 0..(100)
 
       if (current_date.strftime("%m").eql? "08")
         current_date -= 100
@@ -44,38 +46,70 @@ DSFileReader.new("english_urls")]
     simulations1 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
-                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 0.75),
-                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.25)]
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 15.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 5.0)]
 
     simulations2 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
-                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 0.85),
-                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.15)]
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 17.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 3.0)]
 
     simulations3 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
-                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 0.075),
-                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.025),
-                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.9)]
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 75.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 25.0),
+                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 900.0)]
 
     simulations4 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
-                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 0.15),
-                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.1),
-                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.75)]
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 3.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 2.0),
+                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 15.0)]
 
     simulations5 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
-                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 0.4),
-                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.1),
-                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.5)]
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 4.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 1.0),
+                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 5.0)]
 
-    all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5]
-    # all_simulations = [simulations3]
+    simulations6 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 1.0),
+                    DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 1.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 1.0),
+                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.0),
+                    DSStrategyValue.new(DSArrivalsStrategy.new, 1.0)]
+
+    simulations7 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 1.0),
+                    DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 1.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 1.0),
+                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.0),
+                    DSStrategyValue.new(DSArrivalsStrategy.new, 1.0)]
+
+    simulations8 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 1.0),
+                    DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 1.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 2.0),
+                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 1.0),
+                    DSStrategyValue.new(DSArrivalsStrategy.new, 1.0)]
+
+    simulations9 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 1.0),
+                    DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 0.0),
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 2.0),
+                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 1.0),
+                    DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
+
+    all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5, simulations6, simulations7, simulations8,simulations9]
+    # all_simulations = [simulations6, simulations7, simulations8,simulations9]
 
     max_earnings = -9999999999
     selected_simulation = nil

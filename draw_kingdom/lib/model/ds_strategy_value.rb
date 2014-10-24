@@ -3,11 +3,11 @@ require_relative "../strategies/ds_base_strategy"
 class DSStrategyValue
 
   # readers
-  attr_reader :strategy, :value
+  attr_reader :strategy, :weight
 
-  def initialize(strategy, value)
+  def initialize(strategy, weight)
     @strategy = strategy
-    @value = value
+    @weight = weight
   end
 end
 

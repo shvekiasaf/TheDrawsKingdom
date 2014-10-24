@@ -1,20 +1,12 @@
 ---
-Jong Ajax: !ruby/object:DSTeam
-  team_name: Jong Ajax
-Telstar: !ruby/object:DSTeam
-  team_name: Telstar
-FC Oss: !ruby/object:DSTeam
-  team_name: FC Oss
-FC Eindhoven: !ruby/object:DSTeam
-  team_name: FC Eindhoven
-Helmond: !ruby/object:DSTeam
-  team_name: Helmond
-Volendam: !ruby/object:DSTeam
-  team_name: Volendam
-Almere City: !ruby/object:DSTeam
-  team_name: Almere City
-RKC Waalwijk: !ruby/object:DSTeam
-  team_name: RKC Waalwijk
+N.E.C. Nijmegen: !ruby/object:DSTeam
+  team_name: N.E.C. Nijmegen
+Den Bosch: !ruby/object:DSTeam
+  team_name: Den Bosch
+Sparta Rotterdam: !ruby/object:DSTeam
+  team_name: Sparta Rotterdam
+VVV-Venlo: !ruby/object:DSTeam
+  team_name: VVV-Venlo
 Emmen: !ruby/object:DSTeam
   team_name: Emmen
 MVV Maastricht: !ruby/object:DSTeam
@@ -23,20 +15,28 @@ De Graafschap: !ruby/object:DSTeam
   team_name: De Graafschap
 Achilles'29: !ruby/object:DSTeam
   team_name: Achilles'29
-Sparta Rotterdam: !ruby/object:DSTeam
-  team_name: Sparta Rotterdam
-VVV-Venlo: !ruby/object:DSTeam
-  team_name: VVV-Venlo
-N.E.C. Nijmegen: !ruby/object:DSTeam
-  team_name: N.E.C. Nijmegen
-Den Bosch: !ruby/object:DSTeam
-  team_name: Den Bosch
+Jong Ajax: !ruby/object:DSTeam
+  team_name: Jong Ajax
+Telstar: !ruby/object:DSTeam
+  team_name: Telstar
 Jong PSV Eindhoven: !ruby/object:DSTeam
   team_name: Jong PSV Eindhoven
+Almere City: !ruby/object:DSTeam
+  team_name: Almere City
+Helmond: !ruby/object:DSTeam
+  team_name: Helmond
 Fortuna Sittard: !ruby/object:DSTeam
   team_name: Fortuna Sittard
 Jong FC Twente: !ruby/object:DSTeam
   team_name: Jong FC Twente
+FC Eindhoven: !ruby/object:DSTeam
+  team_name: FC Eindhoven
+Volendam: !ruby/object:DSTeam
+  team_name: Volendam
+RKC Waalwijk: !ruby/object:DSTeam
+  team_name: RKC Waalwijk
+FC Oss: !ruby/object:DSTeam
+  team_name: FC Oss
 Roda JC Kerkrade: !ruby/object:DSTeam
   team_name: Roda JC Kerkrade
 Utrecht: !ruby/object:DSTeam

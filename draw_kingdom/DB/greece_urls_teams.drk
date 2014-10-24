@@ -1,4 +1,12 @@
 ---
+Niki Volos: !ruby/object:DSTeam
+  team_name: Niki Volos
+Panthrakikos: !ruby/object:DSTeam
+  team_name: Panthrakikos
+Panathinaikos: !ruby/object:DSTeam
+  team_name: Panathinaikos
+Ofi Crete: !ruby/object:DSTeam
+  team_name: Ofi Crete
 Xanthi: !ruby/object:DSTeam
   team_name: Xanthi
 Kalloni Lekanopedio: !ruby/object:DSTeam
@@ -7,22 +15,16 @@ Panaitolikos: !ruby/object:DSTeam
   team_name: Panaitolikos
 Paok Saloniki: !ruby/object:DSTeam
   team_name: Paok Saloniki
-Ofi Crete: !ruby/object:DSTeam
-  team_name: Ofi Crete
 Ergotelis: !ruby/object:DSTeam
   team_name: Ergotelis
+Atromitos Athinon: !ruby/object:DSTeam
+  team_name: Atromitos Athinon
 Kerkyra: !ruby/object:DSTeam
   team_name: Kerkyra
 Panionios: !ruby/object:DSTeam
   team_name: Panionios
-Atromitos Athinon: !ruby/object:DSTeam
-  team_name: Atromitos Athinon
 Veria: !ruby/object:DSTeam
   team_name: Veria
-Panathinaikos: !ruby/object:DSTeam
-  team_name: Panathinaikos
-Panthrakikos: !ruby/object:DSTeam
-  team_name: Panthrakikos
 Platanias: !ruby/object:DSTeam
   team_name: Platanias
 Pas Giannina: !ruby/object:DSTeam
@@ -31,8 +33,6 @@ Levadiakos: !ruby/object:DSTeam
   team_name: Levadiakos
 Olympiakos: !ruby/object:DSTeam
   team_name: Olympiakos
-Niki Volos: !ruby/object:DSTeam
-  team_name: Niki Volos
 Asteras Tripolis: !ruby/object:DSTeam
   team_name: Asteras Tripolis
 Panetolikos: !ruby/object:DSTeam

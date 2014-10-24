@@ -8,6 +8,7 @@ require_relative "../strategies/ds_draw_games_proportion_strategy"
 require_relative "../strategies/ds_last_non_draw_in_a_row_strategy"
 require_relative "../strategies/ds_non_draw_in_a_row_strategy"
 require_relative "../strategies/ds_future_fixtures_effect_strategy"
+require_relative "../strategies/ds_arrivals_strategy"
 require 'colorize'
 
 class DSSimulations
@@ -42,6 +43,7 @@ class DSSimulations
           some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, due_to_date, success_indicator)
           did_draw_since = false
           draw_after_attempt = 0
+
           # count the number of draws since date
           some_games_for_team.each do |current_game|
             draw_after_attempt += 1
@@ -57,19 +59,22 @@ class DSSimulations
           # print team_name + "," + (did_draw_since ? "1" : "0")
 
           @totalGrade = 0
+          weightSum = 0
           strategies.each do |current_strategy_value|
 
             # set all teams and team object for current strategy
-            current_strategy_value.strategy.loadGamesAndTeam(@file_reader, team_object, due_to_date)
+            current_strategy_value.strategy.loadGamesAndTeam(@file_reader, team_object, due_to_date, strategies, success_indicator)
 
             # calculate the current simulation grade
             tempgrade = current_strategy_value.strategy.getGrade.abs
 
-            @totalGrade += tempgrade * current_strategy_value.value
-
+            @totalGrade += tempgrade * current_strategy_value.weight
+            weightSum += current_strategy_value.weight
             # debug
             # print "," + ('%.2f' % tempgrade)
           end
+
+          @totalGrade /= weightSum
 
           currentRecord = DSRecord.new(team_object, @totalGrade, did_draw_since, draw_after_attempt)
           @records_array.push(currentRecord)

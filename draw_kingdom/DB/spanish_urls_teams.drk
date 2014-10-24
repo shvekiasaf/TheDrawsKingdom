@@ -1,32 +1,4 @@
 ---
-Rayo Vallecano: !ruby/object:DSTeam
-  team_name: Rayo Vallecano
-Barcelona: !ruby/object:DSTeam
-  team_name: Barcelona
-Eibar: !ruby/object:DSTeam
-  team_name: Eibar
-Real Sociedad: !ruby/object:DSTeam
-  team_name: Real Sociedad
-Levante: !ruby/object:DSTeam
-  team_name: Levante
-Elche: !ruby/object:DSTeam
-  team_name: Elche
-Celta Vigo: !ruby/object:DSTeam
-  team_name: Celta Vigo
-Getafe: !ruby/object:DSTeam
-  team_name: Getafe
-Almeria: !ruby/object:DSTeam
-  team_name: Almeria
-Malaga: !ruby/object:DSTeam
-  team_name: Malaga
-Granada: !ruby/object:DSTeam
-  team_name: Granada
-Real Madrid: !ruby/object:DSTeam
-  team_name: Real Madrid
-Athletic Bilbao: !ruby/object:DSTeam
-  team_name: Athletic Bilbao
-Cordoba: !ruby/object:DSTeam
-  team_name: Cordoba
 Ath Madrid: !ruby/object:DSTeam
   team_name: Ath Madrid
 Espanyol: !ruby/object:DSTeam
@@ -35,50 +7,78 @@ Deportivo La Coruna: !ruby/object:DSTeam
   team_name: Deportivo La Coruna
 Valencia: !ruby/object:DSTeam
   team_name: Valencia
+Rayo Vallecano: !ruby/object:DSTeam
+  team_name: Rayo Vallecano
+Barcelona: !ruby/object:DSTeam
+  team_name: Barcelona
+Eibar: !ruby/object:DSTeam
+  team_name: Eibar
+Real Sociedad: !ruby/object:DSTeam
+  team_name: Real Sociedad
+Elche: !ruby/object:DSTeam
+  team_name: Elche
 Sevilla: !ruby/object:DSTeam
   team_name: Sevilla
+Levante: !ruby/object:DSTeam
+  team_name: Levante
+Celta Vigo: !ruby/object:DSTeam
+  team_name: Celta Vigo
+Getafe: !ruby/object:DSTeam
+  team_name: Getafe
 Villarreal: !ruby/object:DSTeam
   team_name: Villarreal
-Girona: !ruby/object:DSTeam
-  team_name: Girona
-Ponferradina: !ruby/object:DSTeam
-  team_name: Ponferradina
-Osasuna: !ruby/object:DSTeam
-  team_name: Osasuna
-Racing Santander: !ruby/object:DSTeam
-  team_name: Racing Santander
-CD Lugo: !ruby/object:DSTeam
-  team_name: CD Lugo
-Zaragoza: !ruby/object:DSTeam
-  team_name: Zaragoza
-UE Llagostera: !ruby/object:DSTeam
-  team_name: UE Llagostera
-Sabadell: !ruby/object:DSTeam
-  team_name: Sabadell
-Valladolid: !ruby/object:DSTeam
-  team_name: Valladolid
-Alaves: !ruby/object:DSTeam
-  team_name: Alaves
-Mirandes: !ruby/object:DSTeam
-  team_name: Mirandes
-Albacete: !ruby/object:DSTeam
-  team_name: Albacete
-Tenerife: !ruby/object:DSTeam
-  team_name: Tenerife
+Almeria: !ruby/object:DSTeam
+  team_name: Almeria
+Malaga: !ruby/object:DSTeam
+  team_name: Malaga
+Granada: !ruby/object:DSTeam
+  team_name: Granada
+Athletic Bilbao: !ruby/object:DSTeam
+  team_name: Athletic Bilbao
+Real Madrid: !ruby/object:DSTeam
+  team_name: Real Madrid
+Cordoba: !ruby/object:DSTeam
+  team_name: Cordoba
 Recreativo Huelva: !ruby/object:DSTeam
   team_name: Recreativo Huelva
 Sporting Gijon: !ruby/object:DSTeam
   team_name: Sporting Gijon
+Valladolid: !ruby/object:DSTeam
+  team_name: Valladolid
+Ponferradina: !ruby/object:DSTeam
+  team_name: Ponferradina
+UE Llagostera: !ruby/object:DSTeam
+  team_name: UE Llagostera
 Mallorca: !ruby/object:DSTeam
   team_name: Mallorca
+Alaves: !ruby/object:DSTeam
+  team_name: Alaves
+CD Lugo: !ruby/object:DSTeam
+  team_name: CD Lugo
+Mirandes: !ruby/object:DSTeam
+  team_name: Mirandes
+Albacete: !ruby/object:DSTeam
+  team_name: Albacete
+Girona: !ruby/object:DSTeam
+  team_name: Girona
+Osasuna: !ruby/object:DSTeam
+  team_name: Osasuna
+Racing Santander: !ruby/object:DSTeam
+  team_name: Racing Santander
+Zaragoza: !ruby/object:DSTeam
+  team_name: Zaragoza
 CD Leganes: !ruby/object:DSTeam
   team_name: CD Leganes
 Real Betis: !ruby/object:DSTeam
   team_name: Real Betis
+Sabadell: !ruby/object:DSTeam
+  team_name: Sabadell
 Las Palmas: !ruby/object:DSTeam
   team_name: Las Palmas
 Numancia: !ruby/object:DSTeam
   team_name: Numancia
+Tenerife: !ruby/object:DSTeam
+  team_name: Tenerife
 Barcelona B: !ruby/object:DSTeam
   team_name: Barcelona B
 Alcorcon: !ruby/object:DSTeam

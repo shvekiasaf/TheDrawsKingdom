@@ -163,38 +163,6 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
-  home_team: *15
-  away_team: *11
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
-  home_team: *8
-  away_team: *1
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
-  home_team: *18
-  away_team: *13
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
-  home_team: *16
-  away_team: *5
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
   home_team: *4
   away_team: *9
   home_score: -1
@@ -203,6 +171,38 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
+  home_team: *8
+  away_team: *1
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
+  home_team: *18
+  away_team: *13
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
+  home_team: *16
+  away_team: *5
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
+  home_team: *15
+  away_team: *11
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-05-17 17:00:00.000000000 +03:00
   home_team: *10
   away_team: *7
   home_score: -1
@@ -307,8 +307,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-05-03 17:00:00.000000000 +03:00
-  home_team: *18
-  away_team: *9
+  home_team: *11
+  away_team: *17
   home_score: -1
   away_score: -1
   div: 
@@ -333,22 +333,6 @@
   game_date: !ruby/object:DateTime 2015-05-03 17:00:00.000000000 +03:00
   home_team: *6
   away_team: *3
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-05-03 17:00:00.000000000 +03:00
-  home_team: *11
-  away_team: *17
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-05-03 17:00:00.000000000 +03:00
-  home_team: *15
-  away_team: *5
   home_score: -1
   away_score: -1
   div: 
@@ -363,8 +347,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-05-03 17:00:00.000000000 +03:00
-  home_team: *8
-  away_team: *12
+  home_team: *15
+  away_team: *5
   home_score: -1
   away_score: -1
   div: 
@@ -378,9 +362,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
-  home_team: *13
-  away_team: *11
+  game_date: !ruby/object:DateTime 2015-05-03 17:00:00.000000000 +03:00
+  home_team: *8
+  away_team: *12
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-05-03 17:00:00.000000000 +03:00
+  home_team: *18
+  away_team: *9
   home_score: -1
   away_score: -1
   div: 
@@ -397,6 +389,30 @@
   game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
   home_team: *3
   away_team: *16
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
+  home_team: *12
+  away_team: *5
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
+  home_team: *13
+  away_team: *11
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
+  home_team: *17
+  away_team: *15
   home_score: -1
   away_score: -1
   div: 
@@ -427,14 +443,6 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
-  home_team: *17
-  away_team: *15
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
   home_team: *1
   away_team: *14
   home_score: -1
@@ -442,9 +450,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-26 17:00:00.000000000 +03:00
-  home_team: *12
-  away_team: *5
+  game_date: !ruby/object:DateTime 2015-04-19 17:00:00.000000000 +03:00
+  home_team: *16
+  away_team: *9
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-04-19 17:00:00.000000000 +03:00
+  home_team: *18
+  away_team: *1
   home_score: -1
   away_score: -1
   div: 
@@ -499,14 +515,6 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-04-19 17:00:00.000000000 +03:00
-  home_team: *16
-  away_team: *9
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-19 17:00:00.000000000 +03:00
   home_team: *4
   away_team: *8
   home_score: -1
@@ -514,9 +522,9 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-19 17:00:00.000000000 +03:00
-  home_team: *18
-  away_team: *1
+  game_date: !ruby/object:DateTime 2015-04-12 17:00:00.000000000 +03:00
+  home_team: *1
+  away_team: *6
   home_score: -1
   away_score: -1
   div: 
@@ -525,6 +533,14 @@
   game_date: !ruby/object:DateTime 2015-04-12 17:00:00.000000000 +03:00
   home_team: *3
   away_team: *15
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-04-12 17:00:00.000000000 +03:00
+  home_team: *10
+  away_team: *4
   home_score: -1
   away_score: -1
   div: 
@@ -555,8 +571,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-04-12 17:00:00.000000000 +03:00
-  home_team: *10
-  away_team: *4
+  home_team: *13
+  away_team: *5
   home_score: -1
   away_score: -1
   div: 
@@ -578,17 +594,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-12 17:00:00.000000000 +03:00
-  home_team: *1
-  away_team: *6
+  game_date: !ruby/object:DateTime 2015-04-05 17:00:00.000000000 +03:00
+  home_team: *4
+  away_team: *12
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-12 17:00:00.000000000 +03:00
-  home_team: *13
-  away_team: *5
+  game_date: !ruby/object:DateTime 2015-04-05 17:00:00.000000000 +03:00
+  home_team: *16
+  away_team: *1
   home_score: -1
   away_score: -1
   div: 
@@ -650,17 +666,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-05 17:00:00.000000000 +03:00
-  home_team: *4
-  away_team: *12
+  game_date: !ruby/object:DateTime 2015-03-22 15:00:00.000000000 +02:00
+  home_team: *7
+  away_team: *15
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-04-05 17:00:00.000000000 +03:00
-  home_team: *16
-  away_team: *1
+  game_date: !ruby/object:DateTime 2015-03-22 15:00:00.000000000 +02:00
+  home_team: *3
+  away_team: *17
   home_score: -1
   away_score: -1
   div: 
@@ -683,8 +699,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-03-22 15:00:00.000000000 +02:00
-  home_team: *7
-  away_team: *15
+  home_team: *1
+  away_team: *11
   home_score: -1
   away_score: -1
   div: 
@@ -717,22 +733,6 @@
   game_date: !ruby/object:DateTime 2015-03-22 15:00:00.000000000 +02:00
   home_team: *4
   away_team: *14
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-22 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *11
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-22 15:00:00.000000000 +02:00
-  home_team: *3
-  away_team: *17
   home_score: -1
   away_score: -1
   div: 
@@ -771,8 +771,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-03-15 15:00:00.000000000 +02:00
-  home_team: *15
-  away_team: *1
+  home_team: *17
+  away_team: *9
   home_score: -1
   away_score: -1
   div: 
@@ -787,14 +787,6 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-03-15 15:00:00.000000000 +02:00
-  home_team: *18
-  away_team: *4
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-15 15:00:00.000000000 +02:00
   home_team: *16
   away_team: *8
   home_score: -1
@@ -803,8 +795,16 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-03-15 15:00:00.000000000 +02:00
-  home_team: *17
-  away_team: *9
+  home_team: *18
+  away_team: *4
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-03-15 15:00:00.000000000 +02:00
+  home_team: *15
+  away_team: *1
   home_score: -1
   away_score: -1
   div: 
@@ -813,6 +813,22 @@
   game_date: !ruby/object:DateTime 2015-03-08 15:00:00.000000000 +02:00
   home_team: *4
   away_team: *6
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-03-08 15:00:00.000000000 +02:00
+  home_team: *10
+  away_team: *16
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-03-08 15:00:00.000000000 +02:00
+  home_team: *1
+  away_team: *5
   home_score: -1
   away_score: -1
   div: 
@@ -859,24 +875,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-03-08 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *5
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-08 15:00:00.000000000 +02:00
   home_team: *8
   away_team: *11
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-08 15:00:00.000000000 +02:00
-  home_team: *10
-  away_team: *16
   home_score: -1
   away_score: -1
   div: 
@@ -885,38 +885,6 @@
   game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
   home_team: *18
   away_team: *12
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
-  home_team: *17
-  away_team: *1
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
-  home_team: *5
-  away_team: *2
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
-  home_team: *3
-  away_team: *9
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
-  home_team: *6
-  away_team: *14
   home_score: -1
   away_score: -1
   div: 
@@ -947,6 +915,14 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
+  home_team: *6
+  away_team: *14
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
   home_team: *16
   away_team: *4
   home_score: -1
@@ -954,17 +930,33 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-22 15:00:00.000000000 +02:00
-  home_team: *4
-  away_team: *11
+  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
+  home_team: *5
+  away_team: *2
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
+  home_team: *17
+  away_team: *1
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-03-01 15:00:00.000000000 +02:00
+  home_team: *3
+  away_team: *9
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-02-22 15:00:00.000000000 +02:00
-  home_team: *10
-  away_team: *15
+  home_team: *1
+  away_team: *13
   home_score: -1
   away_score: -1
   div: 
@@ -1003,8 +995,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-02-22 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *13
+  home_team: *8
+  away_team: *5
   home_score: -1
   away_score: -1
   div: 
@@ -1019,16 +1011,16 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-02-22 15:00:00.000000000 +02:00
-  home_team: *8
-  away_team: *5
+  home_team: *4
+  away_team: *11
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
-  home_team: *15
-  away_team: *4
+  game_date: !ruby/object:DateTime 2015-02-22 15:00:00.000000000 +02:00
+  home_team: *10
+  away_team: *15
   home_score: -1
   away_score: -1
   div: 
@@ -1037,38 +1029,6 @@
   game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
   home_team: *3
   away_team: *1
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
-  home_team: *6
-  away_team: *12
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
-  home_team: *5
-  away_team: *10
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
-  home_team: *9
-  away_team: *7
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
-  home_team: *11
-  away_team: *14
   home_score: -1
   away_score: -1
   div: 
@@ -1091,6 +1051,14 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
+  home_team: *15
+  away_team: *4
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
   home_team: *13
   away_team: *2
   home_score: -1
@@ -1098,9 +1066,33 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-08 15:00:00.000000000 +02:00
-  home_team: *4
-  away_team: *5
+  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
+  home_team: *11
+  away_team: *14
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
+  home_team: *9
+  away_team: *7
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
+  home_team: *5
+  away_team: *10
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-02-15 15:00:00.000000000 +02:00
+  home_team: *6
+  away_team: *12
   home_score: -1
   away_score: -1
   div: 
@@ -1155,32 +1147,24 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-02-08 15:00:00.000000000 +02:00
-  home_team: *8
-  away_team: *13
+  home_team: *18
+  away_team: *11
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-02-08 15:00:00.000000000 +02:00
-  home_team: *18
-  away_team: *11
+  home_team: *4
+  away_team: *5
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
-  home_team: *16
-  away_team: *12
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
-  home_team: *7
-  away_team: *1
+  game_date: !ruby/object:DateTime 2015-02-08 15:00:00.000000000 +02:00
+  home_team: *8
+  away_team: *13
   home_score: -1
   away_score: -1
   div: 
@@ -1189,14 +1173,6 @@
   game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
   home_team: *3
   away_team: *8
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
-  home_team: *5
-  away_team: *14
   home_score: -1
   away_score: -1
   div: 
@@ -1235,8 +1211,32 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
+  home_team: *16
+  away_team: *12
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
   home_team: *17
   away_team: *4
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
+  home_team: *7
+  away_team: *1
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-02-01 15:00:00.000000000 +02:00
+  home_team: *5
+  away_team: *14
   home_score: -1
   away_score: -1
   div: 
@@ -1251,6 +1251,14 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-01-25 15:00:00.000000000 +02:00
+  home_team: *1
+  away_team: *12
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-01-25 15:00:00.000000000 +02:00
   home_team: *3
   away_team: *10
   home_score: -1
@@ -1259,8 +1267,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-01-25 15:00:00.000000000 +02:00
-  home_team: *15
-  away_team: *6
+  home_team: *5
+  away_team: *18
   home_score: -1
   away_score: -1
   div: 
@@ -1291,14 +1299,6 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-01-25 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *12
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-01-25 15:00:00.000000000 +02:00
   home_team: *13
   away_team: *4
   home_score: -1
@@ -1307,16 +1307,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-01-25 15:00:00.000000000 +02:00
-  home_team: *5
-  away_team: *18
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-01-04 15:00:00.000000000 +02:00
-  home_team: *2
-  away_team: *1
+  home_team: *15
+  away_team: *6
   home_score: -1
   away_score: -1
   div: 
@@ -1339,24 +1331,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2015-01-04 15:00:00.000000000 +02:00
-  home_team: *12
-  away_team: *11
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-01-04 15:00:00.000000000 +02:00
   home_team: *14
   away_team: *13
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2015-01-04 15:00:00.000000000 +02:00
-  home_team: *8
-  away_team: *7
   home_score: -1
   away_score: -1
   div: 
@@ -1386,9 +1362,57 @@
   div: 
   season: NS
 - !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-01-04 15:00:00.000000000 +02:00
+  home_team: *2
+  away_team: *1
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-01-04 15:00:00.000000000 +02:00
+  home_team: *12
+  away_team: *11
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2015-01-04 15:00:00.000000000 +02:00
+  home_team: *8
+  away_team: *7
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-12-28 15:00:00.000000000 +02:00
+  home_team: *17
+  away_team: *6
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-12-28 15:00:00.000000000 +02:00
+  home_team: *1
+  away_team: *8
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-12-28 15:00:00.000000000 +02:00
   home_team: *3
   away_team: *14
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-12-28 15:00:00.000000000 +02:00
+  home_team: *5
+  away_team: *16
   home_score: -1
   away_score: -1
   div: 
@@ -1434,25 +1458,9 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-28 15:00:00.000000000 +02:00
-  home_team: *17
-  away_team: *6
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-28 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *8
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-28 15:00:00.000000000 +02:00
-  home_team: *5
-  away_team: *16
+  game_date: !ruby/object:DateTime 2014-12-21 15:00:00.000000000 +02:00
+  home_team: *14
+  away_team: *9
   home_score: -1
   away_score: -1
   div: 
@@ -1483,8 +1491,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-12-21 15:00:00.000000000 +02:00
-  home_team: *14
-  away_team: *9
+  home_team: *10
+  away_team: *1
   home_score: -1
   away_score: -1
   div: 
@@ -1522,9 +1530,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-21 15:00:00.000000000 +02:00
-  home_team: *10
-  away_team: *1
+  game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
+  home_team: *17
+  away_team: *11
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
+  home_team: *1
+  away_team: *4
   home_score: -1
   away_score: -1
   div: 
@@ -1533,30 +1549,6 @@
   game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
   home_team: *3
   away_team: *6
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
-  home_team: *5
-  away_team: *15
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
-  home_team: *7
-  away_team: *14
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
-  home_team: *9
-  away_team: *18
   home_score: -1
   away_score: -1
   div: 
@@ -1579,16 +1571,16 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
-  home_team: *17
-  away_team: *11
+  home_team: *7
+  away_team: *14
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *4
+  home_team: *9
+  away_team: *18
   home_score: -1
   away_score: -1
   div: 
@@ -1597,6 +1589,22 @@
   game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
   home_team: *13
   away_team: *16
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-12-14 15:00:00.000000000 +02:00
+  home_team: *5
+  away_team: *15
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-12-07 15:00:00.000000000 +02:00
+  home_team: *14
+  away_team: *1
   home_score: -1
   away_score: -1
   div: 
@@ -1635,8 +1643,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-12-07 15:00:00.000000000 +02:00
-  home_team: *14
-  away_team: *1
+  home_team: *15
+  away_team: *17
   home_score: -1
   away_score: -1
   div: 
@@ -1666,9 +1674,25 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-12-07 15:00:00.000000000 +02:00
-  home_team: *15
-  away_team: *17
+  game_date: !ruby/object:DateTime 2014-11-30 15:00:00.000000000 +02:00
+  home_team: *8
+  away_team: *4
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-11-30 15:00:00.000000000 +02:00
+  home_team: *1
+  away_team: *18
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-11-30 15:00:00.000000000 +02:00
+  home_team: *17
+  away_team: *5
   home_score: -1
   away_score: -1
   div: 
@@ -1707,8 +1731,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-11-30 15:00:00.000000000 +02:00
-  home_team: *17
-  away_team: *5
+  home_team: *13
+  away_team: *15
   home_score: -1
   away_score: -1
   div: 
@@ -1722,25 +1746,9 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-30 15:00:00.000000000 +02:00
-  home_team: *8
-  away_team: *4
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-30 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *18
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-30 15:00:00.000000000 +02:00
-  home_team: *13
-  away_team: *15
+  game_date: !ruby/object:DateTime 2014-11-23 15:00:00.000000000 +02:00
+  home_team: *18
+  away_team: *2
   home_score: -1
   away_score: -1
   div: 
@@ -1763,6 +1771,14 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-11-23 15:00:00.000000000 +02:00
+  home_team: *11
+  away_team: *9
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-11-23 15:00:00.000000000 +02:00
   home_team: *15
   away_team: *3
   home_score: -1
@@ -1771,8 +1787,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-11-23 15:00:00.000000000 +02:00
-  home_team: *18
-  away_team: *2
+  home_team: *6
+  away_team: *1
   home_score: -1
   away_score: -1
   div: 
@@ -1802,25 +1818,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-23 15:00:00.000000000 +02:00
-  home_team: *6
-  away_team: *1
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-23 15:00:00.000000000 +02:00
-  home_team: *11
-  away_team: *9
+  game_date: !ruby/object:DateTime 2014-11-09 15:00:00.000000000 +02:00
+  home_team: *8
+  away_team: *18
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-11-09 15:00:00.000000000 +02:00
-  home_team: *8
-  away_team: *18
+  home_team: *1
+  away_team: *16
   home_score: -1
   away_score: -1
   div: 
@@ -1859,8 +1867,8 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-11-09 15:00:00.000000000 +02:00
-  home_team: *9
-  away_team: *15
+  home_team: *13
+  away_team: *17
   home_score: -1
   away_score: -1
   div: 
@@ -1875,22 +1883,14 @@
   season: NS
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-11-09 15:00:00.000000000 +02:00
-  home_team: *13
-  away_team: *17
+  home_team: *9
+  away_team: *15
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-09 15:00:00.000000000 +02:00
-  home_team: *1
-  away_team: *16
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
+  game_date: !ruby/object:DateTime 2014-11-03 20:00:00.000000000 +02:00
   home_team: *5
   away_team: *9
   home_score: -1
@@ -1898,33 +1898,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
+  game_date: !ruby/object:DateTime 2014-11-03 19:00:00.000000000 +02:00
+  home_team: *14
+  away_team: *4
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-11-02 19:00:00.000000000 +02:00
   home_team: *16
   away_team: *2
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
-  home_team: *6
-  away_team: *8
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
-  home_team: *17
-  away_team: *3
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
-  home_team: *13
-  away_team: *12
   home_score: -1
   away_score: -1
   div: 
@@ -1938,15 +1922,31 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
-  home_team: *14
-  away_team: *4
+  game_date: !ruby/object:DateTime 2014-11-02 13:30:00.000000000 +02:00
+  home_team: *6
+  away_team: *8
   home_score: -1
   away_score: -1
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
+  game_date: !ruby/object:DateTime 2014-11-02 13:30:00.000000000 +02:00
+  home_team: *13
+  away_team: *12
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-11-01 19:00:00.000000000 +02:00
+  home_team: *17
+  away_team: *3
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-11-01 16:00:00.000000000 +02:00
   home_team: *18
   away_team: *10
   home_score: -1
@@ -1954,9 +1954,17 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-11-02 15:00:00.000000000 +02:00
+  game_date: !ruby/object:DateTime 2014-11-01 13:30:00.000000000 +02:00
   home_team: *11
   away_team: *1
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-10-31 20:00:00.000000000 +02:00
+  home_team: *15
+  away_team: *7
   home_score: -1
   away_score: -1
   div: 
@@ -1981,22 +1989,6 @@
   game_date: !ruby/object:DateTime 2014-10-26 16:00:00.000000000 +02:00
   home_team: *3
   away_team: *13
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-26 15:00:00.000000000 +02:00
-  home_team: *9
-  away_team: *17
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-26 15:00:00.000000000 +02:00
-  home_team: *7
-  away_team: *5
   home_score: -1
   away_score: -1
   div: 
@@ -2050,84 +2042,76 @@
   div: 
   season: NS
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-20 21:00:00.000000000 +03:00
+  game_date: !ruby/object:DateTime 2014-10-20 03:00:00.000000000 +03:00
   home_team: *6
   away_team: *4
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
+  home_score: '2'
+  away_score: '2'
+  div: T1
+  season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-20 20:00:00.000000000 +03:00
+  game_date: !ruby/object:DateTime 2014-10-20 03:00:00.000000000 +03:00
   home_team: *11
   away_team: *8
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
+  home_score: '0'
+  away_score: '0'
+  div: T1
+  season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-19 20:00:00.000000000 +03:00
+  game_date: !ruby/object:DateTime 2014-10-19 03:00:00.000000000 +03:00
   home_team: *16
   away_team: *10
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
+  home_score: '3'
+  away_score: '2'
+  div: T1
+  season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-19 20:00:00.000000000 +03:00
-  home_team: *17
-  away_team: *7
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-19 17:00:00.000000000 +03:00
+  game_date: !ruby/object:DateTime 2014-10-19 03:00:00.000000000 +03:00
   home_team: *3
   away_team: *12
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
+  home_score: '3'
+  away_score: '1'
+  div: T1
+  season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-19 14:30:00.000000000 +03:00
+  game_date: !ruby/object:DateTime 2014-10-19 03:00:00.000000000 +03:00
   home_team: *18
   away_team: *14
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
+  home_score: '2'
+  away_score: '2'
+  div: T1
+  season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-18 20:00:00.000000000 +03:00
-  home_team: *15
-  away_team: *2
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
+  game_date: !ruby/object:DateTime 2014-10-19 03:00:00.000000000 +03:00
+  home_team: &19 !ruby/object:DSTeam
+    team_name: Akhisar Belediyespor
+  away_team: *7
+  home_score: '2'
+  away_score: '0'
+  div: T1
+  season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-18 17:00:00.000000000 +03:00
+  game_date: !ruby/object:DateTime 2014-10-18 03:00:00.000000000 +03:00
   home_team: *13
   away_team: *9
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
+  home_score: '1'
+  away_score: '0'
+  div: T1
+  season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-18 14:30:00.000000000 +03:00
+  game_date: !ruby/object:DateTime 2014-10-18 03:00:00.000000000 +03:00
   home_team: *5
   away_team: *1
-  home_score: -1
-  away_score: -1
-  div: 
-  season: NS
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-10-05 03:00:00.000000000 +03:00
-  home_team: *1
-  away_team: &19 !ruby/object:DSTeam
-    team_name: Akhisar Belediyespor
-  home_score: '4'
+  home_score: '0'
   away_score: '0'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-10-18 03:00:00.000000000 +03:00
+  home_team: *15
+  away_team: *2
+  home_score: '2'
+  away_score: '1'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2155,11 +2139,19 @@
   div: T1
   season: '1415'
 - !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-10-05 03:00:00.000000000 +03:00
+  home_team: *1
+  away_team: *19
+  home_score: '4'
+  away_score: '0'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-10-04 03:00:00.000000000 +03:00
-  home_team: *2
-  away_team: *5
-  home_score: '2'
-  away_score: '1'
+  home_team: *8
+  away_team: *15
+  home_score: '1'
+  away_score: '2'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2180,10 +2172,10 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-10-04 03:00:00.000000000 +03:00
-  home_team: *8
-  away_team: *15
-  home_score: '1'
-  away_score: '2'
+  home_team: *2
+  away_team: *5
+  home_score: '2'
+  away_score: '1'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2212,17 +2204,9 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-09-28 03:00:00.000000000 +03:00
-  home_team: *5
-  away_team: *8
-  home_score: '1'
-  away_score: '1'
-  div: T1
-  season: '1415'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-28 03:00:00.000000000 +03:00
-  home_team: *6
-  away_team: *18
-  home_score: '0'
+  home_team: *11
+  away_team: *4
+  home_score: '3'
   away_score: '1'
   div: T1
   season: '1415'
@@ -2236,16 +2220,16 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-09-28 03:00:00.000000000 +03:00
-  home_team: *11
-  away_team: *4
-  home_score: '3'
+  home_team: *6
+  away_team: *18
+  home_score: '0'
   away_score: '1'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-27 03:00:00.000000000 +03:00
-  home_team: *16
-  away_team: *14
+  game_date: !ruby/object:DateTime 2014-09-28 03:00:00.000000000 +03:00
+  home_team: *5
+  away_team: *8
   home_score: '1'
   away_score: '1'
   div: T1
@@ -2254,6 +2238,14 @@
   game_date: !ruby/object:DateTime 2014-09-27 03:00:00.000000000 +03:00
   home_team: *3
   away_team: *7
+  home_score: '1'
+  away_score: '1'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-09-27 03:00:00.000000000 +03:00
+  home_team: *16
+  away_team: *14
   home_score: '1'
   away_score: '1'
   div: T1
@@ -2268,6 +2260,14 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-09-22 03:00:00.000000000 +03:00
+  home_team: *18
+  away_team: *16
+  home_score: '0'
+  away_score: '1'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-09-22 03:00:00.000000000 +03:00
   home_team: *1
   away_team: *3
   home_score: '1'
@@ -2275,11 +2275,11 @@
   div: T1
   season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-22 03:00:00.000000000 +03:00
-  home_team: *18
-  away_team: *16
-  home_score: '0'
-  away_score: '1'
+  game_date: !ruby/object:DateTime 2014-09-21 03:00:00.000000000 +03:00
+  home_team: *2
+  away_team: *13
+  home_score: '1'
+  away_score: '0'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2299,11 +2299,11 @@
   div: T1
   season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-21 03:00:00.000000000 +03:00
-  home_team: *2
-  away_team: *13
+  game_date: !ruby/object:DateTime 2014-09-20 03:00:00.000000000 +03:00
+  home_team: *8
+  away_team: *19
   home_score: '1'
-  away_score: '0'
+  away_score: '2'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2312,14 +2312,6 @@
   away_team: *15
   home_score: '2'
   away_score: '0'
-  div: T1
-  season: '1415'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-20 03:00:00.000000000 +03:00
-  home_team: *8
-  away_team: *19
-  home_score: '1'
-  away_score: '2'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2340,6 +2332,14 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-09-15 03:00:00.000000000 +03:00
+  home_team: *19
+  away_team: *10
+  home_score: '2'
+  away_score: '2'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-09-15 03:00:00.000000000 +03:00
   home_team: *16
   away_team: *6
   home_score: '1'
@@ -2347,9 +2347,9 @@
   div: T1
   season: '1415'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-15 03:00:00.000000000 +03:00
-  home_team: *19
-  away_team: *10
+  game_date: !ruby/object:DateTime 2014-09-14 03:00:00.000000000 +03:00
+  home_team: *13
+  away_team: *8
   home_score: '2'
   away_score: '2'
   div: T1
@@ -2360,14 +2360,6 @@
   away_team: *2
   home_score: '0'
   away_score: '0'
-  div: T1
-  season: '1415'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-14 03:00:00.000000000 +03:00
-  home_team: *13
-  away_team: *8
-  home_score: '2'
-  away_score: '2'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2388,14 +2380,6 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-09-13 03:00:00.000000000 +03:00
-  home_team: *5
-  away_team: *4
-  home_score: '2'
-  away_score: '0'
-  div: T1
-  season: '1415'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-09-13 03:00:00.000000000 +03:00
   home_team: *11
   away_team: *18
   home_score: '1'
@@ -2404,8 +2388,24 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-09-13 03:00:00.000000000 +03:00
+  home_team: *5
+  away_team: *4
+  home_score: '2'
+  away_score: '0'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-09-13 03:00:00.000000000 +03:00
   home_team: *15
   away_team: *14
+  home_score: '0'
+  away_score: '0'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-08-31 03:00:00.000000000 +03:00
+  home_team: *8
+  away_team: *3
   home_score: '0'
   away_score: '0'
   div: T1
@@ -2420,14 +2420,6 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-08-31 03:00:00.000000000 +03:00
-  home_team: *8
-  away_team: *3
-  home_score: '0'
-  away_score: '0'
-  div: T1
-  season: '1415'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-08-31 03:00:00.000000000 +03:00
   home_team: *2
   away_team: *9
   home_score: '3'
@@ -2436,9 +2428,9 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-08-30 03:00:00.000000000 +03:00
-  home_team: *1
-  away_team: *7
-  home_score: '1'
+  home_team: *14
+  away_team: *5
+  home_score: '2'
   away_score: '1'
   div: T1
   season: '1415'
@@ -2452,18 +2444,18 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-08-30 03:00:00.000000000 +03:00
-  home_team: *14
-  away_team: *5
-  home_score: '2'
-  away_score: '1'
-  div: T1
-  season: '1415'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-08-30 03:00:00.000000000 +03:00
   home_team: *18
   away_team: *15
   home_score: '0'
   away_score: '2'
+  div: T1
+  season: '1415'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-08-30 03:00:00.000000000 +03:00
+  home_team: *1
+  away_team: *7
+  home_score: '1'
+  away_score: '1'
   div: T1
   season: '1415'
 - !ruby/object:DSGame
@@ -2484,14 +2476,6 @@
   season: '1415'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-18 03:00:00.000000000 +03:00
-  home_team: *9
-  away_team: *10
-  home_score: '1'
-  away_score: '0'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-05-18 03:00:00.000000000 +03:00
   home_team: *19
   away_team: *7
   home_score: '1'
@@ -2508,11 +2492,18 @@
   div: T1
   season: '1314'
 - !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-05-18 03:00:00.000000000 +03:00
+  home_team: *9
+  away_team: *10
+  home_score: '1'
+  away_score: '0'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-17 03:00:00.000000000 +03:00
-  home_team: *6
-  away_team: &20 !ruby/object:DSTeam
-    team_name: Elazigspor
-  home_score: '3'
+  home_team: *16
+  away_team: *11
+  home_score: '1'
   away_score: '1'
   div: T1
   season: '1314'
@@ -2526,9 +2517,10 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-17 03:00:00.000000000 +03:00
-  home_team: *16
-  away_team: *11
-  home_score: '1'
+  home_team: *6
+  away_team: &21 !ruby/object:DSTeam
+    team_name: Elazigspor
+  home_score: '3'
   away_score: '1'
   div: T1
   season: '1314'
@@ -2542,15 +2534,6 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-16 03:00:00.000000000 +03:00
-  home_team: &21 !ruby/object:DSTeam
-    team_name: Kayserispor
-  away_team: *2
-  home_score: '0'
-  away_score: '2'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-05-16 03:00:00.000000000 +03:00
   home_team: *14
   away_team: *5
   home_score: '1'
@@ -2558,10 +2541,19 @@
   div: T1
   season: '1314'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-05-11 03:00:00.000000000 +03:00
-  home_team: *20
-  away_team: *16
+  game_date: !ruby/object:DateTime 2014-05-16 03:00:00.000000000 +03:00
+  home_team: &20 !ruby/object:DSTeam
+    team_name: Kayserispor
+  away_team: *2
   home_score: '0'
+  away_score: '2'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-05-11 03:00:00.000000000 +03:00
+  home_team: *8
+  away_team: *18
+  home_score: '1'
   away_score: '1'
   div: T1
   season: '1314'
@@ -2583,8 +2575,16 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-11 03:00:00.000000000 +03:00
+  home_team: *10
+  away_team: *19
+  home_score: '3'
+  away_score: '1'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-05-11 03:00:00.000000000 +03:00
   home_team: *5
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '0'
   div: T1
@@ -2599,17 +2599,9 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-11 03:00:00.000000000 +03:00
-  home_team: *10
-  away_team: *19
-  home_score: '3'
-  away_score: '1'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-05-11 03:00:00.000000000 +03:00
-  home_team: *8
-  away_team: *18
-  home_score: '1'
+  home_team: *21
+  away_team: *16
+  home_score: '0'
   away_score: '1'
   div: T1
   season: '1314'
@@ -2631,10 +2623,10 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-04 03:00:00.000000000 +03:00
-  home_team: *19
-  away_team: *2
-  home_score: '3'
-  away_score: '1'
+  home_team: *18
+  away_team: *3
+  home_score: '2'
+  away_score: '2'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2647,26 +2639,18 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-04 03:00:00.000000000 +03:00
-  home_team: *18
-  away_team: *3
-  home_score: '2'
-  away_score: '2'
+  home_team: *19
+  away_team: *2
+  home_score: '3'
+  away_score: '1'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-03 03:00:00.000000000 +03:00
-  home_team: *9
-  away_team: *5
-  home_score: '2'
+  home_team: *15
+  away_team: *11
+  home_score: '3'
   away_score: '2'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-05-03 03:00:00.000000000 +03:00
-  home_team: *8
-  away_team: *13
-  home_score: '1'
-  away_score: '0'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2679,26 +2663,42 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-03 03:00:00.000000000 +03:00
-  home_team: *22
-  away_team: *20
-  home_score: '1'
+  home_team: *9
+  away_team: *5
+  home_score: '2'
   away_score: '2'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-03 03:00:00.000000000 +03:00
   home_team: *14
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '4'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-05-03 03:00:00.000000000 +03:00
-  home_team: *15
-  away_team: *11
-  home_score: '3'
+  home_team: *22
+  away_team: *21
+  home_score: '1'
   away_score: '2'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-05-03 03:00:00.000000000 +03:00
+  home_team: *8
+  away_team: *13
+  home_score: '1'
+  away_score: '0'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-04-27 03:00:00.000000000 +03:00
+  home_team: *21
+  away_team: *15
+  home_score: '0'
+  away_score: '1'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2727,22 +2727,6 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-27 03:00:00.000000000 +03:00
-  home_team: *20
-  away_team: *15
-  home_score: '0'
-  away_score: '1'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-04-27 03:00:00.000000000 +03:00
-  home_team: *21
-  away_team: *9
-  home_score: '1'
-  away_score: '3'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-04-27 03:00:00.000000000 +03:00
   home_team: *5
   away_team: *19
   home_score: '4'
@@ -2755,6 +2739,14 @@
   away_team: *16
   home_score: '3'
   away_score: '0'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-04-27 03:00:00.000000000 +03:00
+  home_team: *20
+  away_team: *9
+  home_score: '1'
+  away_score: '3'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2791,14 +2783,6 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-20 03:00:00.000000000 +03:00
-  home_team: *16
-  away_team: *2
-  home_score: '1'
-  away_score: '1'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-04-20 03:00:00.000000000 +03:00
   home_team: *6
   away_team: *5
   home_score: '3'
@@ -2806,19 +2790,11 @@
   div: T1
   season: '1314'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-04-19 03:00:00.000000000 +03:00
-  home_team: *18
-  away_team: *20
+  game_date: !ruby/object:DateTime 2014-04-20 03:00:00.000000000 +03:00
+  home_team: *16
+  away_team: *2
   home_score: '1'
-  away_score: '0'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-04-19 03:00:00.000000000 +03:00
-  home_team: *19
-  away_team: *21
-  home_score: '2'
-  away_score: '2'
+  away_score: '1'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2827,6 +2803,22 @@
   away_team: *7
   home_score: '0'
   away_score: '4'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-04-19 03:00:00.000000000 +03:00
+  home_team: *18
+  away_team: *21
+  home_score: '1'
+  away_score: '0'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-04-19 03:00:00.000000000 +03:00
+  home_team: *19
+  away_team: *20
+  home_score: '2'
+  away_score: '2'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2847,10 +2839,18 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-14 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *13
   home_score: '2'
   away_score: '1'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-04-13 03:00:00.000000000 +03:00
+  home_team: *11
+  away_team: *8
+  home_score: '0'
+  away_score: '0'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2870,18 +2870,10 @@
   div: T1
   season: '1314'
 - !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-04-13 03:00:00.000000000 +03:00
-  home_team: *11
-  away_team: *8
-  home_score: '0'
-  away_score: '0'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-12 03:00:00.000000000 +03:00
-  home_team: *10
-  away_team: *15
-  home_score: '2'
+  home_team: *7
+  away_team: *18
+  home_score: '1'
   away_score: '1'
   div: T1
   season: '1314'
@@ -2895,18 +2887,18 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-12 03:00:00.000000000 +03:00
-  home_team: *7
-  away_team: *18
-  home_score: '1'
-  away_score: '1'
+  home_team: *20
+  away_team: *6
+  home_score: '0'
+  away_score: '2'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-12 03:00:00.000000000 +03:00
-  home_team: *21
-  away_team: *6
-  home_score: '0'
-  away_score: '2'
+  home_team: *10
+  away_team: *15
+  home_score: '2'
+  away_score: '1'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -2927,14 +2919,6 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-06 03:00:00.000000000 +03:00
-  home_team: *18
-  away_team: *10
-  home_score: '4'
-  away_score: '3'
-  div: T1
-  season: '1314'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2014-04-06 03:00:00.000000000 +03:00
   home_team: *15
   away_team: *2
   home_score: '1'
@@ -2944,16 +2928,24 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-06 03:00:00.000000000 +03:00
   home_team: *8
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '0'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-04-06 03:00:00.000000000 +03:00
+  home_team: *18
+  away_team: *10
+  home_score: '4'
+  away_score: '3'
+  div: T1
+  season: '1314'
+- !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-05 03:00:00.000000000 +03:00
-  home_team: *16
-  away_team: *21
-  home_score: '2'
+  home_team: *22
+  away_team: *5
+  home_score: '1'
   away_score: '1'
   div: T1
   season: '1314'
@@ -2967,9 +2959,9 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-04-05 03:00:00.000000000 +03:00
-  home_team: *22
-  away_team: *5
-  home_score: '1'
+  home_team: *16
+  away_team: *20
+  home_score: '2'
   away_score: '1'
   div: T1
   season: '1314'
@@ -3007,7 +2999,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-31 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *22
   home_score: '3'
   away_score: '1'
@@ -3038,9 +3030,41 @@
   div: 
   season: NS
 - !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-03-30 20:00:00.000000000 +03:00
+  home_team: *17
+  away_team: *7
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-03-30 20:00:00.000000000 +03:00
+  home_team: *16
+  away_team: *10
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-30 19:30:00.000000000 +03:00
   home_team: *8
   away_team: *15
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-03-30 17:00:00.000000000 +03:00
+  home_team: *3
+  away_team: *12
+  home_score: -1
+  away_score: -1
+  div: 
+  season: NS
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2014-03-30 14:30:00.000000000 +03:00
+  home_team: *18
+  away_team: *14
   home_score: -1
   away_score: -1
   div: 
@@ -3063,18 +3087,18 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-29 03:00:00.000000000 +03:00
-  home_team: *19
-  away_team: *6
-  home_score: '2'
-  away_score: '3'
+  home_team: *21
+  away_team: *3
+  home_score: '0'
+  away_score: '0'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-29 03:00:00.000000000 +03:00
-  home_team: *20
-  away_team: *3
-  home_score: '0'
-  away_score: '0'
+  home_team: *19
+  away_team: *6
+  home_score: '2'
+  away_score: '3'
   div: T1
   season: '1314'
 - !ruby/object:DSGame
@@ -3120,7 +3144,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-23 02:00:00.000000000 +02:00
   home_team: *11
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '1'
   div: T1
@@ -3128,7 +3152,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-22 02:00:00.000000000 +02:00
   home_team: *15
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -3167,7 +3191,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-17 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *18
   home_score: '2'
   away_score: '0'
@@ -3200,7 +3224,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-16 02:00:00.000000000 +02:00
   home_team: *14
-  away_team: *20
+  away_team: *21
   home_score: '1'
   away_score: '0'
   div: T1
@@ -3248,7 +3272,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-09 02:00:00.000000000 +02:00
   home_team: *13
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -3279,7 +3303,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-08 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *7
   home_score: '0'
   away_score: '0'
@@ -3319,7 +3343,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-02 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *8
   home_score: '0'
   away_score: '4'
@@ -3328,7 +3352,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-03-02 02:00:00.000000000 +02:00
   home_team: *10
-  away_team: *20
+  away_team: *21
   home_score: '1'
   away_score: '3'
   div: T1
@@ -3375,7 +3399,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-02-24 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *2
   home_score: '1'
   away_score: '1'
@@ -3392,7 +3416,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-02-23 02:00:00.000000000 +02:00
   home_team: *3
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -3464,7 +3488,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-02-17 02:00:00.000000000 +02:00
   home_team: *5
-  away_team: *20
+  away_team: *21
   home_score: '2'
   away_score: '3'
   div: T1
@@ -3495,7 +3519,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-02-15 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *11
   home_score: '1'
   away_score: '0'
@@ -3543,8 +3567,8 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-02-09 02:00:00.000000000 +02:00
-  home_team: *20
-  away_team: *21
+  home_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '0'
   div: T1
@@ -3608,7 +3632,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-02-02 02:00:00.000000000 +02:00
   home_team: *9
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '1'
   div: T1
@@ -3639,7 +3663,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-02-01 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *7
   home_score: '0'
   away_score: '0'
@@ -3695,7 +3719,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-01-26 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *19
   home_score: '2'
   away_score: '1'
@@ -3704,7 +3728,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2014-01-26 02:00:00.000000000 +02:00
   home_team: *10
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '0'
   div: T1
@@ -3760,7 +3784,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-29 02:00:00.000000000 +02:00
   home_team: *2
-  away_team: *21
+  away_team: *20
   home_score: '5'
   away_score: '1'
   div: T1
@@ -3783,7 +3807,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-28 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *6
   home_score: '1'
   away_score: '0'
@@ -3839,7 +3863,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-22 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *5
   home_score: '0'
   away_score: '0'
@@ -3872,7 +3896,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-21 02:00:00.000000000 +02:00
   home_team: *16
-  away_team: *20
+  away_team: *21
   home_score: '4'
   away_score: '1'
   div: T1
@@ -3911,7 +3935,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-14 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *14
   home_score: '1'
   away_score: '1'
@@ -3927,7 +3951,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-14 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *22
   home_score: '4'
   away_score: '1'
@@ -3976,7 +4000,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-08 02:00:00.000000000 +02:00
   home_team: *9
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -4016,7 +4040,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-12-06 02:00:00.000000000 +02:00
   home_team: *15
-  away_team: *20
+  away_team: *21
   home_score: '2'
   away_score: '0'
   div: T1
@@ -4063,7 +4087,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-30 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *19
   home_score: '0'
   away_score: '0'
@@ -4087,7 +4111,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-29 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *18
   home_score: '1'
   away_score: '2'
@@ -4112,7 +4136,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-24 02:00:00.000000000 +02:00
   home_team: *13
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '1'
   div: T1
@@ -4160,7 +4184,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-23 02:00:00.000000000 +02:00
   home_team: *6
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '2'
   div: T1
@@ -4191,7 +4215,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-09 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *16
   home_score: '0'
   away_score: '3'
@@ -4223,7 +4247,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-08 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *8
   home_score: '0'
   away_score: '1'
@@ -4248,7 +4272,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-04 02:00:00.000000000 +02:00
   home_team: *22
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '2'
   div: T1
@@ -4280,7 +4304,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-11-03 02:00:00.000000000 +02:00
   home_team: *3
-  away_team: *20
+  away_team: *21
   home_score: '4'
   away_score: '0'
   div: T1
@@ -4319,7 +4343,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-10-27 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *15
   home_score: '2'
   away_score: '4'
@@ -4343,7 +4367,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-10-26 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *11
   home_score: '1'
   away_score: '2'
@@ -4392,7 +4416,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-10-21 03:00:00.000000000 +03:00
   home_team: *18
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '0'
   div: T1
@@ -4439,7 +4463,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-10-19 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *14
   home_score: '0'
   away_score: '2'
@@ -4472,7 +4496,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-10-06 03:00:00.000000000 +03:00
   home_team: *7
-  away_team: *20
+  away_team: *21
   home_score: '4'
   away_score: '0'
   div: T1
@@ -4503,7 +4527,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-10-05 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *13
   home_score: '0'
   away_score: '1'
@@ -4536,7 +4560,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-09-30 03:00:00.000000000 +03:00
   home_team: *8
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '1'
   div: T1
@@ -4559,7 +4583,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-09-29 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *10
   home_score: '2'
   away_score: '4'
@@ -4599,7 +4623,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-09-23 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *3
   home_score: '0'
   away_score: '1'
@@ -4640,7 +4664,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-09-21 03:00:00.000000000 +03:00
   home_team: *2
-  away_team: *20
+  away_team: *21
   home_score: '4'
   away_score: '0'
   div: T1
@@ -4695,7 +4719,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-09-15 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *5
   home_score: '2'
   away_score: '0'
@@ -4704,7 +4728,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-09-15 03:00:00.000000000 +03:00
   home_team: *11
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '1'
   div: T1
@@ -4791,8 +4815,8 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-08-31 03:00:00.000000000 +03:00
-  home_team: *21
-  away_team: *20
+  home_team: *20
+  away_team: *21
   home_score: '1'
   away_score: '3'
   div: T1
@@ -4839,7 +4863,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-08-25 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *9
   home_score: '2'
   away_score: '2'
@@ -4856,7 +4880,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-08-24 03:00:00.000000000 +03:00
   home_team: *7
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '1'
   div: T1
@@ -4887,7 +4911,7 @@
   season: '1314'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-08-19 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *10
   home_score: '1'
   away_score: '0'
@@ -4920,7 +4944,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-08-18 03:00:00.000000000 +03:00
   home_team: *19
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '1'
   div: T1
@@ -4967,7 +4991,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-05-19 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *16
   home_score: '2'
   away_score: '0'
@@ -4975,7 +4999,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-05-19 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *10
   home_score: '0'
   away_score: '0'
@@ -5089,7 +5113,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-05-10 03:00:00.000000000 +03:00
   home_team: *7
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -5097,7 +5121,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-05-10 03:00:00.000000000 +03:00
   home_team: *13
-  away_team: *20
+  away_team: *21
   home_score: '1'
   away_score: '1'
   div: T1
@@ -5105,7 +5129,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-05-05 03:00:00.000000000 +03:00
   home_team: *12
-  away_team: *20
+  away_team: *21
   home_score: '0'
   away_score: '2'
   div: T1
@@ -5160,7 +5184,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-05-04 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *3
   home_score: '2'
   away_score: '1'
@@ -5193,7 +5217,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-28 03:00:00.000000000 +03:00
   home_team: *2
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -5216,7 +5240,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-27 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *9
   home_score: '1'
   away_score: '0'
@@ -5256,7 +5280,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-21 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *10
   home_score: '1'
   away_score: '1'
@@ -5313,7 +5337,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-19 03:00:00.000000000 +03:00
   home_team: *15
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '1'
   div: T1
@@ -5337,7 +5361,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-14 03:00:00.000000000 +03:00
   home_team: *13
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -5352,7 +5376,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-14 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *1
   home_score: '1'
   away_score: '0'
@@ -5448,8 +5472,8 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-06 03:00:00.000000000 +03:00
-  home_team: *21
-  away_team: *20
+  home_team: *20
+  away_team: *21
   home_score: '4'
   away_score: '1'
   div: T1
@@ -5473,7 +5497,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-04-01 03:00:00.000000000 +03:00
   home_team: *9
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '1'
   div: T1
@@ -5504,7 +5528,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-03-31 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *11
   home_score: '1'
   away_score: '1'
@@ -5544,7 +5568,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-03-17 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *15
   home_score: '1'
   away_score: '3'
@@ -5593,7 +5617,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-03-15 02:00:00.000000000 +02:00
   home_team: *14
-  away_team: *20
+  away_team: *21
   home_score: '2'
   away_score: '2'
   div: T1
@@ -5640,7 +5664,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-03-10 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *23
   home_score: '1'
   away_score: '0'
@@ -5665,7 +5689,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-03-09 02:00:00.000000000 +02:00
   home_team: *1
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '0'
   div: T1
@@ -5688,7 +5712,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-03-03 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *12
   home_score: '2'
   away_score: '1'
@@ -5721,7 +5745,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-03-02 02:00:00.000000000 +02:00
   home_team: *19
-  away_team: *20
+  away_team: *21
   home_score: '0'
   away_score: '1'
   div: T1
@@ -5760,7 +5784,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-24 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *11
   home_score: '1'
   away_score: '0'
@@ -5792,7 +5816,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-23 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *22
   home_score: '2'
   away_score: '1'
@@ -5857,7 +5881,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-17 02:00:00.000000000 +02:00
   home_team: *18
-  away_team: *20
+  away_team: *21
   home_score: '1'
   away_score: '0'
   div: T1
@@ -5881,7 +5905,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-16 02:00:00.000000000 +02:00
   home_team: *14
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '3'
   div: T1
@@ -5912,7 +5936,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-10 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *23
   home_score: '0'
   away_score: '0'
@@ -5944,7 +5968,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-09 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *16
   home_score: '1'
   away_score: '3'
@@ -6017,7 +6041,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-02 02:00:00.000000000 +02:00
   home_team: *7
-  away_team: *20
+  away_team: *21
   home_score: '0'
   away_score: '0'
   div: T1
@@ -6025,7 +6049,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-02-01 02:00:00.000000000 +02:00
   home_team: *19
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -6048,7 +6072,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-01-27 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *22
   home_score: '2'
   away_score: '0'
@@ -6064,7 +6088,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-01-27 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *3
   home_score: '3'
   away_score: '1'
@@ -6137,7 +6161,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-01-20 02:00:00.000000000 +02:00
   home_team: *2
-  away_team: *20
+  away_team: *21
   home_score: '2'
   away_score: '2'
   div: T1
@@ -6169,7 +6193,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2013-01-19 02:00:00.000000000 +02:00
   home_team: *18
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -6209,7 +6233,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-23 02:00:00.000000000 +02:00
   home_team: *10
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '1'
   div: T1
@@ -6249,7 +6273,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-21 02:00:00.000000000 +02:00
   home_team: *16
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '1'
   div: T1
@@ -6264,7 +6288,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-17 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *7
   home_score: '1'
   away_score: '0'
@@ -6312,7 +6336,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-15 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *13
   home_score: '0'
   away_score: '0'
@@ -6345,7 +6369,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-09 02:00:00.000000000 +02:00
   home_team: *3
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '1'
   div: T1
@@ -6392,7 +6416,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-07 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *12
   home_score: '1'
   away_score: '0'
@@ -6408,7 +6432,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-02 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *2
   home_score: '1'
   away_score: '1'
@@ -6457,7 +6481,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-12-01 02:00:00.000000000 +02:00
   home_team: *9
-  away_team: *20
+  away_team: *21
   home_score: '0'
   away_score: '1'
   div: T1
@@ -6497,14 +6521,14 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-11-25 02:00:00.000000000 +02:00
   home_team: *10
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '2'
   div: T1
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-11-24 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *15
   home_score: '0'
   away_score: '1'
@@ -6576,7 +6600,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-11-18 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *13
   home_score: '1'
   away_score: '1'
@@ -6593,7 +6617,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-11-17 02:00:00.000000000 +02:00
   home_team: *1
-  away_team: *20
+  away_team: *21
   home_score: '1'
   away_score: '1'
   div: T1
@@ -6616,8 +6640,8 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-11-11 02:00:00.000000000 +02:00
-  home_team: *20
-  away_team: *21
+  home_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '4'
   div: T1
@@ -6713,7 +6737,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-11-04 02:00:00.000000000 +02:00
   home_team: *11
-  away_team: *20
+  away_team: *21
   home_score: '1'
   away_score: '2'
   div: T1
@@ -6728,7 +6752,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-11-03 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *9
   home_score: '3'
   away_score: '0'
@@ -6809,7 +6833,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-10-27 02:00:00.000000000 +02:00
   home_team: *15
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '0'
   div: T1
@@ -6824,7 +6848,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-10-26 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *14
   home_score: '1'
   away_score: '1'
@@ -6832,7 +6856,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-10-22 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *1
   home_score: '0'
   away_score: '1'
@@ -6873,7 +6897,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-10-20 02:00:00.000000000 +02:00
   home_team: *23
-  away_team: *20
+  away_team: *21
   home_score: '2'
   away_score: '2'
   div: T1
@@ -6913,7 +6937,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-10-07 02:00:00.000000000 +02:00
   home_team: *12
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -6944,7 +6968,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-10-06 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *19
   home_score: '0'
   away_score: '0'
@@ -6993,7 +7017,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-30 02:00:00.000000000 +02:00
   home_team: *22
-  away_team: *20
+  away_team: *21
   home_score: '4'
   away_score: '0'
   div: T1
@@ -7009,7 +7033,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-30 02:00:00.000000000 +02:00
   home_team: *11
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '0'
   div: T1
@@ -7072,7 +7096,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-23 02:00:00.000000000 +02:00
-  home_team: *20
+  home_team: *21
   away_team: *18
   home_score: '1'
   away_score: '1'
@@ -7088,7 +7112,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-22 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *14
   home_score: '3'
   away_score: '2'
@@ -7121,7 +7145,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-17 03:00:00.000000000 +03:00
   home_team: *23
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '2'
   div: T1
@@ -7129,7 +7153,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-17 03:00:00.000000000 +03:00
   home_team: *16
-  away_team: *20
+  away_team: *21
   home_score: '3'
   away_score: '0'
   div: T1
@@ -7216,7 +7240,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-01 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *19
   home_score: '1'
   away_score: '1'
@@ -7232,7 +7256,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-09-01 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *7
   home_score: '0'
   away_score: '3'
@@ -7265,7 +7289,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-08-27 03:00:00.000000000 +03:00
   home_team: *22
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '0'
   div: T1
@@ -7273,7 +7297,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-08-26 03:00:00.000000000 +03:00
   home_team: *3
-  away_team: *20
+  away_team: *21
   home_score: '2'
   away_score: '0'
   div: T1
@@ -7368,7 +7392,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-08-19 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *18
   home_score: '0'
   away_score: '1'
@@ -7392,7 +7416,7 @@
   season: '1213'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-08-18 03:00:00.000000000 +03:00
-  home_team: *20
+  home_team: *21
   away_team: *2
   home_score: '1'
   away_score: '1'
@@ -7460,7 +7484,7 @@
   game_date: !ruby/object:DateTime 2012-04-07 03:00:00.000000000 +03:00
   home_team: &26 !ruby/object:DSTeam
     team_name: Ankaragucu
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '5'
   div: T1
@@ -7515,7 +7539,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-03-31 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *14
   home_score: '2'
   away_score: '2'
@@ -7588,7 +7612,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-03-25 02:00:00.000000000 +02:00
   home_team: *9
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -7643,7 +7667,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-03-18 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *24
   home_score: '2'
   away_score: '0'
@@ -7756,7 +7780,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-03-10 02:00:00.000000000 +02:00
   home_team: *1
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -7779,7 +7803,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-03-04 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *25
   home_score: '2'
   away_score: '0'
@@ -7908,7 +7932,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-02-24 02:00:00.000000000 +02:00
   home_team: *23
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -7947,7 +7971,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-02-19 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *3
   home_score: '3'
   away_score: '3'
@@ -8036,7 +8060,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-02-11 02:00:00.000000000 +02:00
   home_team: *15
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -8115,7 +8139,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-02-05 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *11
   home_score: '2'
   away_score: '3'
@@ -8140,7 +8164,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-02-02 02:00:00.000000000 +02:00
   home_team: *10
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '1'
   div: T1
@@ -8203,7 +8227,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-01-30 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *16
   home_score: '1'
   away_score: '0'
@@ -8324,7 +8348,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-01-24 02:00:00.000000000 +02:00
   home_team: *12
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -8380,7 +8404,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-01-21 02:00:00.000000000 +02:00
   home_team: *2
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '0'
   div: T1
@@ -8419,7 +8443,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-01-16 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *13
   home_score: '1'
   away_score: '1'
@@ -8508,7 +8532,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-01-08 02:00:00.000000000 +02:00
   home_team: *22
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -8611,7 +8635,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2012-01-03 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *18
   home_score: '0'
   away_score: '2'
@@ -8691,7 +8715,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-12-21 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *26
   home_score: '3'
   away_score: '0'
@@ -8756,7 +8780,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-12-17 02:00:00.000000000 +02:00
   home_team: *14
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -8795,18 +8819,18 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-12-12 02:00:00.000000000 +02:00
-  home_team: *21
-  away_team: *9
-  home_score: '2'
-  away_score: '0'
-  div: T1
-  season: '1112'
-- !ruby/object:DSGame
-  game_date: !ruby/object:DateTime 2011-12-12 02:00:00.000000000 +02:00
   home_team: *10
   away_team: *25
   home_score: '2'
   away_score: '2'
+  div: T1
+  season: '1112'
+- !ruby/object:DSGame
+  game_date: !ruby/object:DateTime 2011-12-12 02:00:00.000000000 +02:00
+  home_team: *20
+  away_team: *9
+  home_score: '2'
+  away_score: '0'
   div: T1
   season: '1112'
 - !ruby/object:DSGame
@@ -8860,7 +8884,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-12-08 02:00:00.000000000 +02:00
   home_team: *24
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -8955,7 +8979,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-12-04 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *1
   home_score: '1'
   away_score: '0'
@@ -9012,7 +9036,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-11-27 02:00:00.000000000 +02:00
   home_team: *25
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -9107,7 +9131,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-11-19 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *23
   home_score: '1'
   away_score: '0'
@@ -9140,7 +9164,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-11-06 02:00:00.000000000 +02:00
   home_team: *3
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -9227,7 +9251,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-10-30 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *15
   home_score: '0'
   away_score: '2'
@@ -9308,7 +9332,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-10-27 02:00:00.000000000 +02:00
   home_team: *11
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -9363,7 +9387,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-10-23 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *10
   home_score: '6'
   away_score: '2'
@@ -9468,7 +9492,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-10-15 02:00:00.000000000 +02:00
   home_team: *16
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '2'
   div: T1
@@ -9515,7 +9539,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-10-02 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *12
   home_score: '2'
   away_score: '2'
@@ -9635,7 +9659,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-09-23 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *2
   home_score: '0'
   away_score: '1'
@@ -9692,7 +9716,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-09-20 03:00:00.000000000 +03:00
   home_team: *13
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -9771,7 +9795,7 @@
   season: '1112'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-09-16 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *22
   home_score: '0'
   away_score: '1'
@@ -9820,7 +9844,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-09-11 03:00:00.000000000 +03:00
   home_team: *18
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '0'
   div: T1
@@ -9901,7 +9925,7 @@
   game_date: !ruby/object:DateTime 2011-05-21 03:00:00.000000000 +03:00
   home_team: &27 !ruby/object:DSTeam
     team_name: Bucaspor
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '3'
   div: T1
@@ -9964,7 +9988,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-05-15 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *13
   home_score: '1'
   away_score: '2'
@@ -10069,7 +10093,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-05-06 03:00:00.000000000 +03:00
   home_team: *14
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -10108,7 +10132,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-05-01 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *18
   home_score: '1'
   away_score: '0'
@@ -10205,7 +10229,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-04-23 03:00:00.000000000 +03:00
   home_team: *15
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '1'
   div: T1
@@ -10244,7 +10268,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-04-17 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *5
   home_score: '1'
   away_score: '3'
@@ -10325,7 +10349,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-04-10 03:00:00.000000000 +03:00
   home_team: *11
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '1'
   div: T1
@@ -10380,7 +10404,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-04-03 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *7
   home_score: '1'
   away_score: '3'
@@ -10493,7 +10517,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-03-19 02:00:00.000000000 +02:00
   home_team: *16
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '2'
   div: T1
@@ -10509,7 +10533,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-03-13 02:00:00.000000000 +02:00
   home_team: *10
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -10644,7 +10668,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-03-04 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *25
   home_score: '1'
   away_score: '2'
@@ -10677,7 +10701,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-02-27 02:00:00.000000000 +02:00
   home_team: *3
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '3'
   div: T1
@@ -10732,7 +10756,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-02-20 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *22
   home_score: '2'
   away_score: '0'
@@ -10797,7 +10821,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-02-14 02:00:00.000000000 +02:00
   home_team: *2
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '0'
   div: T1
@@ -10916,7 +10940,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-02-05 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *26
   home_score: '2'
   away_score: '1'
@@ -11005,14 +11029,14 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-01-29 02:00:00.000000000 +02:00
   home_team: *9
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '0'
   div: T1
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2011-01-24 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *1
   home_score: '3'
   away_score: '2'
@@ -11124,7 +11148,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-12-18 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *27
   home_score: '2'
   away_score: '0'
@@ -11181,7 +11205,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-12-12 02:00:00.000000000 +02:00
   home_team: *13
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '0'
   div: T1
@@ -11228,7 +11252,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-12-06 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *14
   home_score: '2'
   away_score: '2'
@@ -11301,7 +11325,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-11-29 02:00:00.000000000 +02:00
   home_team: *18
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '0'
   div: T1
@@ -11396,7 +11420,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-11-21 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *15
   home_score: '0'
   away_score: '0'
@@ -11509,7 +11533,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-11-12 02:00:00.000000000 +02:00
   home_team: *5
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -11580,7 +11604,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-11-05 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *11
   home_score: '1'
   away_score: '1'
@@ -11605,7 +11629,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-10-31 02:00:00.000000000 +02:00
   home_team: *7
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -11660,7 +11684,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-10-25 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *16
   home_score: '1'
   away_score: '0'
@@ -11740,7 +11764,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-10-17 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *10
   home_score: '4'
   away_score: '1'
@@ -11837,7 +11861,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-10-02 02:00:00.000000000 +02:00
   home_team: *25
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '2'
   div: T1
@@ -11900,7 +11924,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-09-26 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *3
   home_score: '0'
   away_score: '0'
@@ -11997,7 +12021,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-09-18 02:00:00.000000000 +02:00
   home_team: *22
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -12076,7 +12100,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-09-11 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *2
   home_score: '2'
   away_score: '0'
@@ -12157,7 +12181,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-08-27 03:00:00.000000000 +03:00
   home_team: *26
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '1'
   div: T1
@@ -12228,7 +12252,7 @@
   season: '1011'
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-08-20 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *9
   home_score: '1'
   away_score: '0'
@@ -12237,7 +12261,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-08-16 03:00:00.000000000 +03:00
   home_team: *1
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '2'
   div: T1
@@ -12367,7 +12391,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-05-15 03:00:00.000000000 +03:00
   home_team: *22
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '0'
   div: T1
@@ -12382,7 +12406,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-05-09 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *1
   home_score: '1'
   away_score: '1'
@@ -12495,7 +12519,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-05-01 03:00:00.000000000 +03:00
   home_team: *18
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '0'
   div: T1
@@ -12534,7 +12558,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-04-24 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *25
   home_score: '1'
   away_score: '2'
@@ -12583,7 +12607,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-04-18 03:00:00.000000000 +03:00
   home_team: *29
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '3'
   div: T1
@@ -12630,7 +12654,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-04-12 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *10
   home_score: '2'
   away_score: '2'
@@ -12711,7 +12735,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-04-04 03:00:00.000000000 +03:00
   home_team: *2
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '0'
   div: T1
@@ -12758,7 +12782,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-03-29 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *3
   home_score: '1'
   away_score: '0'
@@ -12847,7 +12871,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-03-21 02:00:00.000000000 +02:00
   home_team: *26
-  away_team: *21
+  away_team: *20
   home_score: '3'
   away_score: '0'
   div: T1
@@ -12926,7 +12950,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-03-14 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *14
   home_score: '1'
   away_score: '2'
@@ -13023,7 +13047,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-03-06 02:00:00.000000000 +02:00
   home_team: *7
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '2'
   div: T1
@@ -13078,7 +13102,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-02-27 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *16
   home_score: '1'
   away_score: '2'
@@ -13191,7 +13215,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-02-14 02:00:00.000000000 +02:00
   home_team: *28
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -13270,7 +13294,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-02-06 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *15
   home_score: '0'
   away_score: '0'
@@ -13287,7 +13311,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-01-31 02:00:00.000000000 +02:00
   home_team: *13
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -13366,7 +13390,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2010-01-24 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *11
   home_score: '1'
   away_score: '1'
@@ -13414,7 +13438,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-12-19 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *22
   home_score: '1'
   away_score: '2'
@@ -13487,7 +13511,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-12-13 02:00:00.000000000 +02:00
   home_team: *1
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -13542,7 +13566,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-12-06 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *18
   home_score: '3'
   away_score: '0'
@@ -13591,7 +13615,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-11-29 02:00:00.000000000 +02:00
   home_team: *25
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -13662,7 +13686,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-11-22 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *29
   home_score: '2'
   away_score: '0'
@@ -13719,7 +13743,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-11-08 02:00:00.000000000 +02:00
   home_team: *10
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '4'
   div: T1
@@ -13790,7 +13814,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-11-01 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *2
   home_score: '1'
   away_score: '1'
@@ -13903,7 +13927,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-10-23 02:00:00.000000000 +02:00
   home_team: *3
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -13918,7 +13942,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-10-18 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *26
   home_score: '3'
   away_score: '0'
@@ -13999,7 +14023,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-10-04 02:00:00.000000000 +02:00
   home_team: *14
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -14038,7 +14062,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-09-27 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *7
   home_score: '0'
   away_score: '0'
@@ -14143,7 +14167,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-09-19 03:00:00.000000000 +03:00
   home_team: *16
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '1'
   div: T1
@@ -14270,7 +14294,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-08-29 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *28
   home_score: '3'
   away_score: '0'
@@ -14319,7 +14343,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-08-23 03:00:00.000000000 +03:00
   home_team: *15
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '1'
   div: T1
@@ -14366,7 +14390,7 @@
   season: 0910
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-08-16 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *13
   home_score: '1'
   away_score: '1'
@@ -14431,7 +14455,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-08-09 03:00:00.000000000 +03:00
   home_team: *11
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '0'
   div: T1
@@ -14496,7 +14520,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-05-30 03:00:00.000000000 +03:00
   home_team: *11
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '4'
   div: T1
@@ -14625,7 +14649,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-05-23 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *32
   home_score: '1'
   away_score: '0'
@@ -14682,7 +14706,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-05-17 03:00:00.000000000 +03:00
   home_team: *1
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -14705,7 +14729,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-05-10 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *13
   home_score: '3'
   away_score: '0'
@@ -14834,7 +14858,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-05-02 03:00:00.000000000 +03:00
   home_team: *3
-  away_team: *21
+  away_team: *20
   home_score: '4'
   away_score: '1'
   div: T1
@@ -14865,7 +14889,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-04-26 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *5
   home_score: '1'
   away_score: '1'
@@ -14962,7 +14986,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-04-19 03:00:00.000000000 +03:00
   home_team: *22
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '1'
   div: T1
@@ -15001,7 +15025,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-04-12 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *28
   home_score: '2'
   away_score: '0'
@@ -15114,7 +15138,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-04-04 03:00:00.000000000 +03:00
   home_team: *16
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -15177,7 +15201,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-03-21 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *26
   home_score: '2'
   away_score: '0'
@@ -15210,7 +15234,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-03-15 02:00:00.000000000 +02:00
   home_team: *31
-  away_team: *21
+  away_team: *20
   home_score: '2'
   away_score: '2'
   div: T1
@@ -15281,7 +15305,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-03-08 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *2
   home_score: '0'
   away_score: '2'
@@ -15402,7 +15426,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-02-28 02:00:00.000000000 +02:00
   home_team: *14
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -15481,7 +15505,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-02-21 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *18
   home_score: '0'
   away_score: '0'
@@ -15498,7 +15522,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-02-15 02:00:00.000000000 +02:00
   home_team: *30
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '2'
   div: T1
@@ -15626,7 +15650,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-02-07 02:00:00.000000000 +02:00
   home_team: *15
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '1'
   div: T1
@@ -15689,7 +15713,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-01-31 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *10
   home_score: '0'
   away_score: '0'
@@ -15753,7 +15777,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2009-01-24 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *11
   home_score: '1'
   away_score: '3'
@@ -15826,7 +15850,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-12-20 02:00:00.000000000 +02:00
   home_team: *32
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '3'
   div: T1
@@ -15913,7 +15937,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-12-13 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *1
   home_score: '2'
   away_score: '0'
@@ -15986,7 +16010,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-12-06 02:00:00.000000000 +02:00
   home_team: *13
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '0'
   div: T1
@@ -16065,7 +16089,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-11-28 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *3
   home_score: '1'
   away_score: '1'
@@ -16074,7 +16098,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-11-23 02:00:00.000000000 +02:00
   home_team: *5
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '0'
   div: T1
@@ -16161,7 +16185,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-11-16 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *22
   home_score: '0'
   away_score: '0'
@@ -16250,7 +16274,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-11-09 02:00:00.000000000 +02:00
   home_team: *28
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -16313,7 +16337,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-11-02 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *16
   home_score: '1'
   away_score: '0'
@@ -16370,7 +16394,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-10-26 02:00:00.000000000 +02:00
   home_team: *26
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '3'
   div: T1
@@ -16449,7 +16473,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-10-19 02:00:00.000000000 +02:00
-  home_team: *21
+  home_team: *20
   away_team: *31
   home_score: '1'
   away_score: '2'
@@ -16514,7 +16538,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-10-05 02:00:00.000000000 +02:00
   home_team: *2
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '4'
   div: T1
@@ -16585,7 +16609,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-09-28 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *14
   home_score: '1'
   away_score: '0'
@@ -16666,7 +16690,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-09-21 03:00:00.000000000 +03:00
   home_team: *18
-  away_team: *21
+  away_team: *20
   home_score: '1'
   away_score: '0'
   div: T1
@@ -16777,7 +16801,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-09-13 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *30
   home_score: '1'
   away_score: '0'
@@ -16809,7 +16833,7 @@
   season: 0809
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-08-31 03:00:00.000000000 +03:00
-  home_team: *21
+  home_team: *20
   away_team: *15
   home_score: '0'
   away_score: '0'
@@ -16906,7 +16930,7 @@
 - !ruby/object:DSGame
   game_date: !ruby/object:DateTime 2008-08-23 03:00:00.000000000 +03:00
   home_team: *10
-  away_team: *21
+  away_team: *20
   home_score: '0'
   away_score: '0'
   div: T1
