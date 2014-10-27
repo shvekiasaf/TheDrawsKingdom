@@ -16,7 +16,7 @@ module DrawKingdom
 #       DSFileReader.new("turkey_urls"),
 #       DSFileReader.new("english_urls")]
 
-  @file_readers = [DSFileReader.new("italian_urls")]
+  @file_readers = [DSFileReader.new("german_urls")]
 
 
   @file_readers.each do |current_file_reader|
@@ -42,6 +42,8 @@ module DrawKingdom
       current_date = current_date - 7
       dates_array.push(current_date)
     end
+
+    # print "date,teamname,non_draw_in_a_row,non_draw_in_a_row_since,draw_games_prop,draw_games_prop_since,last_non_draw_games,future_fixtures,arrivals,did_draw_since" + "\n"
 
     simulations1 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
@@ -109,7 +111,7 @@ module DrawKingdom
                     DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
 
     all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5, simulations6, simulations7, simulations8,simulations9]
-    # all_simulations = [simulations6, simulations7, simulations8,simulations9]
+    # all_simulations = [simulations1]
 
     max_earnings = -9999999999
     selected_simulation = nil
@@ -123,13 +125,21 @@ module DrawKingdom
 
         current_record = @simulation_manager.runSimulationWithStrategies(current_simulation, current_date, stay_power)
 
-        # summarize success
-        succeeded_simulations += (current_record.did_draw_since == true) ? 1 : 0
+        if (not current_record.nil?)
 
-        # calculate profit according to
-        money_gained += (current_record.draw_after_attempt == -1) ? -1 * ((initial_bet_money * (2 ** stay_power)) * 2 - initial_bet_money) # loss
-        : (0.3 * (initial_bet_money * 2 ** current_record.draw_after_attempt)) + initial_bet_money # win
+          # summarize success
+          succeeded_simulations += (current_record.did_draw_since == true) ? 1 : 0
 
+          # calculate profit according to
+          money_gained += (current_record.draw_after_attempt == -1) ? -1 * initial_bet_money * ((2 ** stay_power) - 1) # loss
+          : (2.5 * initial_bet_money * (2 ** (stay_power - 1))) - (initial_bet_money * ((2 ** stay_power) - 1))
+
+          #(2.5*10*2^(5-1)) - (10*(2^5)-10)
+
+          #: (0.5 * (initial_bet_money * 2 ** current_record.draw_after_attempt)) + initial_bet_money # win
+        else
+          break
+        end
       end
 
       # calculate average money gain and average success rate per simulation

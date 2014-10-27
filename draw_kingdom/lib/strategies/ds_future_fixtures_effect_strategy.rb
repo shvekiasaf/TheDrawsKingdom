@@ -45,16 +45,16 @@ class DSFutureFixturesEffectStrategy < DSBaseStrategy
         grade = difference_sum / @future_games_ammount
 
         # normalize grade
-        return normalizeGrade(grade, 7.0)
+        return normalizeGrade(grade, 15.0)
       else
 
          # print "#" + @team.team_name + "#temp#\n"
 
         return 0
       end
+    else
+      return 0
     end
-  else
-    return 0
   end
 
   def normalizeGrade(grade, range)

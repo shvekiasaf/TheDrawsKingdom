@@ -26,7 +26,7 @@ class DSSimulations
     @records_array = Array.new()
 
     # debug
-    # print "teamname,did_draw_since,non_draw_in_a_row,non_draw_in_a_row_since,draw_games_prop,draw_games_prop_since,last_non_draw_games" + "\n"
+    # print "teamname,did_draw_since,non_draw_in_a_row,non_draw_in_a_row_since,draw_games_prop,draw_games_prop_since,last_non_draw_games,future_fixtures,arrivals" + "\n"
 
     @file_reader.teamsHash.each do |team_name, team_object|
 
@@ -56,7 +56,7 @@ class DSSimulations
             draw_after_attempt = -1
           end
 
-          # print team_name + "," + (did_draw_since ? "1" : "0")
+          # print due_to_date.to_s + "," + team_name
 
           @totalGrade = 0
           weightSum = 0
@@ -80,7 +80,7 @@ class DSSimulations
           @records_array.push(currentRecord)
 
           # debug
-          # print "\n"
+          # print "," + (did_draw_since ? "1" : "0") + "\n"
 
 
         end
@@ -89,7 +89,7 @@ class DSSimulations
     end
 
     # Printing all records sorted by general score
-    #  print "====================================" + "\n"
+    # print "====================================" + "\n"
     @records_array = @records_array.sort {|x,y| y.general_score <=> x.general_score}
 
     if (@records_array.length > 0)
