@@ -11,7 +11,7 @@ require_relative "../strategies/ds_future_fixtures_effect_strategy"
 require_relative "../strategies/ds_arrivals_strategy"
 require 'colorize'
 
-class DSSimulations
+class DSSimulationsRunner
 
   # Readers
   attr_reader :file_reader
@@ -21,7 +21,7 @@ class DSSimulations
     @file_reader = file_reader
   end
 
-  def runSimulationWithStrategies(strategies, due_to_date, success_indicator)
+  def runSimulationWithStrategies(strategies, due_to_date, stay_power)
 
     @records_array = Array.new()
 
@@ -30,31 +30,18 @@ class DSSimulations
 
     @file_reader.teamsHash.each do |team_name, team_object|
 
-      # get all games per team between dates
-      all_games_for_team = @file_reader.getAllGamesFor(team_object, Date.parse('01-01-1804'), due_to_date)
+      # get all team's games until now
+      all_games_for_team = @file_reader.getAllGamesFor(team_object,
+                                                       nil, # from date
+                                                       due_to_date) # to date
 
       if (not all_games_for_team.nil?)
 
-        # only teams with more than 100 games will be checked
+        # only teams with more than 100 games in history will be checked
         if (all_games_for_team.count > 100)
 
-          # For simulation purposes -
-          # Check whether team has a draw or not in X number of games after custom date
-          some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, due_to_date, success_indicator)
-          did_draw_since = false
-          draw_after_attempt = 0
-
-          # count the number of draws since date
-          some_games_for_team.each do |current_game|
-            draw_after_attempt += 1
-            if (current_game.isDraw)
-              did_draw_since = true
-              break
-            end
-          end
-          if (did_draw_since != true)
-            draw_after_attempt = -1
-          end
+          # if had a draw in the following X games, then - on what attempt. else = -1
+          draw_after_attempt = get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)
 
           # print due_to_date.to_s + "," + team_name
 
@@ -63,7 +50,7 @@ class DSSimulations
           strategies.each do |current_strategy_value|
 
             # set all teams and team object for current strategy
-            current_strategy_value.strategy.loadGamesAndTeam(@file_reader, team_object, due_to_date, strategies, success_indicator)
+            current_strategy_value.strategy.loadGamesAndTeam(@file_reader, team_object, due_to_date, strategies, stay_power)
 
             # calculate the current simulation grade
             tempgrade = current_strategy_value.strategy.getGrade.abs
@@ -76,13 +63,11 @@ class DSSimulations
 
           @totalGrade /= weightSum
 
-          currentRecord = DSRecord.new(team_object, @totalGrade, did_draw_since, draw_after_attempt)
+          currentRecord = DSRecord.new(team_object, @totalGrade, draw_after_attempt)
           @records_array.push(currentRecord)
 
           # debug
-          # print "," + (did_draw_since ? "1" : "0") + "\n"
-
-
+          # print "," + (currentRecord.did_draw_since ? "1" : "0") + "\n"
         end
       end
 
@@ -99,5 +84,26 @@ class DSSimulations
     else
       return nil
     end
+  end
+
+  def get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)
+    # Check whether team has a draw or not in X number of games after custom date
+    some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, due_to_date, stay_power)
+    did_draw_since = false
+    draw_after_attempt = 0
+
+    # count the number of draws since date
+    some_games_for_team.each do |current_game|
+      draw_after_attempt += 1
+      if (current_game.isDraw)
+        did_draw_since = true
+        break
+      end
+    end
+    if (did_draw_since != true)
+      draw_after_attempt = -1
+    end
+
+    return draw_after_attempt
   end
 end

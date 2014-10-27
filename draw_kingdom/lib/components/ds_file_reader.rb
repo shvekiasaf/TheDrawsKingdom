@@ -25,7 +25,7 @@ class DSFileReader
     @didInitialize = true
   end
 
-  # return all games for team (Sorted by date)
+  # return all games for team (Sorted by date). nil as date will ignore the value and give all the games without limit
   def getAllGamesFor(team, fromDate, toDate)
 
     if (@didInitialize)
@@ -55,8 +55,22 @@ class DSFileReader
 
       currentGamesArray.each do |current_game|
 
-          if ((current_game.game_date < toDate) && (current_game.game_date > fromDate))
+          if ((toDate.nil?) && (fromDate.nil?))
             filteredGamesArray.push(current_game)
+          elsif (toDate.nil?)
+
+            if (current_game.game_date > fromDate)
+              filteredGamesArray.push(current_game)
+            end
+
+          elsif (fromDate.nil?)
+            if (current_game.game_date < toDate)
+              filteredGamesArray.push(current_game)
+            end
+          else
+            if ((current_game.game_date < toDate) && (current_game.game_date > fromDate))
+              filteredGamesArray.push(current_game)
+            end
           end
       end
 
@@ -68,7 +82,7 @@ class DSFileReader
 
     currentGamesArray = Array.new()
 
-    someGames = getAllGamesFor(team, fromDate, Date.parse("31-12-2055"))
+    someGames = getAllGamesFor(team, fromDate, nil)
 
     someGames.reverse.each() do |current_game|
 
