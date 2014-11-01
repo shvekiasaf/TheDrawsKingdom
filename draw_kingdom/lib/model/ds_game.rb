@@ -21,6 +21,10 @@ class DSGame
     return (@dif == 0)
   end
 
+  def isTeamInMatch(team)
+    return (@home_team.team_name.eql?(team.team_name) or @away_team.team_name.eql?(team.team_name))
+  end
+
   def pointsForTeam(team_object)
 
     home_points = 0

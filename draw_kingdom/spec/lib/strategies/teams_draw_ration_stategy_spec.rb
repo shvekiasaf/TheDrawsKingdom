@@ -27,19 +27,19 @@ allGamesArray = [
 
 describe DSFutureGamesGrader do
   it 'should give 0 with no previous game' do
-    grade = DSFutureGamesGrader.new(allGamesArray[0..10], Date.new(2010, 1, 10)).getGrade
+    grade = DSFutureGamesGrader.new(allGamesArray[0..10], Date.new(2010, 1, 10),1).getGrade
     grade.should == 0.0
   end
   it 'should give 1.0 with only draws'do
-    grade = DSFutureGamesGrader.new(allGamesArray[0..7], Date.new(2010, 1, 7)).getGrade
+    grade = DSFutureGamesGrader.new(allGamesArray[0..7], Date.new(2010, 1, 7),1).getGrade
     grade.should == 1.0
   end
   it 'should give 0.0 with only non-draws'do
-    grade = DSFutureGamesGrader.new(allGamesArray[0..5], Date.new(2010, 1, 5)).getGrade
+    grade = DSFutureGamesGrader.new(allGamesArray[0..5], Date.new(2010, 1, 5),1).getGrade
     grade.should == 0.0
   end
   it 'should give 0.5 with draws in 50% of the games'do
-    grade = DSFutureGamesGrader.new(allGamesArray[0..6], Date.new(2010, 1, 6)).getGrade
+    grade = DSFutureGamesGrader.new(allGamesArray[0..6], Date.new(2010, 1, 6),1).getGrade
     grade.should == 0.5
   end
 end

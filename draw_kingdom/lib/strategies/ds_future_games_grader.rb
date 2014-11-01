@@ -1,7 +1,8 @@
 class DSFutureGamesGrader
 
-  def initialize(all_team_games,due_to_date)
+  def initialize(all_team_games,due_to_date,num_of_games)
     @all_team_games = all_team_games
+    @num_of_games = num_of_games
     @due_to_date = due_to_date
   end
 
@@ -9,7 +10,7 @@ class DSFutureGamesGrader
 
   def getGrade
     grade = 0
-    future_games = @all_team_games.select{|game| game.game_date > @due_to_date}.sort {|x,y| x.game_date <=> y.game_date}
+    future_games = @all_team_games.select{|game| game.game_date > @due_to_date}.sort {|x,y| x.game_date <=> y.game_date}[0..@num_of_games]
     future_games.each do |game|
       proportion = getDrawProportionForTeam(game)
       grade += proportion
