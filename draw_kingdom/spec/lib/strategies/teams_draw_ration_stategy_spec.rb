@@ -1,7 +1,7 @@
 require 'rspec'
 require_relative "../../../lib/strategies/ds_future_games_grader"
-require_relative "../../../lib/model/ds_game"
 require_relative "../../../lib/model/ds_team"
+require_relative "../../../lib/model/ds_game"
 
 hapoel = DSTeam.new("hapoel")
 maccabi = DSTeam.new("maccabi")
