@@ -1,11 +1,11 @@
 class DSRecord
 
   # Readers
-  attr_reader :team_object, :general_score, :draw_after_attempt
+  attr_reader :team_object, :general_score, :draw_after_attempt, :simulation_date
 
   # Initialize
-  def initialize(team_object, general_score, draw_after_attempt)
-
+  def initialize(team_object, general_score, draw_after_attempt,simulation_date)
+    @simulation_date = simulation_date
     @team_object = team_object
     @general_score = general_score
     @draw_after_attempt = draw_after_attempt

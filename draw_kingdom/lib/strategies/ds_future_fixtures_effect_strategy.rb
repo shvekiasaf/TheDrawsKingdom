@@ -1,4 +1,5 @@
 require_relative "../strategies/ds_base_strategy"
+require_relative "../../lib/components/ds_season_calculator"
 require 'date'
 
 class DSFutureFixturesEffectStrategy < DSBaseStrategy
@@ -20,7 +21,7 @@ class DSFutureFixturesEffectStrategy < DSBaseStrategy
 
       # Get current team league points for this season
       current_season = @all_team_games[0].season
-      current_team_points = @file_reader.getTeamPoints(@all_team_games, current_season, @team)
+      current_team_points = DSSeasonCalculator.getTeamPoints(@all_team_games, current_season, @team)
       difference_sum = 0
 
       # run over the X number of future games
@@ -35,7 +36,7 @@ class DSFutureFixturesEffectStrategy < DSBaseStrategy
 
           # get the arrival team league points according to relevant date
           all_games_for_comp_team = @file_reader.getAllGamesFor(current_comp_team, Date.parse('01-01-1804'), @due_to_date)
-          current_comp_team_points = @file_reader.getTeamPoints(all_games_for_comp_team, current_season, current_comp_team)
+          current_comp_team_points = DSSeasonCalculator.getTeamPoints(all_games_for_comp_team, current_season, current_comp_team)
 
           # calculate the difference between the arrival league points to the current team points
           difference_sum += (current_team_points - current_comp_team_points).abs
