@@ -10,6 +10,7 @@ beitar = DSTeam.new("beitar")
 ashdod = DSTeam.new("ashdod")
 tubruk = DSTeam.new("tubruk")
 
+# todo use file test vector for all specs instead of hard coded.
 allGamesArray = [
     DSGame.new(Date.new(2010, 1, 1), hapoel, haifa, 1, 0, nil, "Israel"),
     DSGame.new(Date.new(2010, 1, 2), hapoel, ashdod, 1, 0, nil, "Israel"),

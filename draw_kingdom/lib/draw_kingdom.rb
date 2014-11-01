@@ -56,6 +56,7 @@ module DrawKingdom
         if (not current_record.nil?)
           simulation_records_array.push current_record
         else
+          # todo: when does this happen?
           break
         end
       end

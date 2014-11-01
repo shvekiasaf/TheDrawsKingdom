@@ -15,6 +15,8 @@ class DSSeasonCalculator
     return points
   end
 
+  # todo: use a threshold of at least 5 previous games for the team and consider using previous seasons.
+  # in case I don't have the minimum amount, see what exactly I should return.
   def self.getAvgHomeTeamGoalsScoredInSeason(games_array, season, team_object)
     goals_count = 0
     teamGamesForSeason = games_array.select { |current_game|
@@ -30,6 +32,8 @@ class DSSeasonCalculator
     return goals_count.to_f/teamGamesForSeason.count.to_f
   end
 
+  # todo: use a threshold of at least 5 previous games for the team and consider using previous seasons.
+  # in case I don't have the minimum amount, see what exactly I should return.
   def self.getAvgAwayTeamGoalsScoredInSeason(games_array, season, team_object)
     goals_count = 0
     teamGamesForSeason = games_array.select { |current_game|

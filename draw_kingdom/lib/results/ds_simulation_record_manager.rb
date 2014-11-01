@@ -9,7 +9,7 @@ class DSSimulationRecordManager
   end
 
   def calculate
-    if @records.empty?
+    if @records.nil? or @records.empty?
       @money_gained_avg = 0
       @succeeded_simulations_avg = 0
       return
@@ -25,9 +25,8 @@ class DSSimulationRecordManager
       : (2.5 * @initial_bet_money * (2 ** (current_record.draw_after_attempt - 1))) - (@initial_bet_money * ((2 ** current_record.draw_after_attempt) - 1)) # win
     end
     # calculate average money gain and average success rate per simulation
-    # todo [Ishai] = asaf you devided by @dates.count. I think this is wrong.
-    @money_gained_avg = (money_gained / @records.count)
-    @succeeded_simulations_avg = (100 * succeeded_simulations / @records.count)
+    @money_gained_avg = (money_gained / @records.count.to_f)
+    @succeeded_simulations_avg = (100.0 * succeeded_simulations.to_f / @records.count)
   end
 
 
