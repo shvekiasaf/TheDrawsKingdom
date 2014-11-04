@@ -1,105 +1,116 @@
 ---
-Marseille: !ruby/object:DSTeam
-  team_name: Marseille
-Toulouse: !ruby/object:DSTeam
-  team_name: Toulouse
-Bordeaux: !ruby/object:DSTeam
-  team_name: Bordeaux
-Caen: !ruby/object:DSTeam
-  team_name: Caen
+Lorient: !ruby/object:DSTeam
+  team_name: Lorient
+Paris-SG: !ruby/object:DSTeam
+  team_name: Paris-SG
+Guingamp: !ruby/object:DSTeam
+  team_name: Guingamp
+Bastia: !ruby/object:DSTeam
+  team_name: Bastia
+Lille: !ruby/object:DSTeam
+  team_name: Lille
 Saint-Étienne: !ruby/object:DSTeam
   team_name: Saint-Étienne
-Rennes: !ruby/object:DSTeam
-  team_name: Rennes
-Reims: !ruby/object:DSTeam
-  team_name: Reims
+Metz: !ruby/object:DSTeam
+  team_name: Metz
+Caen: !ruby/object:DSTeam
+  team_name: Caen
 Montpellier: !ruby/object:DSTeam
   team_name: Montpellier
 Evian Tgfc: !ruby/object:DSTeam
   team_name: Evian Tgfc
-Metz: !ruby/object:DSTeam
-  team_name: Metz
-Bastia: !ruby/object:DSTeam
-  team_name: Bastia
-Lorient: !ruby/object:DSTeam
-  team_name: Lorient
-Lens: !ruby/object:DSTeam
-  team_name: Lens
 Nice: !ruby/object:DSTeam
   team_name: Nice
-Monaco: !ruby/object:DSTeam
-  team_name: Monaco
-Nantes: !ruby/object:DSTeam
-  team_name: Nantes
 Lyon: !ruby/object:DSTeam
   team_name: Lyon
-Paris-SG: !ruby/object:DSTeam
-  team_name: Paris-SG
-Lille: !ruby/object:DSTeam
-  team_name: Lille
-Guingamp: !ruby/object:DSTeam
-  team_name: Guingamp
-Valenciennes: !ruby/object:DSTeam
-  team_name: Valenciennes
-Clermont Foot: !ruby/object:DSTeam
-  team_name: Clermont Foot
-Ajaccio: !ruby/object:DSTeam
-  team_name: Ajaccio
-Angers: !ruby/object:DSTeam
-  team_name: Angers
-Arles: !ruby/object:DSTeam
-  team_name: Arles
+Rennes: !ruby/object:DSTeam
+  team_name: Rennes
+Lens: !ruby/object:DSTeam
+  team_name: Lens
+Bordeaux: !ruby/object:DSTeam
+  team_name: Bordeaux
+Nantes: !ruby/object:DSTeam
+  team_name: Nantes
+Toulouse: !ruby/object:DSTeam
+  team_name: Toulouse
+Monaco: !ruby/object:DSTeam
+  team_name: Monaco
+Reims: !ruby/object:DSTeam
+  team_name: Reims
+Marseille: !ruby/object:DSTeam
+  team_name: Marseille
 Niort: !ruby/object:DSTeam
   team_name: Niort
-Nimes: !ruby/object:DSTeam
-  team_name: Nimes
-Auxerre: !ruby/object:DSTeam
-  team_name: Auxerre
-Chateauroux: !ruby/object:DSTeam
-  team_name: Chateauroux
-Tours: !ruby/object:DSTeam
-  team_name: Tours
-US Orléans: !ruby/object:DSTeam
-  team_name: US Orléans
-Creteil: !ruby/object:DSTeam
-  team_name: Creteil
-Stade Brestois 29: !ruby/object:DSTeam
-  team_name: Stade Brestois 29
-GFCO Ajaccio: !ruby/object:DSTeam
-  team_name: GFCO Ajaccio
-Sochaux: !ruby/object:DSTeam
-  team_name: Sochaux
-Laval: !ruby/object:DSTeam
-  team_name: Laval
-Troyes: !ruby/object:DSTeam
-  team_name: Troyes
-Dijon: !ruby/object:DSTeam
-  team_name: Dijon
 Nancy: !ruby/object:DSTeam
   team_name: Nancy
+Ajaccio: !ruby/object:DSTeam
+  team_name: Ajaccio
+Troyes: !ruby/object:DSTeam
+  team_name: Troyes
+Angers: !ruby/object:DSTeam
+  team_name: Angers
+Dijon: !ruby/object:DSTeam
+  team_name: Dijon
+Arles: !ruby/object:DSTeam
+  team_name: Arles
+Valenciennes: !ruby/object:DSTeam
+  team_name: Valenciennes
+Chateauroux: !ruby/object:DSTeam
+  team_name: Chateauroux
+Laval: !ruby/object:DSTeam
+  team_name: Laval
+Creteil: !ruby/object:DSTeam
+  team_name: Creteil
+Nimes: !ruby/object:DSTeam
+  team_name: Nimes
+US Orléans: !ruby/object:DSTeam
+  team_name: US Orléans
+Clermont Foot: !ruby/object:DSTeam
+  team_name: Clermont Foot
+Sochaux: !ruby/object:DSTeam
+  team_name: Sochaux
+GFCO Ajaccio: !ruby/object:DSTeam
+  team_name: GFCO Ajaccio
+Tours: !ruby/object:DSTeam
+  team_name: Tours
+Auxerre: !ruby/object:DSTeam
+  team_name: Auxerre
+Stade Brestois 29: !ruby/object:DSTeam
+  team_name: Stade Brestois 29
 Le Havre: !ruby/object:DSTeam
   team_name: Le Havre
 Etienne Didot: !ruby/object:DSTeam
   team_name: Etienne Didot
-Grenoble: !ruby/object:DSTeam
-  team_name: Grenoble
-Le Mans: !ruby/object:DSTeam
-  team_name: Le Mans
-Boulogne: !ruby/object:DSTeam
-  team_name: Boulogne
-Ajaccio GFCO: !ruby/object:DSTeam
-  team_name: Ajaccio GFCO
-Orleans: !ruby/object:DSTeam
-  team_name: Orleans
-Istres: !ruby/object:DSTeam
-  team_name: Istres
-CA Bastia: !ruby/object:DSTeam
-  team_name: CA Bastia
-Sedan: !ruby/object:DSTeam
-  team_name: Sedan
-Amiens: !ruby/object:DSTeam
-  team_name: Amiens
-Vannes: !ruby/object:DSTeam
-  team_name: Vannes
-Strasbourg: !ruby/object:DSTeam
-  team_name: Strasbourg
+!binary "R3Jlbm9ibGU=": !ruby/object:DSTeam
+  team_name: !binary |-
+    R3Jlbm9ibGU=
+!binary "TGUgTWFucw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    TGUgTWFucw==
+!binary "Qm91bG9nbmU=": !ruby/object:DSTeam
+  team_name: !binary |-
+    Qm91bG9nbmU=
+!binary "QWphY2NpbyBHRkNP": !ruby/object:DSTeam
+  team_name: !binary |-
+    QWphY2NpbyBHRkNP
+!binary "T3JsZWFucw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    T3JsZWFucw==
+!binary "SXN0cmVz": !ruby/object:DSTeam
+  team_name: !binary |-
+    SXN0cmVz
+!binary "Q0EgQmFzdGlh": !ruby/object:DSTeam
+  team_name: !binary |-
+    Q0EgQmFzdGlh
+!binary "U2VkYW4=": !ruby/object:DSTeam
+  team_name: !binary |-
+    U2VkYW4=
+!binary "QW1pZW5z": !ruby/object:DSTeam
+  team_name: !binary |-
+    QW1pZW5z
+!binary "VmFubmVz": !ruby/object:DSTeam
+  team_name: !binary |-
+    VmFubmVz
+!binary "U3RyYXNib3VyZw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    U3RyYXNib3VyZw==

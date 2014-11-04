@@ -1,67 +1,82 @@
 ---
-Niki Volos: !ruby/object:DSTeam
-  team_name: Niki Volos
-Panthrakikos: !ruby/object:DSTeam
-  team_name: Panthrakikos
-Panathinaikos: !ruby/object:DSTeam
-  team_name: Panathinaikos
-Ofi Crete: !ruby/object:DSTeam
-  team_name: Ofi Crete
-Xanthi: !ruby/object:DSTeam
-  team_name: Xanthi
-Kalloni Lekanopedio: !ruby/object:DSTeam
-  team_name: Kalloni Lekanopedio
-Panaitolikos: !ruby/object:DSTeam
-  team_name: Panaitolikos
-Paok Saloniki: !ruby/object:DSTeam
-  team_name: Paok Saloniki
-Ergotelis: !ruby/object:DSTeam
-  team_name: Ergotelis
-Atromitos Athinon: !ruby/object:DSTeam
-  team_name: Atromitos Athinon
-Kerkyra: !ruby/object:DSTeam
-  team_name: Kerkyra
-Panionios: !ruby/object:DSTeam
-  team_name: Panionios
-Veria: !ruby/object:DSTeam
-  team_name: Veria
 Platanias: !ruby/object:DSTeam
   team_name: Platanias
 Pas Giannina: !ruby/object:DSTeam
   team_name: Pas Giannina
-Levadiakos: !ruby/object:DSTeam
-  team_name: Levadiakos
-Olympiakos: !ruby/object:DSTeam
-  team_name: Olympiakos
+Veria: !ruby/object:DSTeam
+  team_name: Veria
+Panionios: !ruby/object:DSTeam
+  team_name: Panionios
 Asteras Tripolis: !ruby/object:DSTeam
   team_name: Asteras Tripolis
-Panetolikos: !ruby/object:DSTeam
-  team_name: Panetolikos
-OFI: !ruby/object:DSTeam
-  team_name: OFI
-Levadeiakos: !ruby/object:DSTeam
-  team_name: Levadeiakos
-Kallonis: !ruby/object:DSTeam
-  team_name: Kallonis
-Panionios Athens: !ruby/object:DSTeam
-  team_name: Panionios Athens
-Aris: !ruby/object:DSTeam
-  team_name: Aris
-Apollon: !ruby/object:DSTeam
-  team_name: Apollon
-AEK: !ruby/object:DSTeam
-  team_name: AEK
-Doxa Dramas: !ruby/object:DSTeam
-  team_name: Doxa Dramas
-Iraklis: !ruby/object:DSTeam
-  team_name: Iraklis
-Larisa: !ruby/object:DSTeam
-  team_name: Larisa
-Olympiakos Volou: !ruby/object:DSTeam
-  team_name: Olympiakos Volou
-Kavala: !ruby/object:DSTeam
-  team_name: Kavala
-Panserraikos: !ruby/object:DSTeam
-  team_name: Panserraikos
-Thrasyvoulos: !ruby/object:DSTeam
-  team_name: Thrasyvoulos
+Olympiakos: !ruby/object:DSTeam
+  team_name: Olympiakos
+Kerkyra: !ruby/object:DSTeam
+  team_name: Kerkyra
+Xanthi: !ruby/object:DSTeam
+  team_name: Xanthi
+Kalloni Lekanopedio: !ruby/object:DSTeam
+  team_name: Kalloni Lekanopedio
+Ofi Crete: !ruby/object:DSTeam
+  team_name: Ofi Crete
+Ergotelis: !ruby/object:DSTeam
+  team_name: Ergotelis
+Atromitos Athinon: !ruby/object:DSTeam
+  team_name: Atromitos Athinon
+Panaitolikos: !ruby/object:DSTeam
+  team_name: Panaitolikos
+Panathinaikos: !ruby/object:DSTeam
+  team_name: Panathinaikos
+Panthrakikos: !ruby/object:DSTeam
+  team_name: Panthrakikos
+Levadiakos: !ruby/object:DSTeam
+  team_name: Levadiakos
+Paok Saloniki: !ruby/object:DSTeam
+  team_name: Paok Saloniki
+Niki Volos: !ruby/object:DSTeam
+  team_name: Niki Volos
+!binary "UGFuZXRvbGlrb3M=": !ruby/object:DSTeam
+  team_name: !binary |-
+    UGFuZXRvbGlrb3M=
+!binary "T0ZJ": !ruby/object:DSTeam
+  team_name: !binary |-
+    T0ZJ
+!binary "TGV2YWRlaWFrb3M=": !ruby/object:DSTeam
+  team_name: !binary |-
+    TGV2YWRlaWFrb3M=
+!binary "S2FsbG9uaXM=": !ruby/object:DSTeam
+  team_name: !binary |-
+    S2FsbG9uaXM=
+!binary "UGFuaW9uaW9zIEF0aGVucw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    UGFuaW9uaW9zIEF0aGVucw==
+!binary "QXJpcw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    QXJpcw==
+!binary "QXBvbGxvbg==": !ruby/object:DSTeam
+  team_name: !binary |-
+    QXBvbGxvbg==
+!binary "QUVL": !ruby/object:DSTeam
+  team_name: !binary |-
+    QUVL
+!binary "RG94YSBEcmFtYXM=": !ruby/object:DSTeam
+  team_name: !binary |-
+    RG94YSBEcmFtYXM=
+!binary "SXJha2xpcw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    SXJha2xpcw==
+!binary "TGFyaXNh": !ruby/object:DSTeam
+  team_name: !binary |-
+    TGFyaXNh
+!binary "T2x5bXBpYWtvcyBWb2xvdQ==": !ruby/object:DSTeam
+  team_name: !binary |-
+    T2x5bXBpYWtvcyBWb2xvdQ==
+!binary "S2F2YWxh": !ruby/object:DSTeam
+  team_name: !binary |-
+    S2F2YWxh
+!binary "UGFuc2VycmFpa29z": !ruby/object:DSTeam
+  team_name: !binary |-
+    UGFuc2VycmFpa29z
+!binary "VGhyYXN5dm91bG9z": !ruby/object:DSTeam
+  team_name: !binary |-
+    VGhyYXN5dm91bG9z

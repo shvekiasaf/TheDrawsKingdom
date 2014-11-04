@@ -1,109 +1,130 @@
 ---
-FC Koln: !ruby/object:DSTeam
-  team_name: FC Koln
-Bor. Dortmund: !ruby/object:DSTeam
-  team_name: Bor. Dortmund
-Bayern Munich: !ruby/object:DSTeam
-  team_name: Bayern Munich
+Mainz 05: !ruby/object:DSTeam
+  team_name: Mainz 05
 Werder Bremen: !ruby/object:DSTeam
   team_name: Werder Bremen
-Hannover: !ruby/object:DSTeam
-  team_name: Hannover
-Bor. Monchengladbach: !ruby/object:DSTeam
-  team_name: Bor. Monchengladbach
-Freiburg: !ruby/object:DSTeam
-  team_name: Freiburg
-Wolfsburg: !ruby/object:DSTeam
-  team_name: Wolfsburg
-Stuttgart: !ruby/object:DSTeam
-  team_name: Stuttgart
-Bayer Leverkusen: !ruby/object:DSTeam
-  team_name: Bayer Leverkusen
 Hamburger SV: !ruby/object:DSTeam
   team_name: Hamburger SV
-Hoffenheim: !ruby/object:DSTeam
-  team_name: Hoffenheim
-Paderborn: !ruby/object:DSTeam
-  team_name: Paderborn
+Bayer Leverkusen: !ruby/object:DSTeam
+  team_name: Bayer Leverkusen
+Stuttgart: !ruby/object:DSTeam
+  team_name: Stuttgart
+Wolfsburg: !ruby/object:DSTeam
+  team_name: Wolfsburg
+Hannover: !ruby/object:DSTeam
+  team_name: Hannover
 Eintracht Frankfurt: !ruby/object:DSTeam
   team_name: Eintracht Frankfurt
-Schalke 04: !ruby/object:DSTeam
-  team_name: Schalke 04
+Bayern Munich: !ruby/object:DSTeam
+  team_name: Bayern Munich
+Bor. Dortmund: !ruby/object:DSTeam
+  team_name: Bor. Dortmund
 Hertha Berlin: !ruby/object:DSTeam
   team_name: Hertha Berlin
 Augsburg: !ruby/object:DSTeam
   team_name: Augsburg
-Mainz 05: !ruby/object:DSTeam
-  team_name: Mainz 05
-FSV Frankfurt: !ruby/object:DSTeam
-  team_name: FSV Frankfurt
-FC Ingolstadt 04: !ruby/object:DSTeam
-  team_name: FC Ingolstadt 04
-FC Erzgebirge Aue: !ruby/object:DSTeam
-  team_name: FC Erzgebirge Aue
-1860 Munchen: !ruby/object:DSTeam
-  team_name: 1860 Munchen
-Karlsruhe: !ruby/object:DSTeam
-  team_name: Karlsruhe
-VFR Aalen: !ruby/object:DSTeam
-  team_name: VFR Aalen
-Gr.Furth: !ruby/object:DSTeam
-  team_name: Gr.Furth
-Nurnberg: !ruby/object:DSTeam
-  team_name: Nurnberg
-RB Leipzig: !ruby/object:DSTeam
-  team_name: RB Leipzig
-Bochum: !ruby/object:DSTeam
-  team_name: Bochum
-Union Berlin: !ruby/object:DSTeam
-  team_name: Union Berlin
+SC Panderborn 07: !ruby/object:DSTeam
+  team_name: SC Panderborn 07
+Freiburg: !ruby/object:DSTeam
+  team_name: Freiburg
+Schalke 04: !ruby/object:DSTeam
+  team_name: Schalke 04
+Hoffenheim: !ruby/object:DSTeam
+  team_name: Hoffenheim
+FC Koln: !ruby/object:DSTeam
+  team_name: FC Koln
+Bor. Monchengladbach: !ruby/object:DSTeam
+  team_name: Bor. Monchengladbach
 Kaiserslautern: !ruby/object:DSTeam
   team_name: Kaiserslautern
-Fortuna Dusseldorf: !ruby/object:DSTeam
-  team_name: Fortuna Dusseldorf
+Bochum: !ruby/object:DSTeam
+  team_name: Bochum
+VFR Aalen: !ruby/object:DSTeam
+  team_name: VFR Aalen
+FSV Frankfurt: !ruby/object:DSTeam
+  team_name: FSV Frankfurt
+SV Sandhausen: !ruby/object:DSTeam
+  team_name: SV Sandhausen
+Nurnberg: !ruby/object:DSTeam
+  team_name: Nurnberg
 St. Pauli: !ruby/object:DSTeam
   team_name: St. Pauli
 FC Heidenheim: !ruby/object:DSTeam
   team_name: FC Heidenheim
-SV Sandhausen: !ruby/object:DSTeam
-  team_name: SV Sandhausen
-Eintracht Braunschweig: !ruby/object:DSTeam
-  team_name: Eintracht Braunschweig
 SV Darmstadt 98: !ruby/object:DSTeam
   team_name: SV Darmstadt 98
-Bielefeld: !ruby/object:DSTeam
-  team_name: Bielefeld
-Cottbus: !ruby/object:DSTeam
-  team_name: Cottbus
-Aalen: !ruby/object:DSTeam
-  team_name: Aalen
-Sandhausen: !ruby/object:DSTeam
-  team_name: Sandhausen
-'Darmstadt ': !ruby/object:DSTeam
-  team_name: 'Darmstadt '
-Heidenheim: !ruby/object:DSTeam
-  team_name: Heidenheim
-Darmstadt: !ruby/object:DSTeam
-  team_name: Darmstadt
-Dresden: !ruby/object:DSTeam
-  team_name: Dresden
-Regensburg: !ruby/object:DSTeam
-  team_name: Regensburg
-Duisburg: !ruby/object:DSTeam
-  team_name: Duisburg
-Aachen: !ruby/object:DSTeam
-  team_name: Aachen
-Hansa Rostock: !ruby/object:DSTeam
-  team_name: Hansa Rostock
-Oberhausen: !ruby/object:DSTeam
-  team_name: Oberhausen
-Osnabruck: !ruby/object:DSTeam
-  team_name: Osnabruck
-Ahlen: !ruby/object:DSTeam
-  team_name: Ahlen
-Koblenz: !ruby/object:DSTeam
-  team_name: Koblenz
-Wehen: !ruby/object:DSTeam
-  team_name: Wehen
-'Kaiserslautern ': !ruby/object:DSTeam
-  team_name: 'Kaiserslautern '
+RB Leipzig: !ruby/object:DSTeam
+  team_name: RB Leipzig
+FC Erzgebirge Aue: !ruby/object:DSTeam
+  team_name: FC Erzgebirge Aue
+Eintracht Braunschweig: !ruby/object:DSTeam
+  team_name: Eintracht Braunschweig
+FC Ingolstadt 04: !ruby/object:DSTeam
+  team_name: FC Ingolstadt 04
+Union Berlin: !ruby/object:DSTeam
+  team_name: Union Berlin
+Gr.Furth: !ruby/object:DSTeam
+  team_name: Gr.Furth
+Karlsruhe: !ruby/object:DSTeam
+  team_name: Karlsruhe
+1860 Munchen: !ruby/object:DSTeam
+  team_name: 1860 Munchen
+Fortuna Dusseldorf: !ruby/object:DSTeam
+  team_name: Fortuna Dusseldorf
+!binary "UGFkZXJib3Ju": !ruby/object:DSTeam
+  team_name: !binary |-
+    UGFkZXJib3Ju
+!binary "QmllbGVmZWxk": !ruby/object:DSTeam
+  team_name: !binary |-
+    QmllbGVmZWxk
+!binary "Q290dGJ1cw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    Q290dGJ1cw==
+!binary "QWFsZW4=": !ruby/object:DSTeam
+  team_name: !binary |-
+    QWFsZW4=
+!binary "U2FuZGhhdXNlbg==": !ruby/object:DSTeam
+  team_name: !binary |-
+    U2FuZGhhdXNlbg==
+!binary "RGFybXN0YWR0IA==": !ruby/object:DSTeam
+  team_name: !binary |-
+    RGFybXN0YWR0IA==
+!binary "SGVpZGVuaGVpbQ==": !ruby/object:DSTeam
+  team_name: !binary |-
+    SGVpZGVuaGVpbQ==
+!binary "RGFybXN0YWR0": !ruby/object:DSTeam
+  team_name: !binary |-
+    RGFybXN0YWR0
+!binary "RHJlc2Rlbg==": !ruby/object:DSTeam
+  team_name: !binary |-
+    RHJlc2Rlbg==
+!binary "UmVnZW5zYnVyZw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    UmVnZW5zYnVyZw==
+!binary "RHVpc2J1cmc=": !ruby/object:DSTeam
+  team_name: !binary |-
+    RHVpc2J1cmc=
+!binary "QWFjaGVu": !ruby/object:DSTeam
+  team_name: !binary |-
+    QWFjaGVu
+!binary "SGFuc2EgUm9zdG9jaw==": !ruby/object:DSTeam
+  team_name: !binary |-
+    SGFuc2EgUm9zdG9jaw==
+!binary "T2JlcmhhdXNlbg==": !ruby/object:DSTeam
+  team_name: !binary |-
+    T2JlcmhhdXNlbg==
+!binary "T3NuYWJydWNr": !ruby/object:DSTeam
+  team_name: !binary |-
+    T3NuYWJydWNr
+!binary "QWhsZW4=": !ruby/object:DSTeam
+  team_name: !binary |-
+    QWhsZW4=
+!binary "S29ibGVueg==": !ruby/object:DSTeam
+  team_name: !binary |-
+    S29ibGVueg==
+!binary "V2VoZW4=": !ruby/object:DSTeam
+  team_name: !binary |-
+    V2VoZW4=
+!binary "S2Fpc2Vyc2xhdXRlcm4g": !ruby/object:DSTeam
+  team_name: !binary |-
+    S2Fpc2Vyc2xhdXRlcm4g

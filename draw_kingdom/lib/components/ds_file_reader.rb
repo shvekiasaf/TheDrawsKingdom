@@ -98,9 +98,10 @@ class DSFileReader
   # return array of all games form file
   def initDataFromFiles
 
-    relative_path = File.dirname(File.realpath(__FILE__)) + "/../"
-    all_games_url = relative_path + "../DB/" + @url_file_name + "_games.drk"
-    all_teams_url = relative_path + "../DB/" + @url_file_name + "_teams.drk"
+    # relative_path = File.dirname(File.realpath(__FILE__)) + "/../../"
+    relative_path = Dir.pwd + "/../"
+    all_games_url = relative_path + "DB/" + @url_file_name + "_games.drk"
+    all_teams_url = relative_path + "DB/" + @url_file_name + "_teams.drk"
 
     if (File.exist?(all_games_url) && File.exist?(all_teams_url))
 
@@ -115,7 +116,7 @@ class DSFileReader
       @teams_names_dictionary = {}
       @games_array = Array.new()
 
-      File.open(relative_path + "../stats/" + @url_file_name).read.each_line do |current_file|
+      File.open(relative_path + "stats/" + @url_file_name).read.each_line do |current_file|
 
         # Creating teams dictionary
         if (current_file.start_with?("#"))
