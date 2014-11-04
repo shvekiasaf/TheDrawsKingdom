@@ -71,7 +71,7 @@ module DrawKingdom
       record_for_todays_team = simulation_runner.runSimulationWithStrategies(current_simulation, today_date, stay_power)
 
       print "Simulation " + (index+1).to_s +  ": " + ('%.2f' % money_gained_avg.to_s) + " NIS, " +
-                ('%.2f' % succeeded_simulations_avg.to_s) + "%, Interest (Tsua'a): " + simulation_record_manager.interest_on_money.to_s + "%,Today: " + record_for_todays_team.team_object.team_name + "\n"
+                ('%.2f' % succeeded_simulations_avg.to_s) + "%, Interest (Tsua'a): " + ('%.2f' %simulation_record_manager.interest_on_money.to_s) + "%,Today: " + record_for_todays_team.team_object.team_name + "\n"
 
       # choose the best simulation
       if (max_earnings < money_gained_avg)
