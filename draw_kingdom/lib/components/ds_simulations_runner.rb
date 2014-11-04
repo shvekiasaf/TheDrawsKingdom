@@ -76,15 +76,8 @@ class DSSimulationsRunner
     # Printing all records sorted by general score
     # print "====================================" + "\n"
 
-    # todo: why not simply run @records_array.max???
-    @records_array = @records_array.sort {|x,y| y.general_score <=> x.general_score}
-    if (@records_array.length > 0)
-      current_record = @records_array[0]
-
-      return current_record
-    else
-      return nil
-    end
+    best_record = @records_array.max_by {|record| record.general_score}
+    best_record
   end
 
   def get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)
