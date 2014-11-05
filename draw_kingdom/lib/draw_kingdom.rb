@@ -8,7 +8,7 @@ require 'date'
 module DrawKingdom
 
   stay_power = 5 # stay power - the number of bets you agree to risk in a row
-  today_date = Date.parse("28-10-2014") # define the date of the simulation
+  today_date = Date.parse("04-11-2014") # define the date of the simulation
   dates_array = DSHelpers.get_dates_before_date(100, today_date) # get an array of dates
   all_simulations = DSSimulationsGenerator.get_simulations_array(stay_power)
 

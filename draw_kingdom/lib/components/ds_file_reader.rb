@@ -159,7 +159,7 @@ class DSFileReader
 
             # Read from football-stats.co.uk CSVs
           else
-            csv_data = open(current_file)
+            csv_data = open(current_file.strip)
             CSV.parse(csv_data.read, headers: true) do |row|
 
               season = current_file.split("/")[4]
