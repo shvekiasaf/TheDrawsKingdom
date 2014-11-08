@@ -11,7 +11,7 @@ class DSFileReader
   attr_reader :games_array, :teamsHash, :url_file_name
 
   # Initialize
-  def initialize(url_file_name, force_init = true)
+  def initialize(url_file_name, force_init = false)
 
     # set the didInitialize flag to false
     @didInitialize = false
