@@ -11,13 +11,13 @@ class DSFileReader
   attr_reader :games_array, :teamsHash, :url_file_name
 
   # Initialize
-  def initialize(url_file_name)
+  def initialize(url_file_name, force_init = true)
 
     # set the didInitialize flag to false
     @didInitialize = false
     @teams_games_hash = {}
     @url_file_name = url_file_name
-
+    @force_init = force_init
     # init data arrays
     initDataFromFiles()
 
@@ -102,7 +102,7 @@ class DSFileReader
     all_games_url = relative_path + "DB/" + @url_file_name + "_games.drk"
     all_teams_url = relative_path + "DB/" + @url_file_name + "_teams.drk"
 
-    if (File.exist?(all_games_url) && File.exist?(all_teams_url))
+    if (!@force_init && File.exist?(all_games_url) && File.exist?(all_teams_url))
 
       print "Reading all data from disk.. \n"
 
@@ -124,7 +124,7 @@ class DSFileReader
           @teams_names_dictionary[splitter[1]] = splitter[2]
 
         else
-          print "Reading file: " + current_file
+          print "Reading file: " + current_file + "\n"
 
           # Read from scores API
           if (current_file.include? "365scores.com")

@@ -10,16 +10,17 @@ def getTestedTeam
 end
 describe 'Calculation utils for season' do
 
-  let(:allGamesArray) {allGamesArray = DSFileReader.new("test_vectors").games_array}
-  let(:season) {'Lowest_Score_Concede.csv'}
+  let(:allGamesArray) {allGamesArray = DSFileReader.new("test_vectors",true).games_array.sort {|x,y| x.game_date <=> y.game_date}}
+  let(:due_to_date) {due_to_date = allGamesArray.last.game_date+ 1}
+  let(:from_date) {from_date = allGamesArray[0].game_date }
   it 'no_scoring' do
-    DSSeasonCalculator.getAvgHomeTeamGoalsScoredInSeason(allGamesArray,season,getTestedTeam).zero?.should be_truthy
-    DSSeasonCalculator.getAvgHomeTeamGoalsScoredInSeason(allGamesArray,season,getTestedTeam).zero?.should be_truthy
+    DSSeasonCalculator.getAvgHomeTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).zero?.should be_truthy
+    DSSeasonCalculator.getAvgHomeTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).zero?.should be_truthy
   end
 
   it '66_home_33_away' do
-    DSSeasonCalculator.getAvgHomeTeamGoalsScoredInSeason(allGamesArray,season,getTestedTeam).should == 4.0/6
-    DSSeasonCalculator.getAvgAwayTeamGoalsScoredInSeason(allGamesArray,season,getTestedTeam).should == 1.0/3
+    DSSeasonCalculator.getAvgHomeTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).should == 4.0/6
+    DSSeasonCalculator.getAvgAwayTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).should == 1.0/3
   end
 
 

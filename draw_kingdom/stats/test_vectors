@@ -1,2 +1,3 @@
 test_vectors/future_teams_draw_ratio/basic_sanity/14/test.csv
+test_vectors/lowest_score_conceding/sanity/14/season_calculator.csv
 test_vectors/lowest_score_conceding/sanity/14/Lowest_Score_Concede.csv

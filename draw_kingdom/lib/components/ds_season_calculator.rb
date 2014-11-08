@@ -15,11 +15,10 @@ class DSSeasonCalculator
     return points
   end
 
-  # todo: use a threshold of at least 5 previous games for the team and consider using previous seasons.
-  # in case I don't have the minimum amount, see what exactly I should return.
-  def self.getAvgHomeTeamGoalsScoredInSeason(games_array, season, team_object)
+  def self.getAvgHomeTeamGoalsScored(games_array, from_date, due_to_date, team_object)
     teamGamesForSeason = games_array.select { |current_game|
-      current_game.season.eql? season and
+      current_game.game_date >= from_date and
+          current_game.game_date <= due_to_date and
           current_game.home_score.to_i != -1 and
           current_game.home_team.team_name.eql?(team_object.team_name)}
     if(teamGamesForSeason.empty?)
@@ -29,11 +28,10 @@ class DSSeasonCalculator
     return goals_count.to_f/teamGamesForSeason.count.to_f
   end
 
-  # todo: use a threshold of at least 5 previous games for the team and consider using previous seasons.
-  # in case I don't have the minimum amount, see what exactly I should return.
-  def self.getAvgAwayTeamGoalsScoredInSeason(games_array, season, team_object)
+  def self.getAvgAwayTeamGoalsScored(games_array, from_date , due_to_date, team_object)
     teamGamesForSeason = games_array.select { |current_game|
-      current_game.season.eql? season and
+      current_game.game_date >= from_date and
+          current_game.game_date <= due_to_date and
           current_game.home_score.to_i != -1 and
           current_game.away_team.team_name.eql?(team_object.team_name)}
     if(teamGamesForSeason.empty?)
