@@ -4,6 +4,7 @@ require_relative "../components/ds_season_calculator"
 class DSLowestScoringConcedingStrategy < DSBaseStrategy
 
 
+  attr_accessor :average_away_calculator, :average_home_calculator
 
   def initialize(since = nil)
     if(since.nil?)
@@ -11,6 +12,8 @@ class DSLowestScoringConcedingStrategy < DSBaseStrategy
     else
       @since = since
     end
+    @average_home_calculator = Proc.new {|all_other_team_games, from_date, due_to_date, home_team|DSSeasonCalculator.getAvgHomeTeamGoalsScored(all_other_team_games,from_date,due_to_date,home_team)}
+    @average_away_calculator = Proc.new {|all_other_team_games, from_date, due_to_date, away_team|DSSeasonCalculator.getAvgAwayTeamGoalsScored(all_other_team_games,from_date,due_to_date,away_team)}
   end
 
   def getGrade
@@ -32,10 +35,10 @@ class DSLowestScoringConcedingStrategy < DSBaseStrategy
     other_team_scoring_avg = 0
     if (game.home_team.eql? @team)
       all_other_team_games = @file_reader.getAllGamesFor(game.away_team, @from_date, @due_to_date)
-      other_team_scoring_avg = DSSeasonCalculator.getAvgAwayTeamGoalsScored(all_other_team_games, @from_date, @due_to_date, game.away_team)
+      other_team_scoring_avg = @average_away_calculator.call(all_other_team_games, @from_date, @due_to_date, game.away_team)
     elsif (game.away_team.eql? @team)
       all_other_team_games = @file_reader.getAllGamesFor(game.home_team, @from_date, @due_to_date)
-      other_team_scoring_avg = DSSeasonCalculator.getAvgHomeTeamGoalsScored(all_other_team_games, @from_date, @due_to_date, game.home_team)
+      other_team_scoring_avg = @average_home_calculator.call(all_other_team_games, @from_date, @due_to_date, game.home_team)
     else
       msg = 'problem with team ' + @team.team_name + ' in date ' + @due_to_date
       print msg
@@ -45,8 +48,8 @@ class DSLowestScoringConcedingStrategy < DSBaseStrategy
   end
 
   def get_team_scoring_average(team_games)
-    DSSeasonCalculator.getAvgHomeTeamGoalsScored(team_games, @from_date, @due_to_date, @team) +
-        DSSeasonCalculator.getAvgAwayTeamGoalsScored(team_games, @from_date, @due_to_date, @team)
+    @average_home_calculator.call(team_games, @from_date, @due_to_date, @team) +
+        @average_away_calculator.call(team_games, @from_date, @due_to_date, @team)
   end
 
 

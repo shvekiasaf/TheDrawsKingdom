@@ -13,6 +13,7 @@ describe 'Calculation utils for season' do
   let(:allGamesArray) {allGamesArray = DSFileReader.new("test_vectors",true).games_array.sort {|x,y| x.game_date <=> y.game_date}}
   let(:due_to_date) {due_to_date = allGamesArray.last.game_date+ 1}
   let(:from_date) {from_date = allGamesArray[0].game_date }
+  let(:average_home_calculator ) {average_home_calculator = Proc.new {|all_other_team_games, from_date, due_to_date, home_team|DSSeasonCalculator.getAvgHomeTeamGoalsScored(all_other_team_games,from_date,due_to_date,home_team)}}
   it 'no_scoring' do
     DSSeasonCalculator.getAvgHomeTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).zero?.should be_truthy
     DSSeasonCalculator.getAvgHomeTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).zero?.should be_truthy
@@ -20,6 +21,7 @@ describe 'Calculation utils for season' do
 
   it '66_home_33_away' do
     DSSeasonCalculator.getAvgHomeTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).should == 4.0/6
+    average_home_calculator.call(allGamesArray,from_date,due_to_date,getTestedTeam).should == 4.0/6
     DSSeasonCalculator.getAvgAwayTeamGoalsScored(allGamesArray,from_date,due_to_date,getTestedTeam).should == 1.0/3
   end
 
