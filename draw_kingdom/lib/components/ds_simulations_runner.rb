@@ -9,7 +9,7 @@ require_relative "../strategies/ds_last_non_draw_in_a_row_strategy"
 require_relative "../strategies/ds_non_draw_in_a_row_strategy"
 require_relative "../strategies/ds_future_fixtures_effect_strategy"
 require_relative "../strategies/ds_arrivals_strategy"
-require 'colorize'
+
 
 class DSSimulationsRunner
 
@@ -63,8 +63,7 @@ class DSSimulationsRunner
 
           @totalGrade /= weightSum
 
-
-          currentRecord = DSRecord.new(team_object, @totalGrade, draw_after_attempt)
+          currentRecord = DSRecord.new(team_object, @totalGrade, draw_after_attempt,due_to_date)
           @records_array.push(currentRecord)
 
           if (not csv_file.nil?)
@@ -82,15 +81,9 @@ class DSSimulationsRunner
 
     # Printing all records sorted by general score
     # print "====================================" + "\n"
-    @records_array = @records_array.sort {|x,y| y.general_score <=> x.general_score}
 
-    if (@records_array.length > 0)
-      current_record = @records_array[0]
-
-      return current_record
-    else
-      return nil
-    end
+    best_record = @records_array.max_by {|record| record.general_score}
+    best_record
   end
 
   def get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)

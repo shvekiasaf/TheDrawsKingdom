@@ -1,0 +1,13 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG
+Test Vector,01/01/14,hapoel,haifa,1,0
+Test Vector,02/01/14,hapoel,ashdod,1,0
+Test Vector,03/01/14,hapoel,maccabi,0,0
+Test Vector,04/01/14,hapoel,beitar,0,1
+Test Vector,05/01/14,hapoel,ashdod,0,0
+Test Vector,06/01/14,hapoel,haifa,0,0
+Test Vector,07/01/14,hapoel,haifa,0,0
+Test Vector,08/01/14,hapoel,maccabi,0,0
+Test Vector,09/01/14,hapoel,beitar,0,0
+Test Vector,10/01/14,hapoel,maccabi,0,0
+Test Vector,11/01/14,hapoel,tubruk,0,0
+Test Vector,12/01/14,hapoel,ashdod,0,0
