@@ -30,4 +30,8 @@ class DSBaseStrategy
     return true
   end
 
+  def strategyName
+    return self.class.name
+  end
+
 end
