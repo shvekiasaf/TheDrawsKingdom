@@ -103,8 +103,8 @@ class DSSimulationsGenerator
                      DSStrategyValue.new(DSLowestScoringStrategy.new(nil), -6.0),
                      DSStrategyValue.new(DSLowestConcedingStrategy.new(nil), -6.0)]
 
-    # all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5, simulations6, simulations7, simulations8,simulations9,simulations10,simulations11,simulations12]
-    all_simulations = [allStrategies]
+    all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5, simulations6, simulations7, simulations8,simulations9,simulations10,simulations11,simulations12]
+    # all_simulations = [allStrategies]
 
     return all_simulations
   end

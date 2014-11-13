@@ -29,6 +29,10 @@ module DrawKingdom
 
   # file_readers = [DSFileReader.new("german_urls")]
 
+  FileUtils.rm_rf("csvs")
+  FileUtils.mkdir("csvs")
+  FileUtils.cd("csvs") do
+
   file_readers.each do |current_file_reader|
 
     print "\nCalculating odds for " + current_file_reader.url_file_name + "\n"
@@ -44,9 +48,7 @@ module DrawKingdom
 
     all_simulations.each_with_index do |current_simulation, index|
 
-      FileUtils.rm_rf("csvs")
-      FileUtils.mkdir("csvs")
-      FileUtils.cd("csvs") do
+
 
       CSV.open(current_file_reader.url_file_name + ".csv", "w") do |csv|
 
@@ -94,12 +96,13 @@ module DrawKingdom
           selected_simulation = current_simulation
         end
       end
-    end
+
 
     # print the chosen teams
     better_record = simulation_runner.runSimulationWithStrategies(selected_simulation, today_date, stay_power, nil)
     print "===============> You better choose: " + better_record.team_object.team_name + "\n"
 
+    end
     end
   end
 end
