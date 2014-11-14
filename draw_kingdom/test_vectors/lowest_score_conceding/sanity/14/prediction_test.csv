@@ -1,0 +1,7 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG
+prediction test,1/1/14,past_results_home_5_away_2,past_results_home_1_away_0,5,0
+prediction test,2/1/14,past_results_home_1_away_4,past_results_home_5_away_2,1,2
+prediction test,6/1/14,past_results_home_1_away_0,past_results_home_1_away_4,1,4
+prediction test,8/1/14,past_results_home_5_away_2,past_results_home_1_away_0,,
+prediction test,9/1/14,past_results_home_1_away_4,past_results_home_5_away_2,,
+prediction test,10/1/14,past_results_home_1_away_4,past_results_home_1_away_0,,
