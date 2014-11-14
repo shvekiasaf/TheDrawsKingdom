@@ -98,11 +98,12 @@ module DrawKingdom
       end
 
 
+
+
+    end
     # print the chosen teams
     better_record = simulation_runner.runSimulationWithStrategies(selected_simulation, today_date, stay_power, nil)
     print "===============> You better choose: " + better_record.team_object.team_name + "\n"
-
-    end
     end
   end
 end
