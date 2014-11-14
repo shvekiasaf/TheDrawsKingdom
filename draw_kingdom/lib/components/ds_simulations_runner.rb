@@ -21,13 +21,11 @@ class DSSimulationsRunner
     @file_reader = file_reader
   end
 
-  def runSimulationWithStrategies(strategies, due_to_date, stay_power)
+  def runSimulationWithStrategies(strategies, due_to_date, stay_power, csv_file)
 
-    @records_array = Array.new()
+    values_array_for_csv = Array.new
 
-    # debug
-    # print "teamname,did_draw_since,non_draw_in_a_row,non_draw_in_a_row_since,draw_games_prop,draw_games_prop_since,last_non_draw_games,future_fixtures,arrivals" + "\n"
-
+    @records_array = Array.new
     @file_reader.teamsHash.each do |team_name, team_object|
 
       # get all team's games until now
@@ -43,10 +41,9 @@ class DSSimulationsRunner
           # if had a draw in the following X games, then - on what attempt. else = -1
           draw_after_attempt = get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)
 
-          # print due_to_date.to_s + "," + team_name
-
           @totalGrade = 0
           weightSum = 0
+
           strategies.each do |current_strategy_value|
 
             # set all teams and team object for current strategy
@@ -54,11 +51,10 @@ class DSSimulationsRunner
 
             # calculate the current simulation grade
             tempgrade = current_strategy_value.strategy.getGrade.abs
+            values_array_for_csv.push(tempgrade)
 
             @totalGrade += tempgrade * current_strategy_value.weight
             weightSum += current_strategy_value.weight
-            # debug
-            # print "," + ('%.2f' % tempgrade)
           end
 
           @totalGrade /= weightSum
@@ -66,8 +62,14 @@ class DSSimulationsRunner
           currentRecord = DSRecord.new(team_object, @totalGrade, draw_after_attempt,due_to_date)
           @records_array.push(currentRecord)
 
-          # debug
-          # print "," + (currentRecord.did_draw_since ? "1" : "0") + "\n"
+          if (not csv_file.nil?)
+            # print the current values into the csv
+            values_array_for_csv.push(due_to_date)
+            values_array_for_csv.push(team_object.team_name)
+            values_array_for_csv.push(currentRecord.did_draw_since ? 1 : 0)
+            csv_file << values_array_for_csv
+            values_array_for_csv.clear
+          end
         end
       end
 

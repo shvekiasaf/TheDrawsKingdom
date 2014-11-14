@@ -12,6 +12,14 @@ class DSDrawGamesProportionStrategy < DSBaseStrategy
 
   end
 
+  def strategyName
+    if (@since == 999999999)
+      return super
+    else
+      return super + "Since"
+    end
+  end
+
   def getGrade
 
     draw_index  = 0

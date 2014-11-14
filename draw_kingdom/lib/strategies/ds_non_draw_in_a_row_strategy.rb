@@ -13,6 +13,14 @@ class DSNonDrawInARowStrategy < DSBaseStrategy
 
   end
 
+  def strategyName
+    if (@since == 999999999)
+      return super
+    else
+      return super + "Since"
+    end
+  end
+
   def getGrade
 
     max_draws = 0

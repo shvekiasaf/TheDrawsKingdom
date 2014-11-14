@@ -19,7 +19,6 @@ class DSArrivalsStrategy < DSBaseStrategy
 
         baseKey += current_strategy_value.strategy.class.name + current_strategy_value.weight.to_s
       end
-
     end
 
       totalGradeOfAllArrivals = 0
@@ -51,6 +50,7 @@ class DSArrivalsStrategy < DSBaseStrategy
 
             # calculate the current strategy grade
             tempgrade = current_strategy_value.strategy.getGrade.abs
+
             totalGradePerTeam += tempgrade * current_strategy_value.weight
             weightSum += current_strategy_value.weight
           end
@@ -58,8 +58,8 @@ class DSArrivalsStrategy < DSBaseStrategy
           totalGradePerTeam /= weightSum
 
           @@teamsWithStrategyToGrade[key] = totalGradePerTeam
-
         else
+
           totalGradePerTeam = @@teamsWithStrategyToGrade[key]
         end
 
@@ -77,7 +77,7 @@ class DSArrivalsStrategy < DSBaseStrategy
       end
 
 
-    # print @team.team_name + " score: " + averageArrivalsGrade.to_s + " " + @due_to_date.to_s + " " + " key: " +key + "\n"
+      # print @team.team_name + " score: " + averageArrivalsGrade.to_s + " " + @due_to_date.to_s + " " + " key: " +key + "\n"
 
       # already normalized so we can just use the grade as is
       return averageArrivalsGrade
