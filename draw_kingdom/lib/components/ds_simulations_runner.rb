@@ -41,8 +41,6 @@ class DSSimulationsRunner
           # if had a draw in the following X games, then - on what attempt. else = -1
           draw_after_attempt = get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)
 
-          # print due_to_date.to_s + "," + team_name
-
           @totalGrade = 0
           weightSum = 0
 
@@ -57,8 +55,6 @@ class DSSimulationsRunner
 
             @totalGrade += tempgrade * current_strategy_value.weight
             weightSum += current_strategy_value.weight
-            # debug
-            # print "," + ('%.2f' % tempgrade)
           end
 
           @totalGrade /= weightSum

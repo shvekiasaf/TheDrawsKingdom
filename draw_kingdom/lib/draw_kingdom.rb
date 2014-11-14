@@ -9,8 +9,8 @@ require 'csv'
 module DrawKingdom
 
   stay_power = 5 # stay power - the number of bets you agree to risk in a row
-  today_date = Date.parse("07-11-2014") # define the date of the simulation
-  dates_array = DSHelpers.get_dates_before_date(100, today_date) # get an array of dates
+  today_date = Date.parse("14-11-2014") # define the date of the simulation dd-mm-yyyy
+  dates_array = DSHelpers.get_dates_before_date(200, today_date) # get an array of dates
   all_simulations = DSSimulationsGenerator.get_simulations_array(stay_power)
 
   # Read all games from file
@@ -41,14 +41,10 @@ module DrawKingdom
     # configure simulation runner with teams and games data
     simulation_runner = DSSimulationsRunner.new(current_file_reader)
 
-    # print "date,teamname,non_draw_in_a_row,non_draw_in_a_row_since,draw_games_prop,draw_games_prop_since,last_non_draw_games,future_fixtures,arrivals,did_draw_since" + "\n"
-
     max_earnings = -9999999999 # the variable that holds the highest earning per simulation
     selected_simulation = nil
 
     all_simulations.each_with_index do |current_simulation, index|
-
-
 
       CSV.open(current_file_reader.url_file_name + ".csv", "w") do |csv|
 
@@ -96,11 +92,8 @@ module DrawKingdom
           selected_simulation = current_simulation
         end
       end
-
-
-
-
     end
+
     # print the chosen teams
     better_record = simulation_runner.runSimulationWithStrategies(selected_simulation, today_date, stay_power, nil)
     print "===============> You better choose: " + better_record.team_object.team_name + "\n"
