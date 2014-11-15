@@ -22,7 +22,7 @@ class DSScorePredictorStrategy < DSBaseStrategy
     grade = future_team_games.map { |game| getDrawLikelihood(game, game_predictor)
     }.instance_eval { reduce(:+) / size.to_f }
 
-    normalizeGrade(grade,5.0)
+    normalizeGrade(grade,@stay_power)
 
   end
 

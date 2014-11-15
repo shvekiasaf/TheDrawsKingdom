@@ -23,7 +23,7 @@ class DSLowestScoringStrategy < DSBaseStrategy
                                               @avg_away_counter,
                                               @avg_home_counter)
     expected_goals = @goals_calculator.getGrade
-    normalizeGrade(1.0/(expected_goals.zero? ? 0.000001 : expected_goals),10)
+    normalizeGrade(1.0/(expected_goals.zero? ? 0.000001 : expected_goals),@stay_power)
   end
 
 
