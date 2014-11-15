@@ -5,6 +5,7 @@ require_relative "components/ds_helpers"
 require_relative "../../draw_kingdom/lib/results/ds_simulation_record_manager"
 require 'date'
 require 'csv'
+require 'fileutils'
 
 module DrawKingdom
 

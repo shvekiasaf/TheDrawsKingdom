@@ -4,6 +4,8 @@ require_relative '../../lib/strategies/ds_teams_draw_ratio_strategy'
 require_relative '../../../draw_kingdom/lib/strategies/ds_lowest_scoring_strategy'
 require_relative '../../../draw_kingdom/lib/strategies/ds_lowest_conceding_strategy'
 require_relative '../../lib/strategies/ds_score_predictor_strategy'
+require_relative '../../lib/strategies/ds_fewest_goals_in_game_strategy'
+
 class DSSimulationsGenerator
 
   def self.get_simulations_array(stay_power)
@@ -73,14 +75,14 @@ class DSSimulationsGenerator
                     DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 1.0),
                     DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
 
-    simulations10 = [DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
-                    DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
-                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
-                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 0.0),
-                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 2.0),
-                    DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 1.0),
-                    DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
 
+    simulations10 = [DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
+                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 1.0),
+                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 3.0),
+                     DSStrategyValue.new(DSFewestGoalsInGameStrategy.new, 5.0),
+                     DSStrategyValue.new(DSScorePredictorStrategy.new, 5.0),
+                     DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 1.0),
+                     DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
 
     simulations11 = [DSStrategyValue.new(DSScorePredictorStrategy.new, 10.0),
                      DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
@@ -93,6 +95,14 @@ class DSSimulationsGenerator
                      DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 17.0),
                      DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 3.0)]
 
+    simulations13 = [DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
+                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
+                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
+                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 0.0),
+                     DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 2.0),
+                     DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 1.0),
+                     DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
+
     allStrategies = [DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
                      DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
                      DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
@@ -103,7 +113,7 @@ class DSSimulationsGenerator
                      DSStrategyValue.new(DSLowestScoringStrategy.new(nil), -6.0),
                      DSStrategyValue.new(DSLowestConcedingStrategy.new(nil), -6.0)]
 
-    all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5, simulations6, simulations7, simulations8,simulations9,simulations10,simulations11,simulations12]
+    all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5, simulations6, simulations7, simulations8,simulations9,simulations10,simulations11,simulations12,simulations13]
     # all_simulations = [allStrategies]
 
     return all_simulations
