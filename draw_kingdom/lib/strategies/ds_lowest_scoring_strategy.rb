@@ -1,30 +1,21 @@
-require_relative "../strategies/ds_base_strategy"
-require_relative "../../lib/components/ds_goals_calculator"
-require_relative "../../../draw_kingdom/lib/components/ds_season_calculator"
+require_relative 'ds_lowest_goals_base_strategy'
+class DSLowestScoringStrategy < DSFewestGoalsBaseStrategy
 
-class DSLowestScoringStrategy < DSBaseStrategy
 
-  def initialize(since = nil)
-    if(since.nil?)
-      @since = 365
+  def get_goals_for_game(game, team_games)
+    if game.home_team.team_name.eql? @team.team_name
+      all_other_team_games = @file_reader.getAllGamesFor(game.away_team, @from_date, @due_to_date)
+      away_team_goals_avg = DSSeasonCalculator.getAvgAwayTeamGoalsConceded(all_other_team_games, @from_date, @due_to_date, game.away_team)
+      home_team_goals_avg = DSSeasonCalculator.getAvgHomeTeamGoalsScored(team_games, @from_date, @due_to_date, @team)
+    elsif game.away_team.team_name.eql? @team.team_name
+      all_other_team_games = @file_reader.getAllGamesFor(game.home_team, @from_date, @due_to_date)
+      home_team_goals_avg = DSSeasonCalculator.getAvgHomeTeamGoalsConceded(all_other_team_games, @from_date, @due_to_date, game.home_team)
+      away_team_goals_avg = DSSeasonCalculator.getAvgAwayTeamGoalsScored(team_games, @from_date, @due_to_date, @team)
     else
-      @since = since
+      msg = "#{@team.team_name} not found in game between #{game.home_team.team_name} and #{game.away_team.team_name} on date #{@due_to_date.to_s}"
+      print msg
+      raise msg
     end
-    @avg_away_counter = Proc.new {|all_other_team_games, from_date, due_to_date, away_team|DSSeasonCalculator.getAvgAwayTeamGoalsScored(all_other_team_games,from_date,due_to_date,away_team)}
-    @avg_home_counter = Proc.new {|all_other_team_games, from_date, due_to_date, home_team|DSSeasonCalculator.getAvgHomeTeamGoalsScored(all_other_team_games,from_date,due_to_date,home_team)}
+    (away_team_goals_avg + home_team_goals_avg)/2
   end
-
-  def getGrade
-    @goals_calculator = DSGoalsCalculator.new(@team,
-                                              @file_reader,
-                                              @due_to_date - @since,
-                                              @due_to_date,
-                                              @stay_power,
-                                              @avg_away_counter,
-                                              @avg_home_counter)
-    expected_goals = @goals_calculator.getGrade
-    normalizeGrade(1.0/(expected_goals.zero? ? 0.000001 : expected_goals),@stay_power)
-  end
-
-
 end

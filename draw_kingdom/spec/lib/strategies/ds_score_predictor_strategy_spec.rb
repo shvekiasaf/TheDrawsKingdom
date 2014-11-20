@@ -16,6 +16,6 @@ describe DSScorePredictorStrategy do
     all_team_games = allGamesArray.select { |game| game.home_team.eql? tested_team or game.away_team.eql? tested_team }
     test_date = all_team_games[all_team_games.length - 1 - stay_power].game_date + 1
     subject.loadGamesAndTeam(file_reader, tested_team, test_date,nil,stay_power)
-    subject.getGrade.should == 10.0/12
+    subject.getGrade.should == 5100.0/256
   end
 end

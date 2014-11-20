@@ -76,7 +76,7 @@ class DSSimulationsGenerator
                     DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
 
 
-    simulations10 = [DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
+    simulations10 = [DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 10.0),
                      DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 1.0),
                      DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 3.0),
                      DSStrategyValue.new(DSFewestGoalsInGameStrategy.new, 5.0),
@@ -85,12 +85,12 @@ class DSSimulationsGenerator
                      DSStrategyValue.new(DSArrivalsStrategy.new, 2.0)]
 
     simulations11 = [DSStrategyValue.new(DSScorePredictorStrategy.new, 10.0),
-                     DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
+                     DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 5.0),
                      DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 17.0),
                      DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 3.0)]
 
-    simulations12 = [DSStrategyValue.new(DSLowestScoringStrategy.new(nil), -6.0),
-                     DSStrategyValue.new(DSLowestConcedingStrategy.new(nil), -6.0),
+    simulations12 = [DSStrategyValue.new(DSLowestScoringStrategy.new(nil), 6.0),
+                     DSStrategyValue.new(DSLowestConcedingStrategy.new(nil), 6.0),
                      DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
                      DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 17.0),
                      DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 3.0)]

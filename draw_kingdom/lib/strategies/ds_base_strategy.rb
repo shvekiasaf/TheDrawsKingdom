@@ -1,4 +1,5 @@
 require_relative "../components/ds_file_reader"
+require_relative "../components/ds_helpers"
 
 class DSBaseStrategy
 
@@ -23,7 +24,7 @@ class DSBaseStrategy
   # With given grade it will return the grade in range from 0 to 100
   def normalizeGrade(grade, range)
 
-    return  ((grade >= range ? range : grade) / range) * 100.0
+    return  DSHelpers.normalize_value(grade,range,100.0)
   end
 
   def shouldRunWhenTreatingArrivals

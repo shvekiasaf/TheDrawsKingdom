@@ -1,6 +1,7 @@
 require_relative '../model/ds_game'
 require_relative '../components/ds_season_calculator'
 require_relative 'ds_score_prediction'
+require_relative '../components/ds_helpers'
 class DSGamePredictor
 
   def initialize(file_reader)
@@ -28,11 +29,17 @@ class DSGamePredictor
     predicted_home_goals = (home_team_goals_scored + away_team_goals_conceded)/2
     predicted_away_goals = (home_team_goals_conceded + away_team_goals_scored)/2
 
-    # we predict based on two data inputs (home team previous scores and away team previous scores)
-    # weight is a measurement of how accurate is our prediction
+    prediction_likelihood = calculate_prediction_likelihood(away_team_goals_conceded, away_team_goals_scored, home_team_goals_conceded, home_team_goals_scored)
+
+    DSScorePrediction.new(predicted_home_goals,predicted_away_goals,prediction_likelihood)
+  end
+
+  # we predict based on two data inputs (home team previous scores and away team previous scores)
+  # weight is a measurement of how accurate is our prediction
+  # we assume that delta < 8 and reverse normalize to [0,1]
+  def calculate_prediction_likelihood(away_team_goals_conceded, away_team_goals_scored, home_team_goals_conceded, home_team_goals_scored)
     delta = (home_team_goals_scored - away_team_goals_conceded).abs + (home_team_goals_conceded - away_team_goals_scored).abs
-    weight = delta.zero? ? 100 : 1.0/delta
-    DSScorePrediction.new(predicted_home_goals,predicted_away_goals,weight)
+    DSHelpers.reverse_normalize_value(delta, 8.0)
   end
 
   def validate_input(from_date, game, to_date)
@@ -40,5 +47,5 @@ class DSGamePredictor
     raise "invalid input - game date should be after time window " if game.game_date < to_date
   end
 
-  private :validate_input
+  private :validate_input, :calculate_prediction_likelihood
 end

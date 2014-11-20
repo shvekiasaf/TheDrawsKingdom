@@ -22,17 +22,17 @@ describe DSGamePredictor do
     prediction = DSGamePredictor.new(file_reader).getPrediction(all_team_games[2], all_team_games.first.game_date - 1, all_team_games.last.game_date - 1)
     prediction.home_score.should == 5
     prediction.away_score.should == 0
-    prediction.likelihood.should == 100
+    prediction.likelihood.should == 1.0
 
 
   end
   it 'past_results_home_1_away_4' do
     tested_team = getTestedTeam
     all_team_games = file_reader.getAllGamesFor(tested_team, Date.new(1900), Date.new(2100)).sort { |x, y| x.game_date <=> y.game_date }
-    prediction = DSGamePredictor.new(file_reader).getPrediction(all_team_games.last, file_reader.games_array.last.game_date - 1, all_team_games.first.game_date - 3)
-    prediction.home_score.should == 3
-    prediction.away_score.should == 2
-    prediction.likelihood.should == 1.0/8
+    prediction = DSGamePredictor.new(file_reader).getPrediction(all_team_games.last, all_team_games.first.game_date - 1, all_team_games.last.game_date - 3)
+    prediction.home_score.should == 0.5
+    prediction.away_score.should == 1
+    prediction.likelihood.should == 5.0/8
 
 
   end

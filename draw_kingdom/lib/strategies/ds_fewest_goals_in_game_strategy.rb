@@ -16,11 +16,11 @@ class DSFewestGoalsInGameStrategy < DSBaseStrategy
     future_games = team_games.select{|game| game.game_date > @due_to_date}.sort {|x,y| x.game_date <=> y.game_date}[0..(@stay_power - 1)]
     # we want enough data: at least stay_power future games and at least stay_power previous games
     return 0 if (team_games.length < (@stay_power * 2) or future_games.length < @stay_power)
-    gradeForFutureGames = future_games.map { |game| getGradeForGame(game) }.reduce(:+)
-    normalizeGrade(gradeForFutureGames,@stay_power)
+    expected_goals_in_games = future_games.map { |game| expected_goals_in_game(game) }.reduce(:+)
+    DSHelpers.reverse_normalize_value(expected_goals_in_games,7 * @stay_power,100)
   end
 
-  def getGradeForGame(game)
+  def expected_goals_in_game(game)
     home_team_previous_games = @file_reader.getAllGamesFor(game.home_team, @from_date, @due_to_date)
     away_team_previous_games = @file_reader.getAllGamesFor(game.away_team, @from_date, @due_to_date)
     return 0 if away_team_previous_games.empty? or home_team_previous_games.empty?
@@ -32,8 +32,8 @@ class DSFewestGoalsInGameStrategy < DSBaseStrategy
         avg_away_team_goals_conceded +
         avg_home_team_goals_conceded +
         avg_away_team_goals_scored
-    total_goals.zero? ? 10.0 : 1.0/total_goals
+    total_goals
   end
 
-  private :getGradeForGame
+  private :expected_goals_in_game
 end

@@ -32,10 +32,11 @@ class DSScorePredictorStrategy < DSBaseStrategy
     return 0 if prediction.nil?
     predicted_delta = (prediction.home_score - prediction.away_score).abs
 
-    # don't have anything intelligent to say here :(
-    return 0 if predicted_delta > 2
-
-    predicted_delta * prediction.likelihood
+    # weight how close our prediction is to a draw.
+    # max delta we will calculate is 4. after that we discard the weight
+    # normalize it [0,1]
+    result_weight = DSHelpers.reverse_normalize_value(predicted_delta, 4.0)
+    result_weight * prediction.likelihood
   end
 
   private :getDrawLikelihood
