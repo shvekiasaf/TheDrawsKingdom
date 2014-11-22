@@ -21,6 +21,32 @@ class DSSimulationsRunner
     @file_reader = file_reader
   end
 
+  # run all strategies for specific date.
+  # return the record of the best strategy
+  # with respect to strategy weights
+  def run_simulations_for_strategies(strategies, due_to_date, stay_power, csv_file)
+    values_array_for_csv = Array.new
+
+    @records_array = Array.new
+    totalGrade = 0
+    weightSum = 0
+    # same as in previous algorithm
+    draw_after_attempt = 0
+    strategies.each do |current_strategy_value|
+      team, draw_after_attempt, grade = get_draw_after_attempt_for_strategy(
+          current_strategy_value.strategy,
+          due_to_date,
+          stay_power)
+      values_array_for_csv.push(grade)
+
+      totalGrade += grade * current_strategy_value.weight
+      weightSum += current_strategy_value.weight
+    end
+
+    DSRecord.new(team_object, totalGrade.to_f/weightSum, draw_after_attempt,due_to_date)
+
+  end
+
   def runSimulationWithStrategies(strategies, due_to_date, stay_power, csv_file)
 
     values_array_for_csv = Array.new
@@ -80,6 +106,47 @@ class DSSimulationsRunner
 
     best_record = @records_array.max_by {|record| record.general_score}
     best_record
+  end
+
+
+  def get_draw_after_attempt_for_strategy(strategy, due_to_date, stay_power)
+    teams = @file_reader.teamsHash.values
+    all_teams_next_games = Hash[teams.
+                                    # return map of team -> future team games
+                                    map { |team| [team, @file_reader.getSomeGamesForTeam(team, due_to_date, (stay_power * 2)).reverse] }].
+        # filter teams without enough future games
+        select{|team,future_games| team_data_sufficient(future_games, stay_power,due_to_date) }
+
+    stay_power.times { |game_bet_index|
+      # get a map of team -> grade for team for strategy for this specific date
+      team_grades_for_strategy = Hash[all_teams_next_games.map { |team, future_games| [team, get_grade_for_team_and_strategy_specific_date(
+          strategy,
+          team,
+          future_games,
+          game_bet_index
+      )] }]
+
+      # find the best team on this date
+      best_team, grade = team_grades_for_strategy.max_by { |team, grade| grade }
+
+      next_team_game = all_teams_next_games[best_team][game_bet_index + 1]
+      return best_team, game_bet_index, grade if (next_team_game.isDraw)
+    }
+  end
+
+  def team_data_sufficient(future_games, stay_power,due_to_date)
+    all_games_for_team = @file_reader.getAllGamesFor(team_object,
+                                                     nil, # from date
+                                                     due_to_date) # to date
+    future_games.size >= stay_power * 2 and all_games_for_team.size > 100
+  end
+
+  def get_grade_for_team_and_strategy_specific_date(strategy, team, team_next_games, game_bet_index)
+    # we want to calculate grade BEFORE the next game
+    to_date = team_next_games[game_bet_index].game_date - 1
+
+    strategy.loadGamesAndTeam(@file_reader, team, to_date, nil, nil)
+    strategy.getGrade
   end
 
   def get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)
