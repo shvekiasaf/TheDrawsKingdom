@@ -6,7 +6,7 @@ class DSTotalRecordsCalculator
     today_date = Date.parse("20-11-2014") # define the date of the simulation dd-mm-yyyy
     @dates_array = DSHelpers.get_dates_before_date(200, today_date) # get an array of dates
     @initial_bet_money = 10
-
+    @draw_after_attempt_occurrences_hash = Hash.new
     @file_readers = [
         DSFileReader.new("german_urls"),
         DSFileReader.new("spanish_urls"),
@@ -26,7 +26,7 @@ class DSTotalRecordsCalculator
     total_income = results.map { |result|result[0]}.reduce(:+)
     total_expense = results.map { |result|result[1]}.reduce(:+)
     puts "profit: " + (total_income - total_expense).to_s
-    puts "interest: " + (total_income.to_f / total_expense).to_s
+    puts "interest: " + ((total_income.to_f - total_expense) / total_expense).to_s
   end
 
   def calculate_results_for_file_reader(file_reader)
@@ -50,6 +50,8 @@ class DSTotalRecordsCalculator
 
             # if had a draw in the following X games, then - on what attempt. else = -1
             draw_after_attempt = get_draw_after_attempt_indicator(team_object, today_date, @stay_power,file_reader)
+            @draw_after_attempt_occurrences_hash[draw_after_attempt] = 0 if (not @draw_after_attempt_occurrences_hash.key?(draw_after_attempt))
+            @draw_after_attempt_occurrences_hash[draw_after_attempt]+=1
             simulation_succeeded = (draw_after_attempt != -1)
             income = simulation_succeeded ? (2.5 * @initial_bet_money * (2 ** (draw_after_attempt - 1))) : 0
             expense = simulation_succeeded ? @initial_bet_money * ((2 ** draw_after_attempt) - 1) : @initial_bet_money * ((2 ** @stay_power) - 1)
@@ -59,6 +61,12 @@ class DSTotalRecordsCalculator
         end
       end
     end
+    numberOfDraws = file_reader.games_array.map { |game| game.isDraw ? 1 : 0 }.reduce(:+)
+    puts "#{file_reader.url_file_name} results: #{numberOfDraws.to_s} draws out of #{file_reader.games_array.size} games. ratio: #{(numberOfDraws.to_f / file_reader.games_array.size).to_s}"
+
+    puts "draw after attempt occurrences histogram: "
+    puts @draw_after_attempt_occurrences_hash.sort.map{|k,v| "#{k}=#{v}"}.join('; ')
+
     return total_income, total_expense
   end
 
