@@ -3,6 +3,7 @@ require_relative "components/ds_simulations_runner"
 require_relative "components/ds_simulations_generator"
 require_relative "components/ds_helpers"
 require_relative "../../draw_kingdom/lib/results/ds_simulation_record_manager"
+require_relative "components/ds_dynamic_simulations_runner"
 require 'date'
 require 'csv'
 require 'fileutils'
@@ -40,7 +41,8 @@ module DrawKingdom
     print "====================================\n"
 
     # configure simulation runner with teams and games data
-    simulation_runner = DSSimulationsRunner.new(current_file_reader)
+    # simulation_runner = DSSimulationsRunner.new(current_file_reader)
+    simulation_runner = DSDynamicSimulationsRunner.new(current_file_reader)
 
     max_earnings = -9999999999 # the variable that holds the highest earning per simulation
     selected_simulation = nil
@@ -64,14 +66,13 @@ module DrawKingdom
         dates_array.each do |current_date|
 
           # execute the simulation for the current date
-          current_record = simulation_runner.runSimulationWithStrategies(current_simulation, current_date, stay_power, csv)
+          team_grades = simulation_runner.get_team_grades(current_simulation, current_date, stay_power)
+          draw_after = simulation_runner.get_draw_after(current_simulation, current_date, stay_power)
+          # this will be the case when we don't have enough previous games for the calculations
+          break if(team_grades.nil? or draw_after.nil?)
+          team, grade = team_grades.first
+          simulation_records_array.push DSRecord.new(team,grade,draw_after,current_date)
 
-          if (not current_record.nil?)
-            simulation_records_array.push current_record
-          else
-            # todo: when does this happen?
-            break
-          end
         end
 
         simulation_record_manager = DSSimulationRecordManager.new(simulation_records_array,stay_power)
@@ -82,10 +83,10 @@ module DrawKingdom
         succeeded_simulations_avg = simulation_record_manager.succeeded_simulations_avg
 
         # if we should have choose a team today according to this simulation
-        record_for_todays_team = simulation_runner.runSimulationWithStrategies(current_simulation, today_date, stay_power, nil)
+        team_to_bet_on = simulation_runner.get_team_grades(current_simulation, today_date, stay_power)[0][0]
 
         print "Simulation " + (index+1).to_s +  ": " + ('%.2f' % money_gained_avg.to_s) + " NIS, " +
-                  ('%.2f' % succeeded_simulations_avg.to_s) + "%, Interest (Tsua'a): " + ('%.2f' %simulation_record_manager.interest_on_money.to_s) + "%,Today: " + record_for_todays_team.team_object.team_name + "\n"
+                  ('%.2f' % succeeded_simulations_avg.to_s) + "%, Interest (Tsua'a): " + ('%.2f' %simulation_record_manager.interest_on_money.to_s) + "%,Today: " + team_to_bet_on.team_name + "\n"
 
         # choose the best simulation
         if (max_earnings < money_gained_avg)
