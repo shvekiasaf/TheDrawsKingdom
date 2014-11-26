@@ -21,7 +21,8 @@ class DSDynamicSimulationsRunner
 
       team_grades[team] = totalGrade.to_f/weightSum
     end
-    team_grades.sort_by {|_key, value| value}
+    # DESCENDING sort by grade
+    team_grades.sort_by {|team, grade| grade}.reverse
   end
 
   def get_draw_after(strategies, start_date, stay_power)
@@ -35,7 +36,7 @@ class DSDynamicSimulationsRunner
 
     # in compliance with static algorithm
     return nil if all_teams_next_games.empty?
-    stay_power.times { |game_bet_index|
+    1.upto(stay_power) { |game_bet_index|
       next_team_game = game_for_next_bet(all_teams_next_games, game_bet_index, stay_power, strategies)
       return game_bet_index if next_team_game.isDraw
     }
@@ -50,8 +51,8 @@ class DSDynamicSimulationsRunner
     next_simulation_date = get_next_simulation_date(all_teams_next_games, game_bet_index)
     team_grades = get_team_grades(strategies, next_simulation_date, stay_power)
     team_grades.each do |team, grade|
-      if(not (all_teams_next_games[team].nil? or all_teams_next_games[team][game_bet_index + 1].nil?))
-        return (all_teams_next_games[team][game_bet_index + 1])
+      if(not (all_teams_next_games[team].nil? or all_teams_next_games[team][game_bet_index].nil?))
+        return (all_teams_next_games[team][game_bet_index])
       end
     end
   end
@@ -69,10 +70,13 @@ class DSDynamicSimulationsRunner
   end
 
 
+  # gets the next date to run the simulation on.
+  # in fact it goes to the next round of games, takes the earliest game and takes
+  # 1 day before
   def get_next_simulation_date(all_teams_next_games, game_bet_index)
     latest_game_for_bet_index = all_teams_next_games.map { |team, next_games| next_games[game_bet_index] }.
-        max_by { |game| game.game_date }
-    latest_game_for_bet_index.game_date + 1
+        min_by { |game| game.game_date }
+    latest_game_for_bet_index.game_date - 1
   end
   private :past_team_data_sufficient, :future_team_data_sufficient, :get_next_simulation_date, :game_for_next_bet
 

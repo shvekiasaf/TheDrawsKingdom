@@ -45,7 +45,7 @@ module DrawKingdom
     simulation_runner = DSDynamicSimulationsRunner.new(current_file_reader)
 
     max_earnings = -9999999999 # the variable that holds the highest earning per simulation
-    selected_simulation = nil
+    best_team = nil
 
     all_simulations.each_with_index do |current_simulation, index|
 
@@ -83,7 +83,7 @@ module DrawKingdom
         succeeded_simulations_avg = simulation_record_manager.succeeded_simulations_avg
 
         # if we should have choose a team today according to this simulation
-        team_to_bet_on = simulation_runner.get_team_grades(current_simulation, today_date, stay_power)[0][0]
+        team_to_bet_on = simulation_runner.get_team_grades(current_simulation, today_date, stay_power).first[0]
 
         print "Simulation " + (index+1).to_s +  ": " + ('%.2f' % money_gained_avg.to_s) + " NIS, " +
                   ('%.2f' % succeeded_simulations_avg.to_s) + "%, Interest (Tsua'a): " + ('%.2f' %simulation_record_manager.interest_on_money.to_s) + "%,Today: " + team_to_bet_on.team_name + "\n"
@@ -91,14 +91,13 @@ module DrawKingdom
         # choose the best simulation
         if (max_earnings < money_gained_avg)
           max_earnings = money_gained_avg
-          selected_simulation = current_simulation
+          best_team = team_to_bet_on
         end
       end
     end
 
     # print the chosen teams
-    better_record = simulation_runner.runSimulationWithStrategies(selected_simulation, today_date, stay_power, nil)
-    print "===============> You better choose: " + better_record.team_object.team_name + "\n"
+    print "===============> You better choose: " + best_team.team_name + "\n"
     end
   end
 end
