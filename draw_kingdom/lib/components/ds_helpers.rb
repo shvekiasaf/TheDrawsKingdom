@@ -6,7 +6,7 @@ class DSHelpers
 
     # create array with dates for simluations
     dates_array = Array.new
-    current_date = date - 60
+    current_date = date
     for i in 0..(ammount - 1)
 
       if (current_date.strftime("%m").eql? "08")

@@ -18,8 +18,13 @@ class DSGame
   end
 
   def isDraw
-    @dif = @home_score.to_i - @away_score.to_i
-    return (@dif == 0)
+
+    if (@home_score == -1) || (@away_score == -1)
+      return nil
+    else
+      @dif = @home_score.to_i - @away_score.to_i
+      return (@dif == 0)
+    end
   end
 
   def isTeamInMatch(team)
