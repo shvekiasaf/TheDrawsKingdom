@@ -2,10 +2,10 @@ require 'date'
 
 class DSGame
   # Readers
-  attr_reader :game_date, :home_team, :away_team, :home_score, :away_score, :div, :season
+  attr_reader :game_date, :home_team, :away_team, :home_score, :away_score, :div, :season, :b365_draw_odds
 
   # Initialize
-  def initialize(game_date, home_team, away_team, home_score, away_score, div, season)
+  def initialize(game_date, home_team, away_team, home_score, away_score, div, season, b365_draw_odds)
 
     @game_date =  game_date
     @home_team = home_team
@@ -14,6 +14,7 @@ class DSGame
     @away_score = away_score
     @div = div
     @season = season
+    @b365_draw_odds = b365_draw_odds
   end
 
   def isDraw
