@@ -3,7 +3,7 @@ require_relative "../components/ds_helpers"
 
 class DSBaseStrategy
 
-  def loadGamesAndTeam(file_reader, team, due_to_date, strategies, stay_power)
+  def loadStrategyWithData(file_reader, team, due_to_date, strategies)
 
     @due_to_date = due_to_date
 
@@ -15,11 +15,10 @@ class DSBaseStrategy
 
     @strategies = strategies
 
-    @stay_power = stay_power
   end
 
   # Grade will be a number between 0 to 100
-  def getGrade; raise "You must implement the method, this is an abstract class" ; end
+  def execute; raise "You must implement the method, this is an abstract class" ; end
 
   # With given grade it will return the grade in range from 0 to 100
   def normalizeGrade(grade, range)
@@ -34,5 +33,7 @@ class DSBaseStrategy
   def strategyName
     return self.class.name
   end
+
+  protected :normalizeGrade
 
 end

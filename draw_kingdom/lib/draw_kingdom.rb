@@ -16,7 +16,10 @@ module DrawKingdom
   today_date      = Date.parse(TODAY_DATE) # define the date of the simulation dd-mm-yyyy
   dates_array     = DSHelpers.get_dates_before_date(NUMBER_OF_DATES, today_date) # get an array of dates
   all_simulations = DSSimulationsGenerator.get_simulations_array
-  file_readers    = [DSFileReader.new("german_urls")]
+  file_readers    = [DSFileReader.new("frances_urls"),
+                     DSFileReader.new("italian_urls"),
+                     DSFileReader.new("german_urls"),
+                     DSFileReader.new("spanish_urls")]
 
   # #Read all games from file
   # file_readers = [
@@ -87,9 +90,11 @@ module DrawKingdom
       best_simulation = all_simulations[best_simulation_index]
 
       # run the best simulation on current date
+      best_record = DSDynamicSimulationsRunner.get_best_record_from_simulation(best_simulation, today_date, current_file_reader)
 
       # print the selected team and the success rate of the simulation
-      print best_simulation_index.to_s + ", " + ('%.2f' % best_simulation_success_rate.to_s)
+      print best_record.team_object.team_name.to_s + ", " + ('%.2f' % best_simulation_success_rate.to_s) + "\n"
+
     end
   end
 end

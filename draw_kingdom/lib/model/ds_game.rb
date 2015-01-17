@@ -54,4 +54,13 @@ class DSGame
       return away_points
     end
   end
+
+  # this method recieve a team and return its opponent
+  def getOpponentForTeam(team)
+
+    # get the arrival team
+    current_comp_team = (team.team_name.eql? @home_team.team_name) ? @away_team : home_team
+
+    return current_comp_team
+  end
 end

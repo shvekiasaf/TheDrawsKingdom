@@ -1,3 +1,5 @@
+# converted to support one game only
+
 require_relative "../strategies/ds_base_strategy"
 
 class DSDrawGamesProportionStrategy < DSBaseStrategy
@@ -20,16 +22,18 @@ class DSDrawGamesProportionStrategy < DSBaseStrategy
     end
   end
 
-  def getGrade
+  def execute
 
     draw_index  = 0
     other_index = 0
 
-    @all_team_games.each do |current_game|
+    games_in_range = @all_team_games.select{|current_game| current_game.game_date.to_datetime > Date.today-@since }
 
-      if (current_game.game_date.to_datetime > Date.today-@since)
+    games_in_range.each do |current_game|
 
-        if (current_game.isDraw())
+      is_draw = current_game.isDraw()
+      if (!is_draw.nil?)
+        if (is_draw)
           draw_index += 1
         else
           other_index += 1
@@ -38,7 +42,7 @@ class DSDrawGamesProportionStrategy < DSBaseStrategy
     end
 
     if ((draw_index.to_i + other_index.to_i) > 0)
-      proportion = draw_index.to_f / (draw_index.to_f + other_index.to_f)
+      proportion = draw_index.to_f / (draw_index + other_index)
     else
       proportion = 0
     end
