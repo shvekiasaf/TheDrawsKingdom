@@ -19,4 +19,15 @@ class DSHelpers
 
     return dates_array
   end
+
+  def self.normalize_value(value, max_value, range = 1.0)
+
+    return  ((value >= max_value ? max_value : value) / max_value.to_f) * range
+  end
+
+  def self.reverse_normalize_value(value, max_value, range = 1.0)
+    return 0 if value >= max_value
+    return normalize_value(max_value - value, max_value, range)
+  end
+
 end

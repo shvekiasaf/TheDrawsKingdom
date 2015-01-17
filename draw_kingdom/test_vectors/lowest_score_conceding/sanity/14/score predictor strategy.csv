@@ -1,0 +1,8 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG
+Lowest Scoring test,1/1/14,a,b,0,0
+Lowest Scoring test,2/1/14,b,tested_team,1,2
+Lowest Scoring test,6/1/14,tested_team,coocoo,1,4
+Lowest Scoring test,8/1/14,coocoo,b,1,1
+Lowest Scoring test,9/1/14,coocoo,a,0,2
+Lowest Scoring test,11/1/14,a,tested_team,,
+Lowest Scoring test,12/1/14,tested_team,coocoo,,

@@ -84,7 +84,8 @@ class DSSimulationsRunner
 
   def get_draw_after_attempt_indicator(team_object, due_to_date, stay_power)
     # Check whether team has a draw or not in X number of games after custom date
-    some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, due_to_date, stay_power)
+    # todo: MAJOR BUG HERE!!!. getSomeGamesForTeam returns an array sorted by descending dates
+    some_games_for_team = @file_reader.getSomeGamesForTeam(team_object, due_to_date, stay_power).reverse
     did_draw_since = false
     draw_after_attempt = 0
 

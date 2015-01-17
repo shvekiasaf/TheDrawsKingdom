@@ -14,7 +14,7 @@ describe 'general spec' do
   let(:allGamesArray) {allGamesArray = file_reader.games_array.sort {|x,y| x.game_date <=> y.game_date}}
   let(:stay_power) {stay_power = 2}
   let(:due_to_date) {due_to_date = allGamesArray[allGamesArray.length - stay_power].game_date+ 1}
-  describe DSLowestScoringStrategy do
+  describe DSLowestConcedingStrategy do
 
 
     it 'home_1_away_0' do
@@ -23,7 +23,7 @@ describe 'general spec' do
       all_team_games = allGamesArray.select { |game| game.home_team.eql? tested_team or game.away_team.eql? tested_team }
       test_date = all_team_games[all_team_games.length - 1 - stay_power].game_date + 1
       subject.loadGamesAndTeam(file_reader, tested_team, test_date,nil,stay_power)
-      subject.getGrade.should == 1.0
+      subject.getGrade.zero?.should be_truthy
     end
 
     it 'home_5_away_2' do
@@ -32,18 +32,18 @@ describe 'general spec' do
       all_team_games = allGamesArray.select { |game| game.home_team.eql? tested_team or game.away_team.eql? tested_team }
       test_date = all_team_games[all_team_games.length - 1 - stay_power].game_date + 1
       subject.loadGamesAndTeam(file_reader, tested_team, test_date,nil,stay_power)
-      subject.getGrade.should == 10.0/8
+      subject.getGrade.should == 100.0 * (5.0/6)
     end
   end
 
-  describe DSLowestConcedingStrategy do
+  describe DSLowestScoringStrategy do
     it 'home_5_away_2' do
 
       tested_team = getTestedTeam
       all_team_games = allGamesArray.select { |game| game.home_team.eql? tested_team or game.away_team.eql? tested_team }
       test_date = all_team_games[all_team_games.length - 1 - stay_power].game_date + 1
       subject.loadGamesAndTeam(file_reader, tested_team, test_date,nil,stay_power)
-      subject.getGrade.should == 100.0/80
+      subject.getGrade.should == 0.0
     end
 
     it 'home_1_away_4' do
@@ -52,15 +52,15 @@ describe 'general spec' do
       all_team_games = allGamesArray.select { |game| game.home_team.eql? tested_team or game.away_team.eql? tested_team }
       test_date = all_team_games[all_team_games.length - 1 - stay_power].game_date + 1
       subject.loadGamesAndTeam(file_reader, tested_team, test_date,nil,stay_power)
-      subject.getGrade.should == 100.0/80
+      subject.getGrade.should == 100.0 * (1.0/6.0)
     end
 
-    it 'home_1_away_4' do 'test non existing team return highest grade (100)'
+    it 'home_1_away_4' do 'test non existing team return 0'
       some_team = getTestedTeam
       all_team_games = allGamesArray.select { |game| game.home_team.eql? some_team or game.away_team.eql? some_team }
       test_date = all_team_games[all_team_games.length - 1 - stay_power].game_date + 1
       subject.loadGamesAndTeam(file_reader, DSTeam.new('non_existing'), test_date,nil,stay_power)
-      subject.getGrade.should == 100.0
+      subject.getGrade.zero?.should be_truthy
     end
 
   end
