@@ -12,18 +12,13 @@ class DSScorePredictorStrategy < DSBaseStrategy
   end
 
 
-  def getGrade
+  def execute
     game_predictor = DSGamePredictor.new(@file_reader)
-    future_team_games = @file_reader.getSomeGamesForTeam(@team, @due_to_date, @stay_power)
-    # can't predict without enough future games...
-    return 0 if future_team_games.size < @stay_power
+    next_game = @file_reader.getNextGameForTeam(@team, @due_to_date)
 
-    # calculate average of array of likelihoods
-    grade = future_team_games.map { |game| getDrawLikelihood(game, game_predictor)
-    }.instance_eval { reduce(:+) / size.to_f }
-
-    normalizeGrade(grade,@stay_power)
-
+    return 0 if next_game.nil?
+    grade = getDrawLikelihood(next_game, game_predictor)
+    normalizeGrade(grade,1.0)
   end
 
   def getDrawLikelihood(game, game_predictor)

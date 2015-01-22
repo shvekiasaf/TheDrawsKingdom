@@ -17,7 +17,10 @@ class DSSimulationsGenerator
     simulationsAll = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500), 3.0),
                       DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
                       DSStrategyValue.new(DSFutureFixturesEffectStrategy.new, 3.0),
-                      DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800), 1.0)]
+                      # todo this is still not popoulated
+                      # DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800), 1.0),
+                      DSStrategyValue.new(DSScorePredictorStrategy.new,10),
+                      DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0)]
 
     simulations1 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),

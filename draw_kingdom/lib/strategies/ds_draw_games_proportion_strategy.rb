@@ -18,35 +18,17 @@ class DSDrawGamesProportionStrategy < DSBaseStrategy
     if (@since == 999999999)
       return super
     else
-      return super + "Since"
+      return super + "Since " + @since.to_s
     end
   end
 
   def execute
+    # todo why Date.today and not ???
+    games_in_range = @all_team_games.select{|current_game| current_game.game_date.to_datetime > @due_to_date-@since }
+    return 0 if games_in_range.empty?
 
-    draw_index  = 0
-    other_index = 0
-
-    games_in_range = @all_team_games.select{|current_game| current_game.game_date.to_datetime > Date.today-@since }
-
-    games_in_range.each do |current_game|
-
-      is_draw = current_game.isDraw()
-      if (!is_draw.nil?)
-        if (is_draw)
-          draw_index += 1
-        else
-          other_index += 1
-        end
-      end
-    end
-
-    if ((draw_index.to_i + other_index.to_i) > 0)
-      proportion = draw_index.to_f / (draw_index + other_index)
-    else
-      proportion = 0
-    end
-
-    return normalizeGrade(proportion, 1.0)
+    games_with_draw = games_in_range.select { |current_game| (not current_game.isDraw.nil?) and current_game.isDraw }.size
+    draw_proportion = games_with_draw.to_f / games_in_range.size
+    normalizeGrade(draw_proportion,1.0)
   end
 end

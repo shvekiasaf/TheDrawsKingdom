@@ -18,13 +18,13 @@ class DSGame
   end
 
   def isDraw
+    return nil if missing_score
+    @dif = @home_score.to_i - @away_score.to_i
+    return (@dif == 0)
+  end
 
-    if (@home_score == -1) || (@away_score == -1)
-      return nil
-    else
-      @dif = @home_score.to_i - @away_score.to_i
-      return (@dif == 0)
-    end
+  def missing_score
+    @home_score == -1 or @away_score == -1
   end
 
   def isTeamInMatch(team)
@@ -33,6 +33,7 @@ class DSGame
 
   def pointsForTeam(team_object)
 
+    return 0 if missing_score
     home_points = 0
     away_points = 0
 
@@ -57,10 +58,11 @@ class DSGame
 
   # this method recieve a team and return its opponent
   def getOpponentForTeam(team)
-
     # get the arrival team
     current_comp_team = (team.team_name.eql? @home_team.team_name) ? @away_team : home_team
 
     return current_comp_team
   end
+
+  private :missing_score
 end

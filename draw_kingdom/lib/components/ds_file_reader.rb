@@ -78,6 +78,12 @@ class DSFileReader
     end
   end
 
+  def getNextGameForTeam(team, fromDate)
+    next_game_array = getSomeGamesForTeam(team, fromDate, 1)
+    return nil if next_game_array.empty?
+    next_game_array[0]
+  end
+
   def getSomeGamesForTeam(team, fromDate, numberOfGames)
 
     currentGamesArray = Array.new()

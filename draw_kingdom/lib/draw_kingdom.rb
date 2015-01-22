@@ -9,31 +9,31 @@ require 'csv'
 require 'fileutils'
 
 NUMBER_OF_DATES = 200
-TODAY_DATE = "17-01-2015"
+TODAY_DATE = "22-01-2015"
 
 module DrawKingdom
 
   today_date      = Date.parse(TODAY_DATE) # define the date of the simulation dd-mm-yyyy
   dates_array     = DSHelpers.get_dates_before_date(NUMBER_OF_DATES, today_date) # get an array of dates
   all_simulations = DSSimulationsGenerator.get_simulations_array
-  file_readers    = [DSFileReader.new("frances_urls"),
-                     DSFileReader.new("italian_urls"),
-                     DSFileReader.new("german_urls"),
-                     DSFileReader.new("spanish_urls")]
+  # file_readers    = [DSFileReader.new("frances_urls",true),
+  #                    DSFileReader.new("italian_urls",true),
+  #                    DSFileReader.new("german_urls",true),
+  #                    DSFileReader.new("spanish_urls",true)]
 
   # #Read all games from file
-  # file_readers = [
-  #     DSFileReader.new("german_urls"),
-  #     DSFileReader.new("spanish_urls"),
-  #     DSFileReader.new("italian_urls"),
-  #     DSFileReader.new("greece_urls"),
-  #     DSFileReader.new("belgium_urls"),
-  #     DSFileReader.new("frances_urls"),
-  #     DSFileReader.new("nethderland_urls"),
-  #     DSFileReader.new("portugali_urls"),
-  #     DSFileReader.new("turkey_urls"),
-  #     DSFileReader.new("english_urls")
-  # ]
+  file_readers = [
+      DSFileReader.new("german_urls",true),
+      DSFileReader.new("spanish_urls",true),
+      DSFileReader.new("italian_urls",true),
+      DSFileReader.new("greece_urls",true),
+      DSFileReader.new("belgium_urls",true),
+      DSFileReader.new("frances_urls",true),
+      DSFileReader.new("nethderland_urls",true),
+      DSFileReader.new("portugali_urls",true),
+      DSFileReader.new("turkey_urls",true),
+      DSFileReader.new("english_urls",true)
+  ]
 
   if (dates_array.nil?)
 
@@ -99,103 +99,6 @@ module DrawKingdom
   end
 end
 
-
-
-
-
-# module DrawKingdom
-#
-#   stay_power = 5 # stay power - the number of bets you agree to risk in a row
-#   today_date = Date.parse("27-11-2014") # define the date of the simulation dd-mm-yyyy
-#   dates_array = DSHelpers.get_dates_before_date(200, today_date) # get an array of dates
-#   all_simulations = DSSimulationsGenerator.get_simulations_array(stay_power)
-#
-  # Read all games from file
-  # file_readers = [
-  #     DSFileReader.new("german_urls"),
-  #     DSFileReader.new("spanish_urls"),
-  #     DSFileReader.new("italian_urls"),
-  #     DSFileReader.new("greece_urls"),
-  #     DSFileReader.new("belgium_urls"),
-  #     DSFileReader.new("frances_urls"),
-  #     DSFileReader.new("nethderland_urls"),
-  #     DSFileReader.new("portugali_urls"),
-  #     DSFileReader.new("turkey_urls"),
-  #     DSFileReader.new("english_urls")
-  # ]
-
-#   file_readers = [DSFileReader.new("german_urls")]
-#
-#   FileUtils.rm_rf("csvs")
-#   FileUtils.mkdir("csvs")
-#   FileUtils.cd("csvs") do
-#
-#   file_readers.each do |current_file_reader|
-#
-#     print "\nCalculating odds for " + current_file_reader.url_file_name + "\n"
-#     print "====================================\n"
-#
-#     # configure simulation runner with teams and games data
-#     # simulation_runner = DSSimulationsRunner.new(current_file_reader)
-#     simulation_runner = DSDynamicSimulationsRunner.new(current_file_reader)
-#
-#     max_earnings = -9999999999 # the variable that holds the highest earning per simulation
-#     best_team = nil
-#
-#     all_simulations.each_with_index do |current_simulation, index|
-#
-#       CSV.open(current_file_reader.url_file_name + ".csv", "w") do |csv|
-#
-#         # write titles of strategies into the csv file
-#         if (not csv.nil?)
-#           csvTitlesArray = current_simulation.map { |x| x.strategy.strategyName}
-#           csvTitlesArray.push("date")
-#           csvTitlesArray.push("teamName")
-#           csvTitlesArray.push("didDrawSince")
-#
-#           csv << csvTitlesArray
-#         end
-#
-#         simulation_records_array = Array.new
-#         # run each simulation on all dates
-#         dates_array.each do |current_date|
-#
-#           # execute the simulation for the current date
-#           team_grades = simulation_runner.get_team_grades(current_simulation, current_date, stay_power)
-#           draw_after = simulation_runner.get_draw_after(current_simulation, current_date, stay_power)
-#           # this will be the case when we don't have enough previous games for the calculations
-#           break if(team_grades.nil? or draw_after.nil?)
-#           team, grade = team_grades.first
-#           simulation_records_array.push DSRecord.new(team,grade,draw_after,current_date)
-#
-#         end
-#
-#         simulation_record_manager = DSSimulationRecordManager.new(simulation_records_array,stay_power)
-#         simulation_record_manager.calculate
-#
-#         # calculate average money gain and average success rate per simulation
-#         money_gained_avg = simulation_record_manager.money_gained_avg
-#         succeeded_simulations_avg = simulation_record_manager.succeeded_simulations_avg
-#
-#         # if we should have choose a team today according to this simulation
-#         team_to_bet_on = simulation_runner.get_team_grades(current_simulation, today_date, stay_power).first[0]
-#
-#         print "Simulation " + (index+1).to_s +  ": " + ('%.2f' % money_gained_avg.to_s) + " NIS, " +
-#                   ('%.2f' % succeeded_simulations_avg.to_s) + "%, Interest (Tsua'a): " + ('%.2f' %simulation_record_manager.interest_on_money.to_s) + "%,Today: " + team_to_bet_on.team_name + "\n"
-#
-#         # choose the best simulation
-#         if (max_earnings < money_gained_avg)
-#           max_earnings = money_gained_avg
-#           best_team = team_to_bet_on
-#         end
-#       end
-#     end
-#
-#     # print the chosen teams
-#     print "===============> You better choose: " + best_team.team_name + "\n"
-#     end
-#   end
-# end
 
 
 

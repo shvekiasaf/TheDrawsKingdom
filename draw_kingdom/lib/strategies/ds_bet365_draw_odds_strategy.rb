@@ -2,6 +2,8 @@
 
 require_relative "../strategies/ds_base_strategy"
 
+# todo what does this strategy return? it currently returns (sum of draw odds for team) / (number of games)
+# todo why not just return the value of current_game.b365_draw_odds
 class DSBet365DrawOddsStrategy < DSBaseStrategy
 
   def initialize(since)
@@ -19,15 +21,15 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
     odds_summary  = 0
     game_index    = 0
 
-    games_in_range = @all_team_games.select{|current_game| current_game.game_date.to_datetime > Date.today-@since }
+    # todo why?? aren't we already getting this from @all_team_games?
+    # todo why Date.today??
+    # games_in_range = @all_team_games.select{|current_game| current_game.game_date.to_datetime > Date.today-@since }
 
+    # todo if anything, the query should be
+    games_in_range = @all_team_games.select{|current_game|(not current_game.b365_draw_odds.nil?) and (current_game.b365_draw_odds.to_f.zero?)}
     games_in_range.each do |current_game|
-
-      if (not current_game.b365_draw_odds.nil?)
-
-        game_index += 1
-        odds_summary += current_game.b365_draw_odds.to_f
-      end
+      game_index += 1
+      odds_summary += current_game.b365_draw_odds.to_f
     end
 
     if (game_index == 0)

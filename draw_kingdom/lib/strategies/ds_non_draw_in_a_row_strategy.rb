@@ -21,24 +21,23 @@ class DSNonDrawInARowStrategy < DSBaseStrategy
     end
   end
 
-  def getGrade
+  def execute
 
     max_draws = 0
     index = 0
 
     @all_team_games.each do |current_game|
 
-      if (current_game.game_date > Date.today-@since)
+      # todo same issue with Date.today
 
-        if (current_game.isDraw())
-          if (max_draws <= index)
-            max_draws = index
-          end
-
-          index = 0
-        else
-          index += 1
+      if (current_game.isDraw())
+        if (max_draws <= index)
+          max_draws = index
         end
+
+        index = 0
+      else
+        index += 1
       end
     end
 
