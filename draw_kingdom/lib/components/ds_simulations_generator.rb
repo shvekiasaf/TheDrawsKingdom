@@ -6,6 +6,8 @@ require_relative '../../../draw_kingdom/lib/strategies/ds_lowest_conceding_strat
 require_relative '../../lib/strategies/ds_score_predictor_strategy'
 require_relative '../../lib/strategies/ds_bet365_draw_odds_strategy'
 require_relative '../../lib/strategies/ds_fewest_goals_in_game_strategy'
+require_relative '../../lib/strategies/ds_draws_in_season_time_window_strategy'
+require_relative '../../lib/strategies/ds_common_draw_score_strategy'
 
 class DSSimulationsGenerator
 
@@ -20,7 +22,9 @@ class DSSimulationsGenerator
                       # todo this is still not popoulated
                       # DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800), 1.0),
                       DSStrategyValue.new(DSScorePredictorStrategy.new,10),
-                      DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0)]
+                      DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0),
+                      DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,2.0),
+                      DSStrategyValue.new(DSCommonDrawScoreStrategy.new,2.0)]
 
     simulations1 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),

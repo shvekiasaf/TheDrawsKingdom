@@ -41,7 +41,7 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
       return normalizeGrade(odds_avg, 8.0)
     end
   end
-
+  # todo don't use this. use the dshelpers.reverse...
   def normalizeGrade(grade, range)
     normalizeGrade = super(grade, range)
 
