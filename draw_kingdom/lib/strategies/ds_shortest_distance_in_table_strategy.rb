@@ -34,13 +34,7 @@ class DsShortestDistanceInTableStrategy < DSBaseStrategy
 
     # todo why limit ourselves to range 5???
     # normalize grade
-    DSHelpers.reverse_normalize_value(difference,20)
+    DSHelpers.reverse_normalize_value(difference,20,100.0)
   end
 
-  # todo don't use this. we have DSHelpers.reverse_normalize_value for this
-  def normalizeGrade(grade, range)
-    normalizeGrade = super(grade, range)
-
-    return (normalizeGrade - 100) * -1
-  end
 end
