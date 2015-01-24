@@ -40,13 +40,7 @@ class DSNonDrawInARowStrategy < DSBaseStrategy
         index += 1
       end
     end
-
-    return normalizeGrade(max_draws, 15.0)
+    DSHelpers.reverse_normalize_value(max_draws,15.0,100.0)
   end
 
-  def normalizeGrade(grade, range)
-    normalizeGrade = super(grade, range)
-
-    return (normalizeGrade - 100) * -1
-  end
 end
