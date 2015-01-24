@@ -6,7 +6,7 @@ require 'date'
 
 # this strategy calculates the similarity between teams by comparing the team points for the current season
 # todo the name of the strategy needs to be changed
-class DSFutureFixturesEffectStrategy < DSBaseStrategy
+class DsShortestDistanceInTableStrategy < DSBaseStrategy
 
   def execute
 

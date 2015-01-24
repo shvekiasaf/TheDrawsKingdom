@@ -55,21 +55,21 @@ require 'date'
                   DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
                   DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 0.075),
                   DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.025),
-                  DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.9)]
+                  DSStrategyValue.new(DsShortestDistanceInTableStrategy.new(stay_power), 0.9)]
 
   simulations4 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                   DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
                   DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
                   DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 0.15),
                   DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.1),
-                  DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.75)]
+                  DSStrategyValue.new(DsShortestDistanceInTableStrategy.new(stay_power), 0.75)]
 
   simulations5 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                   DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
                   DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
                   DSStrategyValue.new(DSDrawGamesProportionStrategy.new(700), 0.4),
                   DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 0.1),
-                  DSStrategyValue.new(DSFutureFixturesEffectStrategy.new(stay_power), 0.5)]
+                  DSStrategyValue.new(DsShortestDistanceInTableStrategy.new(stay_power), 0.5)]
 
   # all_simulations = [simulations1, simulations2, simulations3, simulations4, simulations5]
 all_simulations = [simulations3]
