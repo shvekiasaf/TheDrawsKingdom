@@ -5,32 +5,31 @@ require_relative "../../lib/components/ds_season_calculator"
 require 'date'
 
 # this strategy calculates the similarity between teams by comparing the team points for the current season
-# todo the name of the strategy needs to be changed
 class DsShortestDistanceInTableStrategy < DSBaseStrategy
+
+  def initialize(since = nil)
+    if(since.nil?)
+      @since = 700
+    else
+      @since = since
+    end
+  end
+
 
   def execute
 
-    return nil if @all_team_games.empty?
 
     # season is derived from the due_to_date value
-    current_season = @due_to_date.year.to_s[2,3]
-
-    # next match data
-    next_game = @file_reader.getSomeGamesForTeam(@team, @due_to_date, 1)
-    return nil if next_game.empty?
-    # get the opponent
-    opponent = next_game[0].getOpponentForTeam(@team)
-
-    all_games_for_opponent = @file_reader.getAllGamesFor(opponent, Date.parse('01-01-1804'), @due_to_date)
-
-    # # calculate the team league points up to due_to_date
-    current_team_league_points = DSSeasonCalculator.getTeamPoints(@all_team_games, current_season, @team)
+    current_season = @game.game_date.year.to_s[2,3]
 
     # calculate the opponents league points up to due_to_date
-    opponent_league_points = DSSeasonCalculator.getTeamPoints(all_games_for_opponent, current_season, opponent)
+    home_team_previous_games = @file_reader.getAllGamesFor(@game.home_team, @game.game_date - @since, @game.game_date)
+    away_team_previous_games = @file_reader.getAllGamesFor(@game.away_team, @game.game_date - @since, @game.game_date)
+    home_team_league_points = DSSeasonCalculator.getTeamPoints(home_team_previous_games, current_season, @game.home_team)
+    away_team_league_points = DSSeasonCalculator.getTeamPoints(away_team_previous_games, current_season, @game.away_team)
 
     # subtract current team points from opponent
-    difference = (opponent_league_points - current_team_league_points).abs
+    difference = (home_team_league_points - away_team_league_points).abs
 
     # todo why limit ourselves to range 5???
     # normalize grade

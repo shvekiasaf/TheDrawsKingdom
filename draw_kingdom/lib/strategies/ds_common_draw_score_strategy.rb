@@ -13,11 +13,11 @@ class DSCommonDrawScoreStrategy < DSBaseStrategy
 
   def execute
     game_predictor = DSGamePredictor.new(@file_reader)
-    next_game = @file_reader.getNextGameForTeam(@team, @due_to_date)
-    most_common_draw_score = get_most_common_draw_score
-    return 0 if next_game.nil? or most_common_draw_score.nil?
 
-    prediction = game_predictor.getPrediction(next_game, @due_to_date - @since, @due_to_date)
+    most_common_draw_score = get_most_common_draw_score
+    return 0 if most_common_draw_score.nil?
+
+    prediction = game_predictor.getPrediction(@game, @game.game_date - @since, @game.game_date)
     # could happen if we don't have enough data on other team
     return 0 if prediction.nil?
 
@@ -28,7 +28,7 @@ class DSCommonDrawScoreStrategy < DSBaseStrategy
   end
 
   def get_most_common_draw_score
-    draw_games = @all_team_games.select { |game| game.isDraw }
+    draw_games = gamesInRange.select { |game| game.isDraw }
     # no previous games that ended with draw
     return nil if draw_games.empty?
     # counting occurrences of draws by score

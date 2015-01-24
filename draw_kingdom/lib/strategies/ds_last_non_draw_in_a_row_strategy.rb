@@ -2,10 +2,21 @@ require_relative "../strategies/ds_base_strategy"
 
 class DSLastNonDrawInARowStrategy < DSBaseStrategy
 
-  def getGrade
-    non_draw_index = 0
+  def execute
 
-    @all_team_games.each do |current_game|
+    home_team_previous_games = @file_reader.getAllGamesFor(@game.home_team, nil, @game.game_date)
+    away_team_previous_games = @file_reader.getAllGamesFor(@game.away_team, nil, @game.game_date)
+
+    home_team_non_draw_count = get_non_draw_streak(home_team_previous_games)
+    away_team_non_draw_count = get_non_draw_streak(away_team_previous_games)
+
+    avg_streak = (home_team_non_draw_count + away_team_non_draw_count).to_f/2
+    return normalizeGrade(avg_streak, 10.0)
+  end
+
+  def get_non_draw_streak(games)
+    non_draw_index = 0
+    games.each do |current_game|
 
       if (current_game.isDraw())
         break
@@ -13,7 +24,6 @@ class DSLastNonDrawInARowStrategy < DSBaseStrategy
         non_draw_index += 1
       end
     end
-
-    return normalizeGrade(non_draw_index, 15.0)
+    non_draw_index
   end
 end

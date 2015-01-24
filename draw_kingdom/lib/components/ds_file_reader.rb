@@ -204,7 +204,26 @@ class DSFileReader
     end
   end
 
+  # gets next round of league games
+  # this is a bit wasteful. Can we now how many games are in each round for this specific file reader?
+  def getNextGames(date)
+    return nil if date.nil?
+    # games after given date in ASCENDING order
+    games_after_date = @games_array.select { |current_game| current_game.game_date > date }.reverse
 
+    teams_already_playing = Array.new
+    next_matches = Array.new
+
+    games_after_date.each do |game|
+      # stop running if all coming games are present
+      return next_matches if teams_already_playing.size == @teamsHash.keys.size
+      next if(teams_already_playing.include?(game.home_team) or teams_already_playing.include?(game.away_team))
+      next_matches.push(game)
+      teams_already_playing.push(game.home_team)
+      teams_already_playing.push(game.away_team)
+    end
+    next_matches
+  end
 end
 
 def addTeamToHash(team_title)

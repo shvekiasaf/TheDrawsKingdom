@@ -93,7 +93,7 @@ module DrawKingdom
       best_record = DSDynamicSimulationsRunner.get_best_record_from_simulation(best_simulation, today_date, current_file_reader)
 
       # print the selected team and the success rate of the simulation
-      print best_record.team_object.team_name.to_s + ", " + ('%.2f' % best_simulation_success_rate.to_s) + "\n"
+      print best_record.game.gameName + ", " + ('%.2f' % best_simulation_success_rate.to_s) + "\n"
 
     end
   end

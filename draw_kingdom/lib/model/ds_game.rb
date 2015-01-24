@@ -64,5 +64,20 @@ class DSGame
     return current_comp_team
   end
 
+  # return true iff input game had same teams
+  def isSameTeams(game)
+    return false if game.nil? or game.home_team.nil? or game.away_team.nil?
+    [@home_team.team_name,@away_team.team_name].sort == [game.home_team.team_name,game.away_team.team_name].sort
+  end
+
+  # return true iff input game had same teams with corresponding home/ away configuration
+  def isSameMatch(game)
+    isSameTeams(game) and @home_team.team_name.eql?(game.home_team.team_name)
+  end
+
+  def gameName
+    @home_team.team_name + " VS " + @away_team.team_name
+  end
+
   private :missing_score
 end

@@ -3,15 +3,11 @@ require_relative "../components/ds_helpers"
 
 class DSBaseStrategy
 
-  def loadStrategyWithData(file_reader, team, due_to_date, strategies)
-
-    @due_to_date = due_to_date
+  def loadStrategyWithData(file_reader, game, strategies)
 
     @file_reader = file_reader
 
-    @all_team_games  = @file_reader.getAllGamesFor(team, Date.parse('01-01-1804'), due_to_date)
-
-    @team = team
+    @game = game
 
     @strategies = strategies
 
@@ -34,6 +30,13 @@ class DSBaseStrategy
     return self.class.name
   end
 
+  def gamesInRange
+    @file_reader.games_array.select{|game| game.game_date < @game.game_date}
+  end
+
+  def gamesInRangeSameTeams
+    gamesInRange.select{|game| @game.isSameTeams(game)}
+  end
   protected :normalizeGrade
 
 end

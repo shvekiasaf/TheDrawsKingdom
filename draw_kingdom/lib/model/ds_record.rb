@@ -1,15 +1,12 @@
 class DSRecord
 
   # Readers
-  attr_reader :team_object, :general_score, :did_draw_in_next_match, :simulation_date
+  attr_reader :game, :general_score
 
-  # todo why simply hold the game and score??
   # Initialize
-  def initialize(team_object, general_score, did_draw_in_next_match, simulation_date)
-    @simulation_date = simulation_date
-    @team_object = team_object
+  def initialize(game, general_score)
+    @game = game
     @general_score = general_score
-    @did_draw_in_next_match = did_draw_in_next_match
   end
 
 end

@@ -14,15 +14,12 @@ class DSScorePredictorStrategy < DSBaseStrategy
 
   def execute
     game_predictor = DSGamePredictor.new(@file_reader)
-    next_game = @file_reader.getNextGameForTeam(@team, @due_to_date)
-
-    return 0 if next_game.nil?
-    grade = getDrawLikelihood(next_game, game_predictor)
+    grade = getDrawLikelihood(@game, game_predictor)
     normalizeGrade(grade,1.0)
   end
 
   def getDrawLikelihood(game, game_predictor)
-    prediction = game_predictor.getPrediction(game, @due_to_date - @since, @due_to_date)
+    prediction = game_predictor.getPrediction(game, @game.game_date - @since, @game.game_date)
     # not enough data to predict
     return 0 if prediction.nil?
     predicted_delta = (prediction.home_score - prediction.away_score).abs

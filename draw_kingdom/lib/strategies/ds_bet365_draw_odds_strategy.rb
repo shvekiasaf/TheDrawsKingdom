@@ -19,9 +19,9 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
     odds_summary  = 0
     game_index    = 0
 
-    games_in_range = @all_team_games.select{|current_game| current_game.game_date.to_datetime > Date.today-@since }
 
-    games_in_range.each do |current_game|
+
+    gamesInRangeSameTeams.each do |current_game|
 
       if (not current_game.b365_draw_odds.nil?)
 

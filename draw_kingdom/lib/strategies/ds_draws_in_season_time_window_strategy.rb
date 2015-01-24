@@ -5,10 +5,11 @@ class DSDrawsInSeasonTimeWindowStrategy < DSBaseStrategy
   HALF_OF_PERIOD = 15
 
   def execute
-    games_in_range = @all_team_games.select { |game| game_in_date_range(game.game_date) }
-    return 0 if games_in_range.size < MINIMUM_GAMES_IN_HISTORY
-    number_of_games_ended_in_draw = games_in_range.select { |game| game.isDraw }.size
-    proportion = number_of_games_ended_in_draw.to_f/games_in_range.size
+    previous_games = gamesInRangeSameTeams
+
+    return 0 if previous_games.size < MINIMUM_GAMES_IN_HISTORY
+    number_of_games_ended_in_draw = previous_games.select { |game| game.isDraw }.size
+    proportion = number_of_games_ended_in_draw.to_f/previous_games.size
     normalizeGrade(proportion,1.0)
   end
 

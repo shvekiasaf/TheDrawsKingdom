@@ -12,14 +12,8 @@ class DSDynamicSimulationsRunner
 
     if (best_record.nil?)
       return nil
-
-    elsif (best_record.did_draw_in_next_match.nil?)
-
-      # No expected draw result for chosen best record
-      return nil
     else
-
-      return (best_record.did_draw_in_next_match)
+      return (best_record.game.isDraw)
     end
   end
 
@@ -33,6 +27,8 @@ class DSDynamicSimulationsRunner
       # get all the teams from file reader that passed the sufficient data condition
       teams = current_file_reader.teamsHash.values.select{|team| past_team_data_sufficient(team, date, current_file_reader)}
 
+      team_names = teams.map { |team| team.team_name}
+
       if (teams.nil? || teams.empty? || teams.length < MINIMUM_TEAMS_FOR_BEST_RECORD)
 
         # no calculation were executed, not enough teams
@@ -41,21 +37,14 @@ class DSDynamicSimulationsRunner
 
         best_record = nil # this param will hold the best team record with the best simulation score
 
-        # run the simulation on the chosen teams
-        teams.each do |team|
+        games = current_file_reader.getNextGames(date)
+        games.each do |next_game|
+          # filter game if don't have enough data on one of the teams
+          next if (not team_names.include?(next_game.home_team.team_name)) or (not team_names.include?(next_game.away_team.team_name))
 
-          # find the team's next game according to current date
-          next_game = current_file_reader.getNextGameForTeam(team, date)
-
-          next if next_game.nil?
-
-          did_draw = next_game.isDraw
-
-          # calculating team score
-          team_score = get_team_grade(simulation, date, team, current_file_reader)
-
+          score = get_game_grade(simulation, next_game, current_file_reader)
           # create a record with team, general grade and did draw indicator
-          current_record = DSRecord.new(team, team_score, did_draw, date)
+          current_record = DSRecord.new(next_game, score)
 
           # calculating and saving the best team record
           if (best_record.nil? ||
@@ -69,18 +58,15 @@ class DSDynamicSimulationsRunner
 
           #no record has created
           return nil
-        else
-
-          # does the best team did draw in the next game?
-          return best_record
         end
+        return best_record
       end
     end
   end
 
-  def self.get_team_grade(simulation, date, team, file_reader)
+  def self.get_game_grade(simulation, game, file_reader)
 
-    if (team.nil? || date.nil? || simulation.nil? || simulation.empty? || file_reader.nil?)
+    if (game.nil? || simulation.nil? || simulation.empty? || file_reader.nil?)
       return nil
     else
 
@@ -88,7 +74,7 @@ class DSDynamicSimulationsRunner
 
       totalGrade = 0
       simulation.each do |current_strategy_value|
-        current_strategy_value.strategy.loadStrategyWithData(file_reader, team, date, simulation)
+        current_strategy_value.strategy.loadStrategyWithData(file_reader, game , simulation)
 
         # execute the strategy
         grade = current_strategy_value.strategy.execute
