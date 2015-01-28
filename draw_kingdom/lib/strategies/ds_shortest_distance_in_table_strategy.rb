@@ -33,7 +33,7 @@ class DsShortestDistanceInTableStrategy < DSBaseStrategy
 
     # todo why limit ourselves to range 5???
     # normalize grade
-    DSHelpers.reverse_normalize_value(difference,20,100.0)
+    DSHelpers.reverse_normalize_value(difference,0,20,100.0)
   end
 
 end

@@ -28,6 +28,6 @@ class DSDrawGamesProportionStrategy < DSBaseStrategy
     return 0 if games_in_range_same_teams.empty?
     games_with_draw = games_in_range_same_teams.select { |current_game| (not current_game.isDraw.nil?) and current_game.isDraw }.size
     draw_proportion = games_with_draw.to_f / games_in_range_same_teams.size
-    normalizeGrade(draw_proportion,1.0)
+    DSHelpers.normalize_value(draw_proportion,0,1.0)
   end
 end

@@ -8,7 +8,6 @@ require_relative "../strategies/ds_draw_games_proportion_strategy"
 require_relative "../strategies/ds_last_non_draw_in_a_row_strategy"
 require_relative "../strategies/ds_non_draw_in_a_row_strategy"
 require_relative "../strategies/ds_shortest_distance_in_table_strategy"
-require_relative "../strategies/ds_arrivals_strategy"
 
 
 class DSSimulationsRunner

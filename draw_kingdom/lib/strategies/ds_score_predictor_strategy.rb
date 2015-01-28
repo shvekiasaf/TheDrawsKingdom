@@ -15,7 +15,7 @@ class DSScorePredictorStrategy < DSBaseStrategy
   def execute
     game_predictor = DSGamePredictor.new(@file_reader)
     grade = getDrawLikelihood(@game, game_predictor)
-    normalizeGrade(grade,1.0)
+    DSHelpers.normalize_value(grade,0,1.0)
   end
 
   def getDrawLikelihood(game, game_predictor)

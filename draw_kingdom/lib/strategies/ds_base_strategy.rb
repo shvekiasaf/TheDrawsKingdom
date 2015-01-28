@@ -16,12 +16,6 @@ class DSBaseStrategy
   # Grade will be a number between 0 to 100
   def execute; raise "You must implement the method, this is an abstract class" ; end
 
-  # With given grade it will return the grade in range from 0 to 100
-  def normalizeGrade(grade, range)
-
-    return  DSHelpers.normalize_value(grade,range,100.0)
-  end
-
   def shouldRunWhenTreatingArrivals
     return true
   end
@@ -37,6 +31,9 @@ class DSBaseStrategy
   def gamesInRangeSameTeams
     gamesInRange.select{|game| @game.isSameTeams(game)}
   end
-  protected :normalizeGrade
+
+  def gamesInRangeAtLeastOneTeamSame
+    gamesInRange.select{|game| @game.isOneOfTheTeamsSame(game)}
+  end
 
 end

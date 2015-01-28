@@ -7,8 +7,7 @@ require_relative "components/ds_dynamic_simulations_runner"
 require 'date'
 require 'csv'
 require 'fileutils'
-
-
+require 'linefit'
 
 NUMBER_OF_DATES = 200
 module DrawHistogramGenerator
@@ -36,11 +35,12 @@ module DrawHistogramGenerator
     print "====================================\n"
 
     all_simulations.each_with_index do |current_simulation, simulation_index|
+
       total_games_percent_histogram = Hash.new
       success_percent_histogram = Hash.new
 
       # init histograms
-      (0..100).step(10) { |index|
+      (0..90).step(10) { |index|
         total_games_percent_histogram[index] = 0
         success_percent_histogram[index] = 0
       }
@@ -49,21 +49,42 @@ module DrawHistogramGenerator
       current_file_reader.games_array.select{|game| game.game_date < Date.today}.each do |game|
 
         game_grade = DSDynamicSimulationsRunner.get_game_grade(current_simulation, game, current_file_reader)
-        histogram_index = (game_grade / 10).to_i * 10
+
+        # the histogram index is the grade range:
+        histogram_index = (game_grade==100 ? 90 : (game_grade / 10).to_i * 10)
+
+        # success percent histogram value is the number of draws
         success_percent_histogram[histogram_index] +=1 if game.isDraw
+
+        # total percent histogram value is the total number of games
         total_games_percent_histogram[histogram_index] +=1
       end
+
 
       def self.histogramIndexValue(index, num_of_games, success_percent_histogram)
         return 0 if num_of_games == 0
         (success_percent_histogram[index].to_f/num_of_games)
       end
+
       # generate percentage histogram for this simulation.
       simulation_histogram = total_games_percent_histogram.map { |index, num_of_games| [index, histogramIndexValue(index, num_of_games, success_percent_histogram)] }
+
+      # printing results
       puts "simulation " + simulation_index.to_s + " results"
+
+      # calculating regression slope & rSquare
+      lineFit = LineFit.new
+      lineFit.setData(simulation_histogram.map { |current_array| current_array[0]},
+                      simulation_histogram.map { |current_array| current_array[1]})
+
+      intercept, slope = lineFit.coefficients
+      rSquared = lineFit.rSquared #R-squared is a statistical measure of how close the data are to the fitted regression line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.
+
+      print "rSquare: " + ('%.2f' % (rSquared*100).to_s) + "% \n" + "slope: " + ('%.6f' % slope.to_s) + "\n"
+
       simulation_histogram.each do |index, success_rate|
         num_of_games_with_index = total_games_percent_histogram[index]
-        puts num_of_games_with_index.to_s + " games under " + index.to_s + "%. Success Rate: " + ('%.2f' %success_rate.to_s)
+        puts index.to_s + "-" + (index+10).to_s + "\t(" + num_of_games_with_index.to_s + " games)\tSuccess Rate: " + ('%.2f' %success_rate.to_s)
       end
     end
 

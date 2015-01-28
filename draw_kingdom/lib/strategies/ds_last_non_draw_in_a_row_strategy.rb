@@ -11,7 +11,7 @@ class DSLastNonDrawInARowStrategy < DSBaseStrategy
     away_team_non_draw_count = get_non_draw_streak(away_team_previous_games)
 
     avg_streak = (home_team_non_draw_count + away_team_non_draw_count).to_f/2
-    return normalizeGrade(avg_streak, 10.0)
+    return DSHelpers.normalize_value(avg_streak,0, 10.0)
   end
 
   def get_non_draw_streak(games)
