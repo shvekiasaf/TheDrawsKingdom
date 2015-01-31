@@ -23,15 +23,17 @@ class DSNonDrawInARowStrategy < DSBaseStrategy
 
   def execute
 
-
     game_date = @game.game_date
+
     home_team_games_in_range = @file_reader.getAllGamesFor(@game.home_team, game_date - @since, game_date)
     away_team_games_in_range = @file_reader.getAllGamesFor(@game.away_team, game_date - @since, game_date)
 
     home_team_max_draws = max_non_draws_for_team(home_team_games_in_range)
     away_team_max_draws = max_non_draws_for_team(away_team_games_in_range)
+
     max_draws = [home_team_max_draws, away_team_max_draws].max
-    DSHelpers.reverse_normalize_value(max_draws,0,15.0,100.0)
+
+    DSHelpers.normalize_value(max_draws,0,15.0,100)
   end
 
   def max_non_draws_for_team(games_in_range)
