@@ -24,10 +24,13 @@ class DSDrawGamesProportionStrategy < DSBaseStrategy
 
   def execute
 
-    games_in_range_same_teams = gamesInRangeSameTeams
-    return 0 if games_in_range_same_teams.empty?
-    games_with_draw = games_in_range_same_teams.select { |current_game| (not current_game.isDraw.nil?) and current_game.isDraw }.size
-    draw_proportion = games_with_draw.to_f / games_in_range_same_teams.size
-    DSHelpers.normalize_value(draw_proportion,0,1.0)
+    filtered_games_array = allGamesSinceDate(gamesInRangeAtLeastOneTeamExists, @since)
+
+    return 0 if (filtered_games_array.empty? || filtered_games_array.size < 15)
+
+    games_with_draw = filtered_games_array.select { |current_game| (not current_game.isDraw.nil?) and current_game.isDraw }.size
+    draw_proportion = games_with_draw.to_f / filtered_games_array.size
+
+    return draw_proportion
   end
 end

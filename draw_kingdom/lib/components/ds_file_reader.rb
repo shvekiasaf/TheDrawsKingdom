@@ -18,6 +18,7 @@ class DSFileReader
     @teams_games_hash = {}
     @url_file_name = url_file_name
     @force_init = force_init
+
     # init data arrays
     initDataFromFiles()
 
@@ -112,7 +113,7 @@ class DSFileReader
 
       print "Reading all data from disk.. \n"
 
-      # Real all games from file
+      # Read all games from file
       @games_array = YAML.load(File.read(all_games_url))
       @teamsHash = YAML.load(File.read(all_teams_url ))
     else

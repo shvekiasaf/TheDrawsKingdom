@@ -32,8 +32,16 @@ class DSBaseStrategy
     gamesInRange.select{|game| @game.isSameTeams(game)}
   end
 
-  def gamesInRangeAtLeastOneTeamSame
+  def gamesInRangeAtLeastOneTeamExists
     gamesInRange.select{|game| @game.isOneOfTheTeamsSame(game)}
+  end
+
+  def allGamesSinceDate(games_array, since_date)
+    games_array.select{|game| (game.game_date > (@game.game_date - since_date))}
+  end
+
+  def shouldReverseNormalization
+    false
   end
 
 end

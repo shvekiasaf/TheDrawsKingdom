@@ -14,22 +14,27 @@ module DrawHistogramGenerator
 
   all_simulations = DSSimulationsGenerator.get_simulations_array
 
+
+
   file_readers = [
       DSFileReader.new("german_urls"),
       DSFileReader.new("spanish_urls"),
       DSFileReader.new("italian_urls"),
-      DSFileReader.new("greece_urls"),
-      DSFileReader.new("belgium_urls"),
-      DSFileReader.new("frances_urls"),
-      DSFileReader.new("nethderland_urls"),
-      DSFileReader.new("portugali_urls"),
-      DSFileReader.new("turkey_urls"),
-      DSFileReader.new("english_urls")
+      # DSFileReader.new("greece_urls"),
+      # DSFileReader.new("belgium_urls"),
+      # DSFileReader.new("frances_urls"),
+      # DSFileReader.new("nethderland_urls"),
+      # DSFileReader.new("portugali_urls"),
+      # DSFileReader.new("turkey_urls"),
+      # DSFileReader.new("english_urls")
   ]
 
 
   # for each set of teams from url
   file_readers.each do |current_file_reader|
+
+    #todo: deselect games from bottom of the array, we need previous data for games so we shouldn't calculate grades for these games
+    filtered_games_array = current_file_reader.games_array.select{|game| game.game_date < Date.today}
 
     print "\nCalculating odds for " + current_file_reader.url_file_name + "\n"
     print "====================================\n"
@@ -45,13 +50,14 @@ module DrawHistogramGenerator
         success_percent_histogram[index] = 0
       }
 
-      # grade all games in the past and place them in the histograms
-      current_file_reader.games_array.select{|game| game.game_date < Date.today}.each do |game|
+      # get the normalized grade of all games after executing the simulation strategies
+      # its a hash with game as a key and normalized grade for value
+      games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, filtered_games_array, current_file_reader)
 
-        game_grade = DSDynamicSimulationsRunner.get_game_grade(current_simulation, game, current_file_reader)
+      games_grade_hash.each do |game, grade|
 
         # the histogram index is the grade range:
-        histogram_index = (game_grade==100 ? 90 : (game_grade / 10).to_i * 10)
+        histogram_index = (games_grade_hash[game]==100 ? 90 : (games_grade_hash[game] / 10).to_i * 10)
 
         # success percent histogram value is the number of draws
         success_percent_histogram[histogram_index] +=1 if game.isDraw
@@ -59,7 +65,6 @@ module DrawHistogramGenerator
         # total percent histogram value is the total number of games
         total_games_percent_histogram[histogram_index] +=1
       end
-
 
       def self.histogramIndexValue(index, num_of_games, success_percent_histogram)
         return 0 if num_of_games == 0
@@ -87,9 +92,5 @@ module DrawHistogramGenerator
         puts index.to_s + "-" + (index+10).to_s + "\t(" + num_of_games_with_index.to_s + " games)\tSuccess Rate: " + ('%.2f' %success_rate.to_s)
       end
     end
-
   end
-
-
-
 end

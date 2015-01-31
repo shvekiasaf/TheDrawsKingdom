@@ -25,9 +25,11 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
     odds_summary  = 0
     game_index    = 0
 
-    games_array = @shouldCheckAllGames ? gamesInRangeAtLeastOneTeamSame : gamesInRangeSameTeams
+    games_array = @shouldCheckAllGames ? gamesInRangeAtLeastOneTeamExists : gamesInRangeSameTeams
 
-    filtered_game_array = games_array.select{|game| (game.game_date > (@game.game_date - @since))}
+    filtered_game_array = allGamesSinceDate(games_array, @since)
+
+    return 0 if (filtered_game_array.empty? || filtered_game_array.size < 10)
 
     filtered_game_array.each do |current_game|
 
@@ -44,8 +46,11 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
 
       odds_avg = odds_summary / game_index
 
-      DSHelpers.reverse_normalize_value(odds_avg.to_f,3.35,3.90,100.0)
+      return odds_avg
     end
   end
 
+  def shouldReverseNormalization
+    true
+  end
 end

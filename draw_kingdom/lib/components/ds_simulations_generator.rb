@@ -10,9 +10,19 @@ class DSSimulationsGenerator
 
   def self.get_simulations_array
 
-    simulations0 = [DSStrategyValue.new(DSBet365DrawOddsStrategy.new(400, true), 1.0)
+    optimalSimulations = [DSStrategyValue.new(DSBet365DrawOddsStrategy.new(nil, true), 2.0),
+                          DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
+                          DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 2.0)
+
+    ]
+
+    simulations0 = [DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 2.0)
                     ]
     # DSStrategyValue.new(DSBet365DrawOddsStrategy.new(400, false), 0.0)
+
+
+    all_simulations = [optimalSimulations]
+
 
     simulationsAll = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500), 3.0),
                       DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
@@ -133,7 +143,6 @@ class DSSimulationsGenerator
     #                  DSStrategyValue.new(DSLowestScoringStrategy.new(nil), -6.0),
     #                  DSStrategyValue.new(DSLowestConcedingStrategy.new(nil), -6.0)]
 
-    all_simulations = [simulations0]
     # all_simulations = [allStrategies]
 
     return all_simulations
