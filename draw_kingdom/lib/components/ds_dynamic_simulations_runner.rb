@@ -1,10 +1,13 @@
 require_relative 'ds_file_reader'
+require_relative 'ds_csv_manager'
 require_relative "../model/ds_record"
 
 class DSDynamicSimulationsRunner
 
   # return a hash of games and normalized grades
   def self.calculate_grades_for_games(simulation,games,file_reader)
+
+    csv_manager_instance = DsCsvManager.new(file_reader.url_file_name)
 
     weightSum = simulation.map { |strategy_value| strategy_value.weight}.reduce(:+) # summary of all strategies' weights
     games_grade_hash = {} # hash of normalized grades per game (key:game, value: normalized grade)
@@ -34,6 +37,9 @@ class DSDynamicSimulationsRunner
       # adding the normalized grades to the final hash
       games_grade_normalized_hash.each do |key, value|
 
+        csv_manager_instance.add_strategy_with_grade(key, current_strategy_value.strategy.strategyName, value)
+
+        # add the grade to the final hash
         if (!games_grade_hash.has_key?(key)) # on first grade per game
           games_grade_hash[key] = 0
         end
@@ -41,6 +47,8 @@ class DSDynamicSimulationsRunner
         games_grade_hash[key] += value * current_strategy_value.weight / weightSum
       end
     end
+
+    csv_manager_instance.save_to_csv
 
     games_grade_hash
   end
