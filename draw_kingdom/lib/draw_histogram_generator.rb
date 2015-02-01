@@ -9,24 +9,23 @@ require 'csv'
 require 'fileutils'
 require 'linefit'
 
-NUMBER_OF_DATES = 200
 module DrawHistogramGenerator
 
   all_simulations = DSSimulationsGenerator.get_simulations_array
 
-
+  init_data_store = false
 
   file_readers = [
-      DSFileReader.new("german_urls"),
-      DSFileReader.new("spanish_urls"),
-      DSFileReader.new("italian_urls"),
-      # DSFileReader.new("greece_urls"),
-      # DSFileReader.new("belgium_urls"),
-      # DSFileReader.new("frances_urls"),
-      # DSFileReader.new("nethderland_urls"),
-      # DSFileReader.new("portugali_urls"),
-      # DSFileReader.new("turkey_urls"),
-      # DSFileReader.new("english_urls")
+      DSFileReader.new("german_urls",init_data_store),
+      DSFileReader.new("spanish_urls",init_data_store),
+      DSFileReader.new("italian_urls",init_data_store),
+      DSFileReader.new("greece_urls",init_data_store),
+      DSFileReader.new("belgium_urls",init_data_store),
+      DSFileReader.new("frances_urls",init_data_store),
+      DSFileReader.new("nethderland_urls",init_data_store),
+      DSFileReader.new("portugali_urls",init_data_store),
+      DSFileReader.new("turkey_urls",init_data_store),
+      DSFileReader.new("english_urls",init_data_store)
   ]
 
 

@@ -24,7 +24,7 @@ class DSCommonDrawScoreStrategy < DSBaseStrategy
     delta = (prediction.home_score - most_common_draw_score[0]).abs +
         (prediction.away_score - most_common_draw_score[1]).abs
     reversed_normalized_delta = DSHelpers.reverse_normalize_value(delta,0, 4.0)
-    normalizeGrade(reversed_normalized_delta * prediction.likelihood,1.0)
+    reversed_normalized_delta * prediction.likelihood
   end
 
   def get_most_common_draw_score

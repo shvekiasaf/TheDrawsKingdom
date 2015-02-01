@@ -19,33 +19,23 @@ class DSSimulationsGenerator
 
     ]
 
-    simulations0 = [
-                    ]
-
-    #todo: Ishai, please make these strategies to work:
-    # DSStrategyValue.new(DSScorePredictorStrategy.new,10),
-    # DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,2.0),
-    # DSStrategyValue.new(DSCommonDrawScoreStrategy.new,2.0)
 
 
-    all_simulations = [simulations0]
-
-
-    simulationsAll = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500), 3.0),
+    simulations1 = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500), 3.0),
                       DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
                       DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 3.0),
-                      # todo this is still not popoulated
-                      # DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800), 1.0),
+                      DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,false), 1.0),
                       DSStrategyValue.new(DSScorePredictorStrategy.new,10),
                       DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0),
                       DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,2.0),
                       DSStrategyValue.new(DSCommonDrawScoreStrategy.new,2.0)]
 
-    simulations1 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
+    simulations2 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 15.0),
-                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 5.0)]
+                    DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 5.0),
+                    DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,true), 1.0)]
 
     # simulations2 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
     #                 DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
@@ -152,6 +142,6 @@ class DSSimulationsGenerator
 
     # all_simulations = [allStrategies]
 
-    return all_simulations
+    return [simulations1,simulations2,optimalSimulations]
   end
 end

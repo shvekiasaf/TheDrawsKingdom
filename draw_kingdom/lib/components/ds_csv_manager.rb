@@ -1,6 +1,7 @@
 require 'csv'
 require 'fileutils'
 
+# todo: add simulation name to the csv file. We are currently overriding simulations :/
 class DsCsvManager
 
   attr_reader :league_name
@@ -26,10 +27,10 @@ class DsCsvManager
   end
 
   def save_to_csv
-
+    relative_path = File.dirname(File.realpath(__FILE__)) + "/../../"
     return nil if @games_hash.empty?
 
-    CSV.open("csvs//" + @league_name.to_s + ".csv", "w") do |csv|
+    CSV.open(relative_path + "csvs/" + @league_name.to_s + ".csv", "w") do |csv|
 
       key, value = @games_hash.first
       strategies_array = value.keys

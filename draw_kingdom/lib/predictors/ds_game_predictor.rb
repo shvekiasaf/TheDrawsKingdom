@@ -39,7 +39,7 @@ class DSGamePredictor
   # we assume that delta < 8 and reverse normalize to [0,1]
   def calculate_prediction_likelihood(away_team_goals_conceded, away_team_goals_scored, home_team_goals_conceded, home_team_goals_scored)
     delta = (home_team_goals_scored - away_team_goals_conceded).abs + (home_team_goals_conceded - away_team_goals_scored).abs
-    DSHelpers.reverse_normalize_value(delta, 8.0)
+    DSHelpers.reverse_normalize_value(delta,0, 8.0,1.0)
   end
 
   def validate_input(from_date, game, to_date)
