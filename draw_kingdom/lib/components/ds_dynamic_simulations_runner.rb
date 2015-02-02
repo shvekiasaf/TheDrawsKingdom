@@ -1,9 +1,10 @@
 require_relative 'ds_file_reader'
 require_relative 'ds_csv_manager'
 require_relative "../model/ds_record"
-
+require_relative "../insufficient_data_manager"
 class DSDynamicSimulationsRunner
 
+  INSUFFICIENT_STRATEGIES_THRESHOLD = 0.3
   # return a hash of games and normalized grades
   def self.calculate_grades_for_games(simulation,games,file_reader)
 
@@ -50,6 +51,10 @@ class DSDynamicSimulationsRunner
 
     csv_manager_instance.save_to_csv
 
-    games_grade_hash
+    games_grade_hash.select{|game,grade| strategies_sufficient(game,simulation.size)}
+  end
+  def strategies_sufficient(game,number_of_strategies)
+    number_of_insufficient_grades = InsufficientDataManager.instance.get_number_of_insufficient_grades(game)
+    number_of_insufficient_grades.to_f / number_of_strategies < INSUFFICIENT_STRATEGIES_THRESHOLD
   end
 end

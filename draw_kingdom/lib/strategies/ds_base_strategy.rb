@@ -11,6 +11,8 @@ class DSBaseStrategy
 
     @strategies = strategies
 
+    @insufficient_data_manager = InsufficientDataManager.instance
+
   end
 
   # Grade will be a number between 0 to 100
