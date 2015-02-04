@@ -1,5 +1,6 @@
 require_relative "../components/ds_file_reader"
 require_relative "../components/ds_helpers"
+require_relative "../insufficient_data_manager"
 
 class DSBaseStrategy
 
@@ -46,4 +47,8 @@ class DSBaseStrategy
     false
   end
 
+  def insufficient_data_for_strategy
+    InsufficientDataManager.instance.increment_insufficient_game(@game,strategyName)
+    return 0
+  end
 end

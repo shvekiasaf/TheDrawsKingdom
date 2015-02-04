@@ -20,8 +20,7 @@ class DsShortestDistanceInTableStrategy < DSBaseStrategy
     home_team_season_previous_games = home_team_previous_games.select { |current_game| current_game.season.eql?(@game.season) }
     away_team_season_previous_games = away_team_previous_games.select { |current_game| current_game.season.eql?(@game.season) }
 
-    # todo: maybe we should return a random number?
-    return 0 if ((home_team_season_previous_games.size < 5) || (away_team_season_previous_games.size < 5))
+    return insufficient_data_for_strategy if ((home_team_season_previous_games.size < 5) || (away_team_season_previous_games.size < 5))
 
     home_team_league_points = DSSeasonCalculator.getTeamPoints(home_team_season_previous_games, @game.season, @game.home_team)
     away_team_league_points = DSSeasonCalculator.getTeamPoints(away_team_season_previous_games, @game.season, @game.away_team)

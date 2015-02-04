@@ -15,11 +15,11 @@ class DSCommonDrawScoreStrategy < DSBaseStrategy
     game_predictor = DSGamePredictor.new(@file_reader)
 
     most_common_draw_score = get_most_common_draw_score
-    return 0 if most_common_draw_score.nil?
+    return insufficient_data_for_strategy if most_common_draw_score.nil?
 
     prediction = game_predictor.getPrediction(@game, @game.game_date - @since, @game.game_date)
     # could happen if we don't have enough data on other team
-    return 0 if prediction.nil?
+    return insufficient_data_for_strategy if prediction.nil?
 
     delta = (prediction.home_score - most_common_draw_score[0]).abs +
         (prediction.away_score - most_common_draw_score[1]).abs

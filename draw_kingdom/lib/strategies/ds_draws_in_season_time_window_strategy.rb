@@ -7,7 +7,7 @@ class DSDrawsInSeasonTimeWindowStrategy < DSBaseStrategy
   def execute
     previous_games = gamesInRangeSameTeams.select{|game| game_in_date_range(game.game_date)}
 
-    return 0 if previous_games.size < MINIMUM_GAMES_IN_HISTORY
+    return insufficient_data_for_strategy if previous_games.size < MINIMUM_GAMES_IN_HISTORY
     number_of_games_ended_in_draw = previous_games.select { |game| game.isDraw }.size
     proportion = number_of_games_ended_in_draw.to_f/previous_games.size
     DSHelpers.normalize_value(proportion,0,1.0)

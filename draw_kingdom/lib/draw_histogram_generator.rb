@@ -13,7 +13,7 @@ module DrawHistogramGenerator
 
   all_simulations = DSSimulationsGenerator.get_simulations_array
 
-  init_data_store = false
+  init_data_store = true
 
   file_readers = [
       DSFileReader.new("german_urls",init_data_store),
@@ -32,7 +32,6 @@ module DrawHistogramGenerator
   # for each set of teams from url
   file_readers.each do |current_file_reader|
 
-    #todo: deselect games from bottom of the array, we need previous data for games so we shouldn't calculate grades for these games
     filtered_games_array = current_file_reader.games_array.select{|game| game.game_date < Date.today}
 
     print "\nCalculating odds for " + current_file_reader.url_file_name + "\n"

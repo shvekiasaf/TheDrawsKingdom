@@ -26,7 +26,7 @@ class DSDrawGamesProportionStrategy < DSBaseStrategy
 
     filtered_games_array = allGamesSinceDate(gamesInRangeAtLeastOneTeamExists, @since)
 
-    return 0 if (filtered_games_array.empty? || filtered_games_array.size < 15)
+    return insufficient_data_for_strategy if (filtered_games_array.empty? || filtered_games_array.size < 15)
 
     games_with_draw = filtered_games_array.select { |current_game| (not current_game.isDraw.nil?) and current_game.isDraw }.size
     draw_proportion = games_with_draw.to_f / filtered_games_array.size

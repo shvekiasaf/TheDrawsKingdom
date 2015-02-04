@@ -29,7 +29,7 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
 
     filtered_game_array = allGamesSinceDate(games_array, @since)
 
-    return 0 if (filtered_game_array.empty? || filtered_game_array.size < 10)
+    return insufficient_data_for_strategy if (filtered_game_array.empty? || filtered_game_array.size < 10)
 
     filtered_game_array.each do |current_game|
 
@@ -41,7 +41,7 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
     end
 
     if (game_index == 0)
-      return 0
+      return insufficient_data_for_strategy
     else
 
       odds_avg = odds_summary / game_index
