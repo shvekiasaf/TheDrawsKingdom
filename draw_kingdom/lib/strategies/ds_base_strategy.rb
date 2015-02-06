@@ -47,6 +47,8 @@ class DSBaseStrategy
     false
   end
 
+  # all strategies will call this when the execution can not be performed due
+  # to insufficient data
   def insufficient_data_for_strategy
     InsufficientDataManager.instance.increment_insufficient_game(@game,strategyName)
     return 0

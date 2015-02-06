@@ -1,8 +1,12 @@
 require 'singleton'
+# holds the context for games with insufficient data.
+# The context is held throughout a simulation, and holds the
+# list of strategies that could not execute because of insufficient data per game
 class InsufficientDataManager
   include Singleton
 
   def initialize
+    # hash [game -> array[strategy ids]]
     @insufficient_games_hash = Hash.new
   end
 
