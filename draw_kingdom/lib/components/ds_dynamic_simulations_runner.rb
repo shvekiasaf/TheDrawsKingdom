@@ -6,9 +6,9 @@ class DSDynamicSimulationsRunner
 
   INSUFFICIENT_STRATEGIES_THRESHOLD = 0.3
   # return a hash of games and normalized grades
-  def self.calculate_grades_for_games(simulation,games,file_reader)
+  def self.calculate_grades_for_games(simulation,games,file_reader, generate_csvs = true)
 
-    csv_manager_instance = DsCsvManager.new(file_reader.url_file_name)
+    csv_manager_instance = generate_csvs ? DsCsvManager.new(file_reader.url_file_name) : DsCsvManagerEmpty.new
 
     weightSum = simulation.map { |strategy_value| strategy_value.weight}.reduce(:+) # summary of all strategies' weights
     games_grade_hash = {} # hash of normalized grades per game (key:game, value: normalized grade)
@@ -47,10 +47,10 @@ class DSDynamicSimulationsRunner
 
         games_grade_hash[key] += value * current_strategy_value.weight / weightSum
       end
-      InsufficientDataManager.instance.clean
     end
 
     csv_manager_instance.save_to_csv
+    InsufficientDataManager.instance.clean
 
     games_grade_hash.select{|game,grade| strategies_sufficient(game,simulation.size)}
   end

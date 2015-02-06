@@ -20,15 +20,27 @@ class DSSimulationsGenerator
     ]
 
 
+    simulation_for_itzik = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500),1.0),
+                            DSStrategyValue.new(DSBet365DrawOddsStrategy.new(nil, true), 2.0),
+                            DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
+                            DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 3.0),
+                            DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,false), 1.0),
+                            DSStrategyValue.new(DSScorePredictorStrategy.new,10),
+                            DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0),
+                            DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,2.0),
+                            DSStrategyValue.new(DSCommonDrawScoreStrategy.new,2.0),
+                            DSStrategyValue.new(DSLastNonDrawInARowStrategy.new,1),
+                            DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0)]
+
 
     simulations1 = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500), 3.0),
-                      DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
-                      DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 3.0),
-                      DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,false), 1.0),
-                      DSStrategyValue.new(DSScorePredictorStrategy.new,10),
-                      DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0),
-                      DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,2.0),
-                      DSStrategyValue.new(DSCommonDrawScoreStrategy.new,2.0)]
+                    DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
+                    DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 3.0),
+                    DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,false), 1.0),
+                    DSStrategyValue.new(DSScorePredictorStrategy.new,10),
+                    DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0),
+                    DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,2.0),
+                    DSStrategyValue.new(DSCommonDrawScoreStrategy.new,2.0)]
 
     simulations2 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
                     DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0),
@@ -142,6 +154,7 @@ class DSSimulationsGenerator
 
     # all_simulations = [allStrategies]
 
-    return [simulations1,simulations2,optimalSimulations]
+    # return [simulations1,simulations2,optimalSimulations]
+    [simulation_for_itzik]
   end
 end

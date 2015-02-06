@@ -1,7 +1,8 @@
 require 'csv'
 require 'fileutils'
+require_relative "../insufficient_data_manager"
+require_relative "ds_dynamic_simulations_runner"
 
-# todo: add simulation name to the csv file. We are currently overriding simulations :/
 class DsCsvManager
 
   attr_reader :league_name
@@ -38,11 +39,26 @@ class DsCsvManager
       # write titles
       csv << ["league", "date", "home", "away"] + strategies_array + ["did_draw"]
 
-      @games_hash.each do |key, value|
-
+      games_entries_with_sufficient_data = @games_hash.select { |game, scores_arr| DSDynamicSimulationsRunner.strategies_sufficient(game, scores_arr.size) }
+      games_entries_with_sufficient_data.each do |key, value|
         # write the rest of the data
         csv << [@league_name.to_s, key.game_date.to_s, key.home_team.team_name.to_s, key.away_team.team_name.to_s] + value.values + [(key.isDraw ? "1" : "0")]
       end
     end
+  end
+
+end
+
+class DsCsvManagerEmpty < DsCsvManager
+  def save_to_csv
+  #   do nothing
+  end
+
+  def add_strategy_with_grade
+  #   do nothing
+  end
+
+  def initialize
+    super(nil)
   end
 end

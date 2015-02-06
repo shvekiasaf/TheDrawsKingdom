@@ -53,4 +53,8 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
   def shouldReverseNormalization
     true
   end
+
+  def strategyName
+    super + "_all_games_" + @shouldCheckAllGames.to_s
+  end
 end

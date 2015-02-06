@@ -13,7 +13,7 @@ module DrawHistogramGenerator
 
   all_simulations = DSSimulationsGenerator.get_simulations_array
 
-  init_data_store = true
+  init_data_store = false
 
   file_readers = [
       DSFileReader.new("german_urls",init_data_store),
