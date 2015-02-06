@@ -155,6 +155,6 @@ class DSSimulationsGenerator
     # all_simulations = [allStrategies]
 
     # return [simulations1,simulations2,optimalSimulations]
-    [simulation_for_itzik]
+    [optimalSimulations,simulations1,simulations2,simulation_for_itzik]
   end
 end

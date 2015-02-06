@@ -54,7 +54,7 @@ class DsCsvManagerEmpty < DsCsvManager
   #   do nothing
   end
 
-  def add_strategy_with_grade
+  def add_strategy_with_grade(game, strategy_name, value)
   #   do nothing
   end
 
