@@ -32,3 +32,35 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+draw_kingdom/DB/belgium_urls_games.drk
+draw_kingdom/DB/belgium_urls_teams.drk
+draw_kingdom/DB/english_urls_games.drk
+draw_kingdom/DB/english_urls_teams.drk
+draw_kingdom/DB/frances_urls_games.drk
+draw_kingdom/DB/frances_urls_teams.drk
+draw_kingdom/DB/german_urls_games.drk
+draw_kingdom/DB/german_urls_teams.drk
+draw_kingdom/DB/greece_urls_games.drk
+draw_kingdom/DB/greece_urls_teams.drk
+draw_kingdom/DB/italian_urls_games.drk
+draw_kingdom/DB/italian_urls_teams.drk
+draw_kingdom/DB/nethderland_urls_games.drk
+draw_kingdom/DB/nethderland_urls_teams.drk
+draw_kingdom/DB/portugali_urls_games.drk
+draw_kingdom/DB/portugali_urls_teams.drk
+draw_kingdom/DB/spanish_urls_games.drk
+draw_kingdom/DB/spanish_urls_teams.drk
+draw_kingdom/DB/turkey_urls_games.drk
+draw_kingdom/DB/turkey_urls_teams.drk
+draw_kingdom/lib/csvs/belgium_urls.csv
+draw_kingdom/lib/csvs/frances_urls.csv
+draw_kingdom/lib/csvs/german_urls.csv
+draw_kingdom/lib/csvs/greece_urls.csv
+draw_kingdom/lib/csvs/italian_urls.csv
+draw_kingdom/lib/csvs/nethderland_urls.csv
+draw_kingdom/lib/csvs/portugali_urls.csv
+draw_kingdom/lib/csvs/spanish_urls.csv
+draw_kingdom/lib/csvs/turkey_urls.csv
+.idea/copyright/profiles_settings.xml
+draw_kingdom/.idea/draw_kingdom.iml
+draw_kingdom/.idea/workspace.xml
