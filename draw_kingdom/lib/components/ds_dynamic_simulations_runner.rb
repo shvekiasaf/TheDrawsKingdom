@@ -38,22 +38,24 @@ class DSDynamicSimulationsRunner
         end
       end
 
-      # normalize the grades
-      games_grade_normalized_hash = DSHelpers.normalizeHashValues(games_grade_unnormalized_hash,
-                                                                  current_strategy_value.strategy.shouldReverseNormalization)
+        # normalize the grades
+        games_grade_normalized_hash = DSHelpers.normalizeHashValues(games_grade_unnormalized_hash,
+                                                                    current_strategy_value.strategy.shouldReverseNormalization)
+        if (!games_grade_normalized_hash.nil?)
 
-      # adding the normalized grades to the final hash
-      games_grade_normalized_hash.each do |key, value|
+          # adding the normalized grades to the final hash
+          games_grade_normalized_hash.each do |key, value|
 
-        csv_manager_instance.add_strategy_with_grade(key, current_strategy_value.strategy.strategyName, value)
+            csv_manager_instance.add_strategy_with_grade(key, current_strategy_value.strategy.strategyName, value)
 
-        # add the grade to the final hash
-        if (!games_grade_hash.has_key?(key)) # on first grade per game
-          games_grade_hash[key] = 0
+            # add the grade to the final hash
+            if (!games_grade_hash.has_key?(key)) # on first grade per game
+              games_grade_hash[key] = 0
+            end
+
+            games_grade_hash[key] += value * current_strategy_value.weight / weightSum
+          end
         end
-
-        games_grade_hash[key] += value * current_strategy_value.weight / weightSum
-      end
     end
 
     csv_manager_instance.save_to_csv(simulation.map {|strategy_value| strategy_value.strategy.strategyName})
