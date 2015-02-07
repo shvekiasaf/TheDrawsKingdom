@@ -5,6 +5,7 @@ require_relative '../../lib/strategies/ds_score_predictor_strategy'
 require_relative '../../lib/strategies/ds_bet365_draw_odds_strategy'
 require_relative '../../lib/strategies/ds_draws_in_season_time_window_strategy'
 require_relative '../../lib/strategies/ds_common_draw_score_strategy'
+require_relative '../../lib/strategies/ds_goals_difference_startegy'
 
 class DSSimulationsGenerator
 
@@ -20,17 +21,20 @@ class DSSimulationsGenerator
     ]
 
 
-    simulation_for_itzik = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500),1.0),
-                            DSStrategyValue.new(DSBet365DrawOddsStrategy.new(nil, true), 2.0),
+    simulation_for_itzik = [
+                            DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500),1.0),
+                            DSStrategyValue.new(DSBet365DrawOddsStrategy.new(nil, true), 1.0),
                             DSStrategyValue.new(DSDrawGamesProportionStrategy.new(nil), 1.0),
-                            DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 3.0),
+                            DSStrategyValue.new(DsShortestDistanceInTableStrategy.new, 1.0),
                             DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,false), 1.0),
-                            DSStrategyValue.new(DSScorePredictorStrategy.new,10),
+                            DSStrategyValue.new(DSScorePredictorStrategy.new,1),
                             DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil),1.0),
-                            DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,2.0),
-                            DSStrategyValue.new(DSCommonDrawScoreStrategy.new,2.0),
-                            DSStrategyValue.new(DSLastNonDrawInARowStrategy.new,1),
-                            DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0)]
+                            DSStrategyValue.new(DSDrawsInSeasonTimeWindowStrategy.new,1.0),
+                            DSStrategyValue.new(DSCommonDrawScoreStrategy.new,1.0),
+                            DSStrategyValue.new(DSLastNonDrawInARowStrategy.new,1.0),
+                            DSStrategyValue.new(DSTeamsDrawRatioStrategy.new, 1.0),
+                            DSStrategyValue.new(DSGoalsDifferenceStartegy.new, 1.0)
+                            ]
 
 
     simulations1 = [DSStrategyValue.new(DSDrawGamesProportionStrategy.new(500), 3.0),
@@ -48,6 +52,10 @@ class DSSimulationsGenerator
                     DSStrategyValue.new(DSDrawGamesProportionStrategy.new(400), 15.0),
                     DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 5.0),
                     DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,true), 1.0)]
+
+    simulation3 = [DSStrategyValue.new(DSGoalsDifferenceStartegy.new, 1.0)]
+
+    [simulation_for_itzik]
 
     # simulations2 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
     #                 DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
@@ -155,6 +163,7 @@ class DSSimulationsGenerator
     # all_simulations = [allStrategies]
 
     # return [simulations1,simulations2,optimalSimulations]
-    [optimalSimulations,simulations1,simulations2,simulation_for_itzik]
+    # [optimalSimulations,simulations1,simulations2,simulation_for_itzik]
+
   end
 end
