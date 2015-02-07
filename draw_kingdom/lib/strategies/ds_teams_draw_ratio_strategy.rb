@@ -15,7 +15,7 @@ class DSTeamsDrawRatioStrategy < DSBaseStrategy
   def execute
 
     grade = getDrawProportionForTeam()
-    return DSHelpers.normalize_value(grade,0,1.0)
+    return grade
   end
 
   def getDrawProportionForTeam()
