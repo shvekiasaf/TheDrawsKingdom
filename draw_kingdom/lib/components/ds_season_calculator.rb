@@ -65,5 +65,25 @@ class DSSeasonCalculator
     goals_count =  teamGamesForSeason.map { |game| game.home_score.to_i}.reduce(:+)
     return goals_count.to_f/teamGamesForSeason.count.to_f
   end
+  def self.getAvgTeamGoalDifference(games_array, team_object)
+
+    total_difference = 0
+
+    teamGamesForSeason = games_array.select {|current_game| (!current_game.missing_score)}
+    teamGamesForSeason.each() do |current_game|
+      diff = current_game.home_score.to_i - current_game.away_score.to_i
+      if (team_object == current_game.away_team)
+        diff = diff * -1
+      end
+
+      total_difference += diff
+    end
+
+    if (teamGamesForSeason.empty?)
+      nil
+    else
+      total_difference.to_f / teamGamesForSeason.size
+    end
+  end
 
 end
