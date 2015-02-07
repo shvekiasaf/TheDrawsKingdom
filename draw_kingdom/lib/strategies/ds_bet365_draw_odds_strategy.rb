@@ -29,7 +29,9 @@ class DSBet365DrawOddsStrategy < DSBaseStrategy
 
     filtered_game_array = allGamesSinceDate(games_array, @since)
 
-    return insufficient_data_for_strategy if (filtered_game_array.empty? || filtered_game_array.size < 10)
+    minimum_games_allowed = @shouldCheckAllGames ? 10 : 2
+
+    return insufficient_data_for_strategy if (filtered_game_array.empty? || filtered_game_array.size < minimum_games_allowed)
 
     filtered_game_array.each do |current_game|
 
