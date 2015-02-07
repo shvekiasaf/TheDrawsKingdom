@@ -19,6 +19,7 @@ class InsufficientDataManager
   end
 
   def get_number_of_insufficient_grades(game)
+
     if @insufficient_games_hash.key?game
       return @insufficient_games_hash[game].uniq.size
     else

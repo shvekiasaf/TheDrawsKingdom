@@ -89,5 +89,4 @@ class DSGame
     @home_team.team_name + " VS " + @away_team.team_name
   end
 
-  private :missing_score
 end

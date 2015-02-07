@@ -51,6 +51,6 @@ class DSBaseStrategy
   # to insufficient data
   def insufficient_data_for_strategy
     InsufficientDataManager.instance.increment_insufficient_game(@game,strategyName)
-    return 0
+    return nil
   end
 end

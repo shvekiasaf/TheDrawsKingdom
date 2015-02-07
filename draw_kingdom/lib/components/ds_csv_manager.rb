@@ -27,22 +27,39 @@ class DsCsvManager
     @games_hash[game] = grades_hash
   end
 
-  def save_to_csv
+  def save_to_csv(titles_array)
+
+    # todo: talk to yeshi
+    # didn't work for me..
     relative_path = File.dirname(File.realpath(__FILE__)) + "/../../"
     return nil if @games_hash.empty?
 
-    CSV.open(relative_path + "csvs/" + @league_name.to_s + ".csv", "w") do |csv|
-
-      key, value = @games_hash.first
-      strategies_array = value.keys
+    CSV.open("csvs//" + @league_name.to_s + ".csv", "w") do |csv|
 
       # write titles
-      csv << ["league", "date", "home", "away"] + strategies_array + ["did_draw"]
+      csv << ["league", "date", "home", "away"] + titles_array + ["did_draw"]
 
       games_entries_with_sufficient_data = @games_hash.select { |game, scores_arr| DSDynamicSimulationsRunner.strategies_sufficient(game, scores_arr.size) }
       games_entries_with_sufficient_data.each do |key, value|
+
+        # Put the grades into array using the same order as the titles_array's order.
+        # In order to print it later accurately into the CSV file
+        grades_array = []
+        titles_array.each do |title_strategy_name|
+
+          grade = ""
+          value.each do |strategy_name, strategy_grade|
+            if (title_strategy_name.eql?strategy_name)
+              grade = strategy_grade
+              break
+            end
+          end
+
+          grades_array.push(grade)
+        end
+
         # write the rest of the data
-        csv << [@league_name.to_s, key.game_date.to_s, key.home_team.team_name.to_s, key.away_team.team_name.to_s] + value.values + [(key.isDraw ? "1" : "0")]
+        csv << [@league_name.to_s, key.game_date.to_s, key.home_team.team_name.to_s, key.away_team.team_name.to_s] + grades_array + [(key.isDraw ? "1" : "0")]
       end
     end
   end
@@ -50,7 +67,7 @@ class DsCsvManager
 end
 
 class DsCsvManagerEmpty < DsCsvManager
-  def save_to_csv
+  def save_to_csv(titles_array)
   #   do nothing
   end
 
