@@ -49,7 +49,7 @@ module DrawHistogramGenerator
 
       # get the normalized grade of all games after executing the simulation strategies
       # its a hash with game as a key and normalized grade for value
-      games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, filtered_games_array, current_file_reader,true)
+      games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, filtered_games_array, current_file_reader,false)
 
       games_grade_hash.each do |game, grade|
 
