@@ -28,7 +28,6 @@ module DrawHistogramGenerator
       DSFileReader.new("english_urls",init_data_store)
   ]
 
-
   # for each set of teams from url
   file_readers.each do |current_file_reader|
 
@@ -88,6 +87,16 @@ module DrawHistogramGenerator
       simulation_histogram.each do |index, success_rate|
         num_of_games_with_index = total_games_percent_histogram[index]
         puts index.to_s + "-" + (index+10).to_s + "\t(" + num_of_games_with_index.to_s + " games)\tSuccess Rate: " + ('%.2f' %success_rate.to_s)
+      end
+
+      # run the simulation on today's games
+      print "Today:\n"
+      todays_games = current_file_reader.games_array.select{|game| (game.game_date >= Date.today) && (game.game_date < Date.today + 150)}
+      games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, todays_games, current_file_reader,false)
+      top_games = games_grade_hash.select {|game, grade| grade.to_f >= 90}
+
+      top_games.each do |game, grade|
+        print game.home_team.team_name.to_s + " VS " + game.away_team.team_name.to_s + " " + game.game_date.strftime("%d/%m/%Y").to_s + " (" + ('%.2f' %grade.to_s) + ")\n"
       end
     end
   end
