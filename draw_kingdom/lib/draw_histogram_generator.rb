@@ -49,7 +49,7 @@ module DrawHistogramGenerator
 
       # get the normalized grade of all games after executing the simulation strategies
       # its a hash with game as a key and normalized grade for value
-      games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, filtered_games_array, current_file_reader,false)
+      games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, filtered_games_array, current_file_reader,true)
 
       games_grade_hash.each do |game, grade|
 
@@ -91,10 +91,10 @@ module DrawHistogramGenerator
 
       # run the simulation on today's games
       print "Today:\n"
-      todays_games = current_file_reader.games_array.select{|game| (game.game_date >= Date.today) && (game.game_date < Date.today + 150)}
+      todays_games = current_file_reader.games_array.select{|game| (game.game_date >= Date.today) && (game.game_date < Date.today + 14)}
       games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, todays_games, current_file_reader,false)
-      top_games = games_grade_hash.select {|game, grade| grade.to_f >= 90}
 
+      top_games = games_grade_hash.select {|game, grade| games_grade_hash.values.sort.last(4).include?grade}
       top_games.each do |game, grade|
         print game.home_team.team_name.to_s + " VS " + game.away_team.team_name.to_s + " " + game.game_date.strftime("%d/%m/%Y").to_s + " (" + ('%.2f' %grade.to_s) + ")\n"
       end
