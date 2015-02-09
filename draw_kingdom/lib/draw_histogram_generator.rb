@@ -79,6 +79,27 @@ module DrawHistogramGenerator
       lineFit.setData(simulation_histogram.map { |current_array| current_array[0]},
                       simulation_histogram.map { |current_array| current_array[1]})
 
+      # todo talk to shveki
+      # we need to remove the "empty edges" from the calculation of rsquare since it is introducing
+      # noise. for example
+      # rSquare: 7.09%
+      #     slope: 0.001100
+      # 0-10	(22 games)	Success Rate: 0.18
+      # 10-20	(46 games)	Success Rate: 0.13
+      # 20-30	(140 games)	Success Rate: 0.13
+      # 30-40	(166 games)	Success Rate: 0.23
+      # 40-50	(255 games)	Success Rate: 0.22
+      # 50-60	(366 games)	Success Rate: 0.25
+      # 60-70	(495 games)	Success Rate: 0.28
+      # 70-80	(231 games)	Success Rate: 0.31
+      # 80-90	(17 games)	Success Rate: 0.47
+      # 90-100	(0 games)	Success Rate: 0.00
+
+      # the rSquere here is only 7% and slope is shitty - but in fact we get really nice slope & rSquere if we
+      # ignore the empty entry
+      # maybe we should filter out entries with less than 0.5% of the total amount of games?
+
+
       intercept, slope = lineFit.coefficients
       rSquared = lineFit.rSquared #R-squared is a statistical measure of how close the data are to the fitted regression line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.
 

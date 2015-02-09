@@ -11,8 +11,10 @@ class DSDynamicSimulationsRunner
 
     csv_manager_instance = generate_csvs ? DsCsvManager.new(file_reader.url_file_name) : DsCsvManagerEmpty.new
 
-    weightSum = simulation.map { |strategy_value| strategy_value.weight}.reduce(:+) # summary of all strategies' weights
     games_grade_hash = {} # hash of normalized grades per game (key:game, value: normalized grade)
+
+    # will hold RELEVANT weights for strategies
+    total_weights_for_games = Hash[games.collect{ |game|[game,0]}]
 
     # run on all strategies
     simulation.each do |current_strategy_value|
@@ -44,24 +46,33 @@ class DSDynamicSimulationsRunner
         if (!games_grade_normalized_hash.nil?)
 
           # adding the normalized grades to the final hash
-          games_grade_normalized_hash.each do |key, value|
+          games_grade_normalized_hash.each do |game, strategy_normalized_grade|
 
-            csv_manager_instance.add_strategy_with_grade(key, current_strategy_value.strategy.strategyName, value)
+            csv_manager_instance.add_strategy_with_grade(game, current_strategy_value.strategy.strategyName, strategy_normalized_grade)
 
             # add the grade to the final hash
-            if (!games_grade_hash.has_key?(key)) # on first grade per game
-              games_grade_hash[key] = 0
+            if (!games_grade_hash.has_key?(game)) # on first grade per game
+              games_grade_hash[game] = 0
             end
 
-            games_grade_hash[key] += value * current_strategy_value.weight / weightSum
+            # todo talk to shveki
+            # we are currently dividing by the total sum of weights - but there are strategies that we ignore
+            # due to insufficient data. we ignore them using the total_weights_for_games
+            games_grade_hash[game] += strategy_normalized_grade * current_strategy_value.weight
+            total_weights_for_games[game] += current_strategy_value.weight
           end
         end
     end
 
+    # now we divide grades by correct proportion
+    games_grade_hash = games_grade_hash.each {| game, not_proportional_grade| games_grade_hash[game] = not_proportional_grade.to_f / total_weights_for_games[game] }
     csv_manager_instance.save_to_csv(simulation.map {|strategy_value| strategy_value.strategy.strategyName})
 
-    # todo: talk to yeshi
-    # why clean?
+    # todo: talk to shveki
+    # because this is called for each file reader. if we don't perform cleanup, the context will store the games from other
+    # file readers in memory throughout the program execution - significantly increasing our memory footprint
+    # and possibly harming performance.
+    # if you are OK with this lets remove the comment. if not - lets talk
     InsufficientDataManager.instance.clean
 
     games_grade_hash.select{|game,grade| strategies_sufficient(game,simulation.size)}
