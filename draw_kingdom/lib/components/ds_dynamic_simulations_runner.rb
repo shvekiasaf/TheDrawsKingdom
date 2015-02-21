@@ -1,10 +1,9 @@
 require_relative 'ds_file_reader'
 require_relative 'ds_csv_manager'
 require_relative "../model/ds_record"
-require_relative "../insufficient_data_manager"
 class DSDynamicSimulationsRunner
 
-  INSUFFICIENT_STRATEGIES_THRESHOLD = 0.3
+
 
   # return a hash of games and normalized grades
   def self.calculate_grades_for_games(simulation,games,file_reader, generate_csvs = true)
@@ -55,9 +54,6 @@ class DSDynamicSimulationsRunner
               games_grade_hash[game] = 0
             end
 
-            # todo talk to shveki
-            # we are currently dividing by the total sum of weights - but there are strategies that we ignore
-            # due to insufficient data. we ignore them using the total_weights_for_games
             games_grade_hash[game] += strategy_normalized_grade * current_strategy_value.weight
             total_weights_for_games[game] += current_strategy_value.weight
           end
@@ -66,20 +62,10 @@ class DSDynamicSimulationsRunner
 
     # now we divide grades by correct proportion
     games_grade_hash = games_grade_hash.each {| game, not_proportional_grade| games_grade_hash[game] = not_proportional_grade.to_f / total_weights_for_games[game] }
+
     csv_manager_instance.save_to_csv(simulation.map {|strategy_value| strategy_value.strategy.strategyName})
 
-    # todo: talk to shveki
-    # because this is called for each file reader. if we don't perform cleanup, the context will store the games from other
-    # file readers in memory throughout the program execution - significantly increasing our memory footprint
-    # and possibly harming performance.
-    # if you are OK with this lets remove the comment. if not - lets talk
-    InsufficientDataManager.instance.clean
-
-    games_grade_hash.select{|game,grade| strategies_sufficient(game,simulation.size)}
+    games_grade_hash
   end
 
-  def self.strategies_sufficient(game,number_of_strategies)
-    number_of_insufficient_grades = InsufficientDataManager.instance.get_number_of_insufficient_grades(game)
-    (number_of_insufficient_grades.to_f / number_of_strategies) < INSUFFICIENT_STRATEGIES_THRESHOLD
-  end
 end

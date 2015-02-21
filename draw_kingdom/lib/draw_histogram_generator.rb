@@ -4,6 +4,7 @@ require_relative "components/ds_simulations_generator"
 require_relative "components/ds_helpers"
 require_relative "../../draw_kingdom/lib/results/ds_simulation_record_manager"
 require_relative "components/ds_dynamic_simulations_runner"
+require_relative "noise/ds_noise_cleaners"
 require 'date'
 require 'csv'
 require 'fileutils'
@@ -51,6 +52,9 @@ module DrawHistogramGenerator
       # its a hash with game as a key and normalized grade for value
       games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, filtered_games_array, current_file_reader,false)
 
+      # remove games with insufficient data based on the application context
+      games_grade_hash = DSNoiseCleaners.remove_insufficient_data(games_grade_hash,current_simulation.size)
+
       games_grade_hash.each do |game, grade|
 
         # the histogram index is the grade range:
@@ -71,6 +75,9 @@ module DrawHistogramGenerator
       # generate percentage histogram for this simulation.
       simulation_histogram = total_games_percent_histogram.map { |index, num_of_games| [index, histogramIndexValue(index, num_of_games, success_percent_histogram)] }
 
+      # filter entries from histogram with less than 1% of games (noise)
+      simulation_histogram = DSNoiseCleaners.remove_vacant_histogram_entries(games_grade_hash,simulation_histogram,success_percent_histogram)
+
       # printing results
       puts "simulation " + simulation_index.to_s + " results"
 
@@ -78,27 +85,6 @@ module DrawHistogramGenerator
       lineFit = LineFit.new
       lineFit.setData(simulation_histogram.map { |current_array| current_array[0]},
                       simulation_histogram.map { |current_array| current_array[1]})
-
-      # todo talk to shveki
-      # we need to remove the "empty edges" from the calculation of rsquare since it is introducing
-      # noise. for example
-      # rSquare: 7.09%
-      #     slope: 0.001100
-      # 0-10	(22 games)	Success Rate: 0.18
-      # 10-20	(46 games)	Success Rate: 0.13
-      # 20-30	(140 games)	Success Rate: 0.13
-      # 30-40	(166 games)	Success Rate: 0.23
-      # 40-50	(255 games)	Success Rate: 0.22
-      # 50-60	(366 games)	Success Rate: 0.25
-      # 60-70	(495 games)	Success Rate: 0.28
-      # 70-80	(231 games)	Success Rate: 0.31
-      # 80-90	(17 games)	Success Rate: 0.47
-      # 90-100	(0 games)	Success Rate: 0.00
-
-      # the rSquere here is only 7% and slope is shitty - but in fact we get really nice slope & rSquere if we
-      # ignore the empty entry
-      # maybe we should filter out entries with less than 0.5% of the total amount of games?
-
 
       intercept, slope = lineFit.coefficients
       rSquared = lineFit.rSquared #R-squared is a statistical measure of how close the data are to the fitted regression line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.
@@ -113,12 +99,17 @@ module DrawHistogramGenerator
       # run the simulation on today's games
       print "Today:\n"
       todays_games = current_file_reader.games_array.select{|game| (game.game_date >= Date.today) && (game.game_date < Date.today + 14)}
+      todays_games = current_file_reader.games_array.select{|game| (game.game_date >= Date.today) && (game.game_date < Date.today + 14)}
       games_grade_hash = DSDynamicSimulationsRunner.calculate_grades_for_games(current_simulation, todays_games, current_file_reader,false)
 
       top_games = games_grade_hash.select {|game, grade| games_grade_hash.values.sort.last(4).include?grade}
       top_games.each do |game, grade|
         print game.home_team.team_name.to_s + " VS " + game.away_team.team_name.to_s + " " + game.game_date.strftime("%d/%m/%Y").to_s + " (" + ('%.2f' %grade.to_s) + ")\n"
       end
+
+      # cleaning insufficient data from context at the end of each simulation so we
+      # won't overload memory consumption
+      InsufficientDataManager.instance.clean
     end
   end
 end

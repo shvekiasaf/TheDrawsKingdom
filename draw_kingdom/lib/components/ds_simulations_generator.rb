@@ -53,9 +53,7 @@ class DSSimulationsGenerator
                     DSStrategyValue.new(DSLastNonDrawInARowStrategy.new, 5.0),
                     DSStrategyValue.new(DSBet365DrawOddsStrategy.new(800,true), 1.0)]
 
-    simulation3 = [DSStrategyValue.new(DSGoalsDifferenceStartegy.new, 1.0)]
-
-    [simulation_for_itzik]
+    [simulations1,simulations2,optimalSimulations,simulation_for_itzik]
 
     # simulations2 = [DSStrategyValue.new(DSNonDrawInARowStrategy.new(nil), 0.0),
     #                 DSStrategyValue.new(DSNonDrawInARowStrategy.new(500), 0.0),
