@@ -29,9 +29,6 @@ class DSDynamicSimulationsRunner
         # execute the strategy
         grade = current_strategy_value.strategy.execute
 
-        # todo: talk to yeshi
-        # is it fine some games won't have a grade
-        # in case grade is not nil
         if (!grade.nil?)
 
           # insert grade into array
