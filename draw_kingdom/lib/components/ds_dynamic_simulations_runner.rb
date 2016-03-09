@@ -1,5 +1,5 @@
 require_relative 'ds_file_reader'
-require_relative 'ds_csv_manager'
+require_relative '../../../draw_kingdom/deprecated/ds_csv_manager_old'
 require_relative "../model/ds_record"
 class DSDynamicSimulationsRunner
 

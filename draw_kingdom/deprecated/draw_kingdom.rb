@@ -23,16 +23,16 @@ module DrawKingdom
 
   # #Read all games from file
   file_readers = [
-      DSFileReader.new("german_urls"),
-      DSFileReader.new("spanish_urls"),
-      DSFileReader.new("italian_urls"),
-      DSFileReader.new("greece_urls"),
-      DSFileReader.new("belgium_urls"),
+      # DSFileReader.new("german_urls"),
+      # DSFileReader.new("spanish_urls"),
+      # DSFileReader.new("italian_urls"),
+      # DSFileReader.new("greece_urls"),
+      # DSFileReader.new("belgium_urls"),
       DSFileReader.new("frances_urls"),
-      DSFileReader.new("nethderland_urls"),
-      DSFileReader.new("portugali_urls"),
-      DSFileReader.new("turkey_urls"),
-      DSFileReader.new("english_urls")
+      # DSFileReader.new("nethderland_urls"),
+      # DSFileReader.new("portugali_urls"),
+      # DSFileReader.new("turkey_urls"),
+      # DSFileReader.new("english_urls")
   ]
 
   if (dates_array.nil?)

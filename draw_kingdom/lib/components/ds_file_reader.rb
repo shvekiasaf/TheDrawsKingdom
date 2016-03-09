@@ -156,7 +156,7 @@ class DSFileReader
                 if ((not home_team.nil?) && (not away_team.nil?))
 
                   # create game object
-                  current_game = DSGame.new(game_date, @teamsHash[home_team], @teamsHash[away_team], -1, -1, nil, "NS", 0)
+                  current_game = DSGame.new(@url_file_name,game_date, @teamsHash[home_team], @teamsHash[away_team], -1, -1, nil, "NS", 0)
 
                   # insert game object to array
                   @games_array.push(current_game)
@@ -184,7 +184,7 @@ class DSFileReader
               if ((not home_team.nil?) && (not away_team.nil?))
 
                 # create game object
-                current_game = DSGame.new(DateTime.strptime(row["Date"], '%d/%m/%y'),
+                current_game = DSGame.new(@url_file_name, DateTime.strptime(row["Date"], '%d/%m/%y'),
                                           @teamsHash[home_team], @teamsHash[away_team],
                                           row["FTHG"], row["FTAG"], row["Div"], season, row["B365D"])
 
