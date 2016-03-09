@@ -10,7 +10,6 @@ class DsShortestDistanceInTableStrategy < DSBaseStrategy
   def initialize()
   end
 
-
   def execute
 
     # calculate the opponents league points up to due_to_date
@@ -27,7 +26,7 @@ class DsShortestDistanceInTableStrategy < DSBaseStrategy
 
     return insufficient_data_for_strategy if ((home_team_season_previous_games.size < 5) || (away_team_season_previous_games.size < 5))
 
-    home_team_league_points = DSSeasonCalculator.getTeamPoints(home_team_season_previous_games, current_season, @game.home_team)
+    home_team_league_points = DSSeasonCalculator.getTeamPoints(home_team_season_previous_games, current_season, @game.home_team) + 3 # home team should have more points
     away_team_league_points = DSSeasonCalculator.getTeamPoints(away_team_season_previous_games, current_season, @game.away_team)
 
     # subtract current team points from opponent
